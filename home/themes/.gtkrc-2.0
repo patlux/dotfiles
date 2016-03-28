@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/patrick/.gtkrc-2.0.mine"
-gtk-theme-name="Ambiance-Flat-Blue-Spring-Pro"
+gtk-theme-name="Arc"
 gtk-icon-theme-name="Vibrancy-Dark-Blue"
 gtk-font-name="Sans 10"
 gtk-cursor-theme-name="Adwaita"
