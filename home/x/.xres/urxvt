@@ -1,0 +1,57 @@
+! ██╗   ██╗██████╗ ██╗  ██╗██╗   ██╗████████╗
+! ██║   ██║██╔══██╗╚██╗██╔╝██║   ██║╚══██╔══╝
+! ██║   ██║██████╔╝ ╚███╔╝ ██║   ██║   ██║
+! ██║   ██║██╔══██╗ ██╔██╗ ╚██╗ ██╔╝   ██║
+! ╚██████╔╝██║  ██║██╔╝ ██╗ ╚████╔╝    ██║
+!  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝     ╚═╝
+
+URxvt.font: xft:fontFamily:pixelsize=fontSize
+URxvt.saveLines: 1000
+
+
+
+! ---------------------------------------------------------------------------- !
+! SCROLL
+
+URxvt.scrollBar: false
+URxvt.secondaryScroll: true
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+
+
+! ---------------------------------------------------------------------------- !
+! COPY & PASTE
+
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+
+
+
+! ---------------------------------------------------------------------------- !
+! EXTENSIONS
+
+URxvt.perl-ext-common: default,matcher
+
+
+
+! ---------------------------------------------------------------------------- !
+! EXTENSION: `matcher`
+
+URxvt.urlLauncher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+
+
+
+! ---------------------------------------------------------------------------- !
+! THEME
+
+#include "urxvt-themes/default"

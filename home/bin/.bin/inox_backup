@@ -1,0 +1,9 @@
+#!/bin/sh
+
+now=$(date +"%y%m%d_%H%M%S")
+backupfile="/tmp/$now-inox-backup.tar.gz.enc"
+
+echo "Backup Filename: $backupfile"
+
+tar cz ${HOME}/.config/inox/ | openssl enc -aes-256-cbc -e > $backupfile
+scp $backupfile archraspb:./Downloads/

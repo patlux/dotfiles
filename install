@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#- HOME
+src='home'
+target=$HOME
+
+echo "Install $src to $target"
+
+cd $src
+
+for dir in * ; do
+  if [ -d "$dir" ]; then
+    name=$(basename "${dir}")
+    stow -t $target $name
+  fi
+done
+
+cd ..
+
+#- CONFIG
+src='config'
+target="$HOME/.config"
+
+echo "Install $src to $target"
+
+stow -t $target $src

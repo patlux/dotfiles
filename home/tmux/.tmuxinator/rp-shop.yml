@@ -1,0 +1,36 @@
+# ~/.tmuxinator/roompad.yml
+
+name: rp-shop
+root: ~/Documents/dev/roompad/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+pre: sudo systemctl start postgresql redis nginx
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window: rvm roompad-shop
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: shop
+
+windows:
+  - shop:
+      layout: main-vertical
+      root: ~/Documents/dev/roompad/roompad-shop
+      panes:
+        -
+        - rails s
+  - corporate-page:
+      layout: main-vertical
+      root: ~/Documents/dev/roompad/roompad-corporate-page
+      panes:
+        - git status
+        -

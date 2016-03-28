@@ -1,0 +1,83 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# syntax:
+# (sleep <seconds>s && <command>) &
+
+
+
+# ---------------------------------------------------------------------------- #
+
+(xset -dpms; xset s off) &
+# Screensaver off [not installed]
+# (sleep 0.1s && xscreensaver -no-splash) &
+
+# numeric block activate
+(numlockx) &
+
+# set mouse pointer speed
+(xset m 4/1 4) &
+
+# set lockscreen after 10 minutes
+(xautolock -time 10 -locker "$HOME_BIN/lock") &
+
+# start hotkey daemon
+(sxhkd) &
+
+
+
+# ---------------------------------------------------------------------------- #
+# DESKTOP
+
+# Effects
+(compton --config ~/.config/compton.conf) &
+
+# Background
+(sleep 1s && ~/.bin/setwallpaper) &
+
+# Panel
+(sleep 1s && tint2) &
+
+# Dock bar
+(sleep 1s && plank) &
+
+# Conky
+(sleep 1s && ~/.config/conky/start_all.sh) &
+
+
+# Soundicon
+(pnmixer) &
+
+# MEGA
+(sleep 3s && megasync) &
+
+# Data Manager For Crypted Files
+(cryptkeeper) &
+
+
+
+# ---------------------------------------------------------------------------- #
+# REMOVED / UNUSED
+# ---------------------------------------------------------------------------- #
+
+# mail reader
+# (sleep 0.1s && thunderbird) &
+
+# Clipboard Manager
+# (sleep 0.1s && clipit) &
+
+# Dropbox
+# (sleep 0.1s && dropboxd) &
+
+
+# Filemanager
+#(sleep 1s && thunar --daemon) &
+
+# multiple monitors
+# workaround
+# (sleep 1s && xrandr --output VGA-1 --auto && xrandr --auto --output DVI-D-1 --mode 1920x1200 --left-of VGA-1) &
+
+

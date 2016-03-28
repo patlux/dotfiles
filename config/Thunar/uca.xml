@@ -1,0 +1,50 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1449048181286454-5</unique-id>
+	<command>exo-open --working-directory %d --launch TerminalEmulator</command>
+	<description>Example for a custom action</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>sublime-text</icon>
+	<name>Open Sublime Text 3 here</name>
+	<unique-id>1449048189830831-6</unique-id>
+	<command>subl %d</command>
+	<description>Sublime Text 3 Editor</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>network-server-symbolic</icon>
+	<name>Start Local Server here</name>
+	<unique-id>1449048194310356-7</unique-id>
+	<command>http-server %f</command>
+	<description></description>
+	<patterns>*.html;*.html</patterns>
+	<text-files/>
+</action>
+<action>
+	<icon>application-pdf</icon>
+	<name>PDF to JPEG Images</name>
+	<unique-id>1453804339786564-7</unique-id>
+	<command>pdfimages -j %f %n</command>
+	<description>Convert PDF Sites to jpg files</description>
+	<patterns>*.pdf</patterns>
+	<other-files/>
+</action>
+</actions>

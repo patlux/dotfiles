@@ -1,0 +1,42 @@
+# ~/.tmuxinator/helloguest.yml
+
+name: helloguest
+root: ~/Documents/dev/helloguest/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo systemctl start postgresql redis nginx
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rvm gemset use roompad
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: webview-app
+
+windows:
+  - ios-app:
+      layout: main-vertical
+      root: ~/Documents/dev/helloguest/byod-ios-app/
+      panes:
+        - git status
+        -
+  - android-app:
+      layout: main-vertical
+      root: ~/Documents/dev/helloguest/byod-android-app/
+      panes:
+        - git status
+        -
+  - webview-app:
+      layout: main-vertical
+      root: ~/Documents/dev/helloguest/byod-webview-app/
+      panes:
+        - git status
+        -

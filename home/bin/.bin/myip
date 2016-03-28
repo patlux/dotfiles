@@ -1,0 +1,14 @@
+#!/bin/sh
+
+DOMAIN=${1:-"ipecho"}
+
+case $DOMAIN in
+  "myip")
+    curl http://my.ip.fi/
+    echo
+    ;;
+  "ipecho")
+    curl http://ipecho.net/plain
+    echo
+    ;;
+esac

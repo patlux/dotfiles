@@ -1,0 +1,8 @@
+#!/bin/sh
+
+backupfile=$(ssh archraspb 'ls ~/Downloads/*-inox-backup.tar.gz.enc | tail -n1')
+
+echo "Backup Filename: $backupfile"
+
+mkdir -p /tmp/inox-restore
+scp archraspb:$backupfile /tmp/inox-restore/

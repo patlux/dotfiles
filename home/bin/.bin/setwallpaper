@@ -1,0 +1,26 @@
+#!/bin/sh
+
+TARGET="$HOME/Pictures/wallpaper/.wallpaper"
+
+# ---------------------------------------------------------------------------- #
+# CHECK ARGUMENT
+
+if [ ${1+x} ]; then
+  echo "Using $1 as wallpaper.."
+
+  IMAGE=$1
+  cp $IMAGE $TARGET
+
+  gm mogrify \
+    -crop 1920x1080+0+0 \
+    -region 1920x22+0+0 \
+    -blur 10x25 \
+    $TARGET
+
+fi
+
+
+# ---------------------------------------------------------------------------- #
+# SET BACKGROUND IMAGE
+
+hsetroot -center $TARGET

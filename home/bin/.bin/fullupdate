@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# enter country name here
+country="DE"
+
+url="https://www.archlinux.org/mirrorlist/?country=${country}&protocol=http&ip_version=4&use_mirror_status=on"
+
+echo "Get mirrors.."
+
+curl -s "$url" | grep -v '^## Score:' | sed 's/^#S/S/' | rankmirrors -n 5 - \
+    | tee /etc/pacman.d/mirrorlist > /dev/null
+
+pacman -Syu

@@ -1,0 +1,17 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "editor.fontFamily": "Source Code Pro",
+  "editor.glyphMargin": false,
+  "editor.fontSize": 14,
+  "editor.renderWhitespace": true,
+  "editor.rulers": [ 80, 120 ],
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.cursorStyle": "line",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.tmp": true,
+    "**/.sass-cache": true
+  }
+}

@@ -1,0 +1,42 @@
+# ~/.tmuxinator/roompad.yml
+
+name: rgb-led-strip
+root: ~/Documents/dev/raspberry/android-rgb-led-strip
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+pre: sshfs archraspb:./ /home/patrick/mnt/archraspb -C -p 1223 -o reconnect
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window: rvm gemset use development && cls
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: backend
+
+windows:
+  - android:
+      layout: main-vertical
+      root: ~/Documents/dev/raspberry/android-rgb-led-strip
+      panes:
+        - git status
+        - grunt serve --open=false
+  - server:
+      layout: main-vertical
+      root: ~/mnt/archraspb/dev/rgb-led-strip-server
+      panes:
+        - git status
+        -
+  - archraspb:
+      layout: main-vertical
+      panes:
+        - dev:
+          - ssh archraspb
+          - cd dev/rgb-led-strip-server

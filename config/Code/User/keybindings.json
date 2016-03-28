@@ -1,0 +1,8 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "ctrl+shift+7",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus"
+  }
+]
