@@ -33,7 +33,7 @@
 # DESKTOP
 
 # Effects
-(compton --config ~/.config/compton.conf) &
+(compton) &
 
 # Background
 (sleep 1s && ~/.bin/setwallpaper) &
