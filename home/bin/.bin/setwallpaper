@@ -1,23 +1,25 @@
 #!/bin/sh
 
 TARGET="$HOME/Pictures/wallpaper/.wallpaper"
+IMAGE=${1:-$TARGET}
+
+notify-send 'Set wallpaper' $IMAGE
 
 # ---------------------------------------------------------------------------- #
-# CHECK ARGUMENT
+# MODIFY IMAGE
 
-if [ ${1+x} ]; then
-  echo "Using $1 as wallpaper.."
+/usr/bin/cp $IMAGE $TARGET &> /dev/null
 
-  IMAGE=$1
-  cp $IMAGE $TARGET
+read RES_X RES_Y <<<$(xdpyinfo | awk -F'[ x]+' '/dimensions:/{print $3, $4}')
 
-  gm mogrify \
-    -crop 1920x1080+0+0 \
-    -region 1920x22+0+0 \
-    -blur 10x25 \
-    $TARGET
+gm mogrify \
+  -compress JPEG \
+  -quality 100 \
+  -crop "$RES_X"x"$RES_Y"+0+0 \
+  -region "$RES_X"x22+0+0 \
+  -blur 10x25 \
+  $TARGET
 
-fi
 
 
 # ---------------------------------------------------------------------------- #
