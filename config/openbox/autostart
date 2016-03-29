@@ -32,11 +32,11 @@
 # ---------------------------------------------------------------------------- #
 # DESKTOP
 
+# Background
+(~/.bin/setwallpaper) &
+
 # Effects
 (compton) &
-
-# Background
-(sleep 1s && ~/.bin/setwallpaper) &
 
 # Panel
 (sleep 1s && tint2) &
@@ -46,7 +46,6 @@
 
 # Conky
 (sleep 1s && ~/.config/conky/start_all.sh) &
-
 
 # Soundicon
 (pnmixer) &
