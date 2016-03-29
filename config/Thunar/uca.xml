@@ -47,4 +47,13 @@
 	<patterns>*.pdf</patterns>
 	<other-files/>
 </action>
+<action>
+	<icon>wallpaper</icon>
+	<name>Set as wallpaper</name>
+	<unique-id>1459245500982191-3</unique-id>
+	<command>setwallpaper %f</command>
+	<description>Set selected image as wallpaper</description>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
 </actions>
