@@ -1,6 +1,6 @@
 ! transparency
 urxvt*depth: 32
-urxvt*background: [90]#333
+urxvt*background: [95]#333
 
 ! color scheme
 URxvt*background:        #333333
