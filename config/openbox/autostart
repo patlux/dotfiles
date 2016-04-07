@@ -39,22 +39,23 @@
 (compton) &
 
 # Panel
-(sleep 1s && tint2) &
+#(sleep 1s && tint2) &
+(sleep 1s && ~/.bin/run-lemonbar) &
 
 # Dock bar
 (sleep 1s && plank) &
 
 # Conky
-(sleep 1s && ~/.config/conky/start_all.sh) &
+# (sleep 1s && ~/.config/conky/start_all.sh) &
 
 # Soundicon
-(pnmixer) &
+# (pnmixer) &
 
 # MEGA
 (sleep 3s && megasync) &
 
 # Data Manager For Crypted Files
-(cryptkeeper) &
+# (cryptkeeper) &
 
 
 
