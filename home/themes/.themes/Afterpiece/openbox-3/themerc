@@ -30,7 +30,8 @@ menu.items.text.color: #dcdcdc
 menu.items.disabled.text.color: #666666
 
 menu.items.active.bg: flat solid
-menu.items.active.bg.color: #6363cc
+# menu.items.active.bg.color: #6363cc
+menu.items.active.bg.color: #0088cc
 menu.items.active.text.color: #fdfdfd
 
 menu.separator.color: #6c6c6c
@@ -94,7 +95,8 @@ window.inactive.button.unpressed.image.color: #888888
 
 window.inactive.button.pressed.bg: flat solid
 window.inactive.button.pressed.bg.color: #2d2d2d
-window.inactive.button.pressed.image.color: #6363cc
+# window.inactive.button.pressed.image.color: #6363cc
+window.inactive.button.pressed.image.color: #0088cc
 
 window.inactive.button.disabled.bg: flat solid
 window.inactive.button.disabled.bg.color: #2d2d2d
