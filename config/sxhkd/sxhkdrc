@@ -7,7 +7,7 @@ super + Escape
 
 super + shift + Escape
   notify-send -t 250 "Reload top panel!" & \
-  pkill -x lemonbar; sleep 0.5 &&  ~/.bin/run-lemonbar
+  ~/.bin/run-lemonbar
 
 # ---------------------------------------------------------------------------- #
 # DESKTOP
