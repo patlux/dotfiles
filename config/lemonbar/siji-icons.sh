@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# siji icons
+ICON_MUSIC='\ue0fd'
+ICON_DATE='\ue133'
+ICON_CLOCK_ROUND_OUTLINED='\ue016'
+ICON_RAM='\ue146'
+ICON_ARCH='\ue00e'
+ICON_VPN='\ue10f'
+
+
+#- VOLUME
+
+ICON_VOLUME_ZERO='\ue051'
+ICON_VOLUME_MUTE='\ue052'
+ICON_VOLUME='\ue053'

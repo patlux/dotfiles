@@ -1,0 +1,29 @@
+#!/bin/bash
+
+CONFIG_DIR="$HOME/.config/lemonbar"
+
+source "$CONFIG_DIR/config.sh"
+
+
+# ---------------------------------------------------------------------------- #
+# FIFO
+
+# PANEL_FIFO="/tmp/panel-fifo"
+# [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+# mkfifo "$PANEL_FIFO"
+
+
+# ---------------------------------------------------------------------------- #
+# RUN LEMONBAR
+
+"$CONFIG_DIR/output.sh" \
+  | lemonbar \
+          -g "$RES_X"x"$BAR_HEIGHT"+"$BAR_OFFSET_X"+"$BAR_OFFSET_X" \
+          -B "$BAR_BACKGROUND_COLOR" \
+          -F "$BAR_FOREGROUND_COLOR" \
+          -f "$BAR_FONT_ICON" \
+          -f "$BAR_FONT" \
+          -u $BAR_UNDERLINE_WIDTH \
+          -U "$BAR_UNDERLINE_COLOR" \
+          -n "dock" \
+          -p
