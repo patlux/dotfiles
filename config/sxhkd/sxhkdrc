@@ -5,6 +5,9 @@ super + Escape
   notify-send -t 250 "Hotkeys reloaded!" & \
   pkill -USR1 -x sxhkd
 
+super + shift + Escape
+  notify-send -t 250 "Reload top panel!" & \
+  pkill -x lemonbar; sleep 0.5 &&  ~/.bin/run-lemonbar
 
 # ---------------------------------------------------------------------------- #
 # DESKTOP
@@ -27,7 +30,7 @@ super + x
 super + p
   dmenu_run \
     -f \
-    -z \
+    -r \
     -l 3 \
     -o 0.9 \
     -nb "#333" \
@@ -58,6 +61,9 @@ super + shift + w
   notify-send -t 500 "Open Browser (profile dev)" "Start \`inox\` .." & \
   inox --profile-directory="Profile 1" --remote-debugging-port=9222
 
+super + alt + w
+  notify-send -t 500 "Open Browser" "Start \`firefox\` .." & \
+  firefox
 
 #- EDITOR
 
