@@ -28,21 +28,7 @@ super + x
 #- LAUNCHER
 
 super + p
-  dmenu_run \
-    -f \
-    -r \
-    -l 3 \
-    -o 0.9 \
-    -nb "#333" \
-    -nf "#fff" \
-    -sb "#08c" \
-    -sf "#fff" \
-    -fn "Droid Sans Mono-16" \
-    -dim 0.6 \
-    -w 800 \
-    -x 560 \
-    -y 540
-
+  rofi -show run
 
 #- TERMINAL
 
