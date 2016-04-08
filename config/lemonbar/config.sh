@@ -10,7 +10,7 @@ CMD_IFS='󠄳'
 # read display resolution
 read RES_X RES_Y <<< $(xdpyinfo | awk -F'[ x]+' '/dimensions:/{print $3, $4}')
 
-BAR_HEIGHT=22
+BAR_HEIGHT=18
 BAR_OFFSET_X=0
 BAR_OFFSET_Y=0
 

@@ -79,6 +79,7 @@ done < "$PANEL_FIFO" \
     -u $BAR_UNDERLINE_WIDTH \
     -U "$BAR_UNDERLINE_COLOR" \
     -n "dock" \
-    -p
+    -p \
+  | bash
 
 wait

@@ -11,6 +11,9 @@ ICON_PACMAN='\ue00f'
 ICON_VPN='\ue10f'
 ICON_WEATHER='\ue01c'
 
+ICON_UP='\ue13b'
+ICON_DOWN='\ue13c'
+
 
 #- VOLUME
 
