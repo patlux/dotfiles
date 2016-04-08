@@ -16,7 +16,7 @@ gm mogrify \
   -compress JPEG \
   -quality 100 \
   -crop "$RES_X"x"$RES_Y"+0+0 \
-  -region "$RES_X"x22+0+0 \
+  -region "$RES_X"x18+0+0 \
   -blur 10x25 \
   $TARGET
 
