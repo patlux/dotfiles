@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRNAME="$HOME/.config/lemonbar/"
+DIRNAME="$HOME/.config/lemonbar"
 source "$DIRNAME/siji-icons.sh"
 
 PANEL_FIFO='/tmp/panel-fifo'
