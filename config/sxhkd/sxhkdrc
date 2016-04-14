@@ -24,10 +24,9 @@ super + x
 # ---------------------------------------------------------------------------- #
 # APPLICATION
 
-
 #- LAUNCHER
 
-super + p
+super + {space,p}
   rofi -show run
 
 #- TERMINAL
