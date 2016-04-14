@@ -20,7 +20,7 @@ setxkbmap -option ctrl:nocaps
 urxvtd -q -o -f
 
 # SYSTEMD USER INSTANCE
-systemd --user &
+# systemd --user &
 
 
 # ---------------------------------------------------------------------------- #
