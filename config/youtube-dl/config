@@ -1,0 +1,5 @@
+--no-mtime
+--extract-audio
+--format bestaudio
+--restrict-filenames
+-o '~/Music/%(title)s.%(ext)s'
