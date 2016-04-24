@@ -1,7 +1,7 @@
 # Afterpiece v1.01:
 # A flat, modern Openbox theme.
 # Button icons can be changed by renaming the files in the openbox-3
-  folder.
+# folder.
 
 
 # Copyright (c) 2014 Keefer Rourke
@@ -16,7 +16,9 @@
 # conditions that this software is subject to.
 
 
-# Menu
+# ---------------------------------------------------------------------------- #
+# MENU
+
 menu.border.color: #2d2d2d
 
 menu.title.bg: flat solid
@@ -30,103 +32,131 @@ menu.items.text.color: #dcdcdc
 menu.items.disabled.text.color: #666666
 
 menu.items.active.bg: flat solid
-# menu.items.active.bg.color: #6363cc
-menu.items.active.bg.color: #0088cc
+menu.items.active.bg.color: #5294e2
 menu.items.active.text.color: #fdfdfd
 
 menu.separator.color: #6c6c6c
 menu.separator.width: 1
-menu.separator.padding.width: 3
+menu.separator.padding.width: 6
 menu.separator.padding.height: 4
 
 
-# Active window
+# ---------------------------------------------------------------------------- #
+# WINDOW
+
+#- TITLE ALIGN
+
+window.label.text.justify: center
+
+#- BORDER
+
+border.width: 0
+border.color: #2d2d2d
 window.active.border.color: #2d2d2d
+window.inactive.border.color: #2d2d2d
+
+#- PADDING
+
+padding.width: 6
+padding.height: 4
+
+#- TITLE
 
 window.active.title.bg: flat solid
 window.active.title.bg.color: #2d2d2d
 window.active.title.separator.color: #2d2d2d
 window.active.text.justify: center
 
-window.active.label.bg: parentrelative
-window.active.label.text.color: #dcdcdc
-
-window.active.handle.bg: flat solid
-window.active.handle.bg.color: #2d2d2d
-
-window.active.grip.bg: flat solid
-window.active.grip.bg.color: #2d2d2d
-
-window.active.button.unpressed.bg: flat solid
-window.active.button.unpressed.bg.color: #2d2d2d
-window.active.button.unpressed.image.color: #dcdcdc
-
-window.active.button.pressed.bg: flat solid
-window.active.button.pressed.bg.color: #2d2d2d
-window.active.button.pressed.image.color: #7373cc
-
-window.active.button.disabled.bg: flat solid
-window.active.button.disabled.bg.color: #2d2d2d
-window.active.button.disabled.image.color: #888888
-
-window.active.button.hover.image.color: #a3a3cc
-
-
-# Inactive window
-window.inactive.border.color: #2d2d2d
-
 window.inactive.title.bg: flat solid
 window.inactive.title.bg.color: #2d2d2d
 window.inactive.title.separator.color: #2d2d2d
 window.inactive.text.justify: center
 
+#- LABEL
+
+window.active.label.bg: parentrelative
+window.active.label.text.color: #dcdcdc
+
 window.inactive.label.bg: parentrelative
 window.inactive.label.text.color: #888888
+
+#- HANDLE
+
+window.active.handle.bg: flat solid
+window.active.handle.bg.color: #2d2d2d
 
 window.inactive.handle.bg: flat solid
 window.inactive.handle.bg.color: #2d2d2d
 
+#- GRIP
+
+window.active.grip.bg: flat solid
+window.active.grip.bg.color: #2d2d2d
+
 window.inactive.grip.bg: flat solid
 window.inactive.grip.bg.color: #2d2d2d
+
+
+# ---------------------------------------------------------------------------- #
+# WINDOW BUTTON
+
+#- HOVER
+
+window.active.button.hover.image.color: #5294e2
+window.inactive.button.hover.image.color: #a3a3cc
+
+#- UNPRESSED
+
+window.active.button.unpressed.bg: flat solid
+window.active.button.unpressed.bg.color: #2d2d2d
+window.active.button.unpressed.image.color: #dcdcdc
 
 window.inactive.button.unpressed.bg: flat solid
 window.inactive.button.unpressed.bg.color: #2d2d2d
 window.inactive.button.unpressed.image.color: #888888
 
+#- PRESSED
+
+window.active.button.pressed.bg: flat solid
+window.active.button.pressed.bg.color: #2d2d2d
+window.active.button.pressed.image.color: #5294e2
+
 window.inactive.button.pressed.bg: flat solid
 window.inactive.button.pressed.bg.color: #2d2d2d
-# window.inactive.button.pressed.image.color: #6363cc
-window.inactive.button.pressed.image.color: #0088cc
+window.inactive.button.pressed.image.color: #5294e2
+
+#- DISABLED
+
+window.active.button.disabled.bg: flat solid
+window.active.button.disabled.bg.color: #2d2d2d
+window.active.button.disabled.image.color: #888888
 
 window.inactive.button.disabled.bg: flat solid
 window.inactive.button.disabled.bg.color: #2d2d2d
 window.inactive.button.disabled.image.color: #888888
 
-window.inactive.button.hover.image.color: #a3a3cc
 
-
+# ---------------------------------------------------------------------------- #
 # OSD
-osd.border.width: 4
+
+osd.border.width: 0
 osd.border.color: #2d2d2d
 
 osd.bg: flat solid
 osd.bg.color: #2d2d2d
 osd.label.bg: flat solid
-osd.label.bg.color: #2d2d2d
+osd.label.bg.color: #333333
 osd.label.text.color: #dcdcdc
 
 osd.hilight.bg: flat solid
-osd.hilight.bg.color: #bfc0d0
+osd.hilight.bg.color: #5294e2
 
 osd.unhilight.bg: flat solid
 osd.unhilight.bg.color: #1f2428
 
 
-# Other Window stuff
-border.width: 1
-border.color: #2d2d2d
-padding.width: 8
-padding.height: 4
+# ---------------------------------------------------------------------------- #
+# OTHER
+
 window.handle.width: 0
 window.client.padding.width: 0
-window.label.text.justify: center
