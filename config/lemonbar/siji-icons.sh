@@ -2,7 +2,7 @@
 
 # siji icons
 ICON_MUSIC='\ue0fd'
-ICON_DATE='\ue133'
+ICON_DATE='\ue01f'
 ICON_CLOCK_ROUND_OUTLINED='\ue016'
 ICON_RAM='\ue146'
 ICON_CPU='\ue026'
