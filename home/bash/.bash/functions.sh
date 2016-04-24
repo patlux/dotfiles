@@ -45,12 +45,6 @@ function swap()
     mv $TMPFILE "$2"
 }
 
-# ---------------------------------------------------------------------------- #
-## CONVERT PDF TO JPG
-
-convert_pdf_jpg() {
-  convert -verbose -density 150 -trim $1 -quality 100 -sharpen 0x1.0 $2
-}
 
 # ---------------------------------------------------------------------------- #
 ## DD with PIPE-VIEWER
@@ -60,26 +54,6 @@ ddpv() {
     dd if=$1 &> /dev/null | pv -petrb -s $size | dd of=$2
 }
 
-# ---------------------------------------------------------------------------- #
-## GET AUR
-
-function getaur () {
-  wget https://aur.archlinux.org/packages/${1:0:2}/$1/$1.tar.gz
-}
-
-function getaurx () {
-  wget https://aur.archlinux.org/packages/${1:0:2}/$1/$1.tar.gz
-  bsdtar -xf $1.tar.gz
-  rm $1.tar.gz
-  cd $1
-}
-
-# ---------------------------------------------------------------------------- #
-## SAY SOMETHING!
-
-function say() {
-  mplayer -really-quiet "http://translate.google.com/translate_tts?tl=de&q=$1";
-}
 
 # ---------------------------------------------------------------------------- #
 ## REMIND ME!!!
@@ -92,8 +66,9 @@ function remindme()
   sleep $1 && notify-send $2 --icon=dialog-information &
 }
 
+
 # ---------------------------------------------------------------------------- #
 ## UPLOAD FILE TO transfer.sh
 
-transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
-tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; } 
+transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
+tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }

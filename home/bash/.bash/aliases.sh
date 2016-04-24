@@ -12,15 +12,11 @@ alias l.='ls --group-directories-first -ldh .*'
 
 alias mkdir='mkdir -p -v'
 alias du='du -c -h'
-alias du1='du --max-depth=1'
 alias grep='grep --color=auto'
 alias dmesg='dmesg -HL'
 alias ping='ping -c 5'
 alias nano='nano -w -c'
 alias cp='rsync --progress -h -8'
-alias da='date "+%A, %B %d, %Y [%T]"'
-
-alias pacsearch='pacman -Ss'
 
 alias recent='find -maxdepth 1 -type f -mtime -1 -printf "%T@-%Tk:%TM - %f\n" | sort -rn | cut -d- -f2-'
 
