@@ -3,7 +3,7 @@ rofi.width:                          50
 rofi.lines:                          15
 rofi.columns:                        1
 rofi.font:                           mono 12
-rofi.color-normal:                   #333,#fff,#444,#08c,#eee8d5
+rofi.color-normal:                   #2d2d2d,#fff,#343434,#5294e2,#eee8d5
 !rofi.color-urgent:                   #fdf6e3,#dc322f,#eee8d5,#dc322f,#fdf6e3
 !rofi.color-active:                   #fdf6e3,#268bd2,#eee8d5,#268bd2,#fdf6e3
 rofi.color-window:                   #333,#AAA
