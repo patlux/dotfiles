@@ -51,4 +51,4 @@ URxvt.perl-ext-common:
 ! ---------------------------------------------------------------------------- !
 ! THEME
 
-#include "urxvt-themes/default"
+#include "urxvt-themes/visibone"
