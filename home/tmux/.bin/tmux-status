@@ -5,7 +5,7 @@ version_value_bg="colour235"
 
 version_ruby() {
   local version=$(ruby --version | awk '{ print $2 }')
-  echo "#[bg=colour160]#[fg=$version_name_fg] ruby #[bg=$version_value_bg]#[fg=colour160] $version"
+  echo "#[bg=colour1]#[fg=$version_name_fg] ruby #[bg=$version_value_bg]#[fg=colour1] $version"
 }
 
 version_node() {
