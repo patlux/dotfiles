@@ -1,21 +1,40 @@
 #!/bin/bash
 
-version_name_fg="colour255"
-version_value_bg="colour235"
+statusbar_bg="colour235"
+
+# Get the current path in the segment.
+get_tmux_cwd() {
+  local env_name=$(tmux display -p "#D" | tr -d %)
+  # use pane_current_path, no need to set TMUXPWD
+  local env_val=$(tmux display-message -p -F "#{pane_current_path}" -t"$env_name")
+  # The version below is still quite new for tmux. Uncomment this in the future :-)
+  #local env_val=$(tmux show-environment "$env_name" 2>&1)
+
+  if [[ ! $env_val =~ "unknown variable" ]]; then
+    local tmux_pwd=$(echo "$env_val" | sed 's/^.*=//')
+    echo "$tmux_pwd"
+  fi
+}
+
+tpwd() {
+  local current_pwd=$(get_tmux_cwd)
+  local branch=$(git -C ${current_pwd} rev-parse --abbrev-ref HEAD)
+  echo "#[bg=colour2]#[fg=$statusbar_bg] ${branch}"
+}
 
 version_ruby() {
   local version=$(ruby --version | awk '{ print $2 }')
-  echo "#[bg=colour1]#[fg=$version_name_fg] ruby #[bg=$version_value_bg]#[fg=colour1] $version"
+  echo "#[bg=colour1]#[fg=$statusbar_bg] ruby #[bg=$statusbar_bg]#[fg=colour1] $version"
 }
 
 version_node() {
   local version=$(node --version)
-  echo "#[bg=colour4]#[fg=$version_name_fg] node #[bg=$version_value_bg]#[fg=colour4] $version"
+  echo "#[bg=colour4]#[fg=$statusbar_bg] node #[bg=$statusbar_bg]#[fg=colour4] $version"
 }
 
 version_npm() {
   local version=$(npm --version)
-  echo "#[bg=colour5]#[fg=$version_name_fg] npm #[bg=$version_value_bg]#[fg=colour5] $version"
+  echo "#[bg=colour5]#[fg=$statusbar_bg] npm #[bg=$statusbar_bg]#[fg=colour5] $version"
 }
 
-echo "`version_ruby` `version_node` `version_npm` "
+echo "`tpwd` #[default] `version_ruby` #[default] `version_node` #[default] `version_npm` "
