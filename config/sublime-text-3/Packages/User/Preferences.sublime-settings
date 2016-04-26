@@ -14,11 +14,6 @@
   "font_size": 10,
   "ignored_packages":
   [
-    "BracketHighlighter",
-    "GitGutter",
-    "Haml",
-    "Jade",
-    "MoveTab",
     "Vintage"
   ],
   "indent_guide_options":
