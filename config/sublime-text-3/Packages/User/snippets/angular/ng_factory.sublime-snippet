@@ -1,0 +1,44 @@
+<snippet>
+  <content><![CDATA[
+(->
+  null
+  ### @ngInject ###
+  ${1:Factory} = (${3})->
+
+    # ------------------------------------------------------------------------ #
+    #    #PRIVATE
+
+    ${4}
+
+
+
+
+
+    # ------------------------------------------------------------------------ #
+    #    #PUBLIC
+
+    return {
+
+      ${5}
+
+    }
+
+
+
+
+
+  # -------------------------------------------------------------------------- #
+  #    #ANGULAR
+  # -------------------------------------------------------------------------- #
+
+  angular
+    .module '${2}', []
+    .factory '${1:Factory}', ${1:Factory}
+
+)()
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ngfactory</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.coffee</scope>
+</snippet>

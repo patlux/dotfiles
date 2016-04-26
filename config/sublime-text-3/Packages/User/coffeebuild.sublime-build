@@ -1,0 +1,6 @@
+{
+  "cmd": [ "coffee", "-wc", "$file" ],
+  "path": "/home/patrick/.n/bin",
+  "selector": "source.coffee",
+  "working_dir": "$project_path"
+}

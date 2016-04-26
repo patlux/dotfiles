@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"Better CoffeeScript",
+		"BracketHighlighter",
+		"GitGutter",
+		"GitSavvy",
+		"Jade",
+		"MoveTab",
+		"Package Control",
+		"Sass"
+	]
+}

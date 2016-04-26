@@ -1,0 +1,52 @@
+<snippet>
+  <content><![CDATA[
+(->
+  null
+  ### @ngInject ###
+  ${1:Controller} = (${3})->
+    vm = @
+
+    init = () ->
+      ${4}
+
+    # ------------------------------------------------------------------------ #
+    #    #PRIVATE
+
+    ${5}
+
+
+
+
+
+    # ------------------------------------------------------------------------ #
+    #    #PUBLIC
+
+    ${6}
+
+
+
+
+
+    # -------------
+    init()
+    return
+
+
+
+
+
+  # -------------------------------------------------------------------------- #
+  #    #ANGULAR
+  # -------------------------------------------------------------------------- #
+
+  angular
+    .module '${2}', []
+    .controller '${1:Ctrl}', ${1:Controller}
+
+)()
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ngctrl</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.coffee</scope>
+</snippet>

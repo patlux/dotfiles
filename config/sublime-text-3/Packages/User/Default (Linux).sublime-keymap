@@ -1,0 +1,13 @@
+[
+  { "keys": ["ctrl+7"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["ctrl+#"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["ctrl+shift+7"], "command": "toggle_comment", "args": { "block": true } },
+  { "keys": ["ctrl+´"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+
+  { "keys": ["super+shift+enter"], "command": "max_pane" },
+  { "keys": ["ctrl+0"], "command": "focus_side_bar" },
+  { "keys": [ "ctrl+k", "ctrl+n" ], "command": "focus_neighboring_group", "args": {"forward": false} },
+  { "keys": [ "ctrl+shift+o" ], "command": "prompt_open_folder" }
+
+
+]
