@@ -33,6 +33,7 @@
   "material_theme_small_statusbar": true,
   "material_theme_small_tab": true,
   "overlay_scroll_bars": "enabled",
+  "show_encoding": true,
   "rulers":
   [
     80
