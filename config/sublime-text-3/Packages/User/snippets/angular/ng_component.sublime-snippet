@@ -6,8 +6,7 @@
 # ---------------------------------------------------------------------------- #
 
 component =
-  bindings:
-    page: '='
+  bindings: {}
   controllerAs: ''
 
   require: []
@@ -29,6 +28,9 @@ component.controller = ( $element ) ->
   # -------------------------------------------------------------------------- #
   # PRIVATE
 
+  _onDestroy = () ->
+    # ...
+
   # -------------------------------------------------------------------------- #
   # PUBLIC
 
@@ -36,6 +38,7 @@ component.controller = ( $element ) ->
   # INITIALIZE
 
   vm.$onInit = init
+  vm.$onDestroy = _onDestroy
   return
 
 
@@ -43,7 +46,7 @@ component.controller = ( $element ) ->
 # ---------------------------------------------------------------------------- #
 #    #EXPORTS
 
-module.export = component
+module.exports = component
 
 ]]></content>
   <tabTrigger>ngcomponent</tabTrigger>
