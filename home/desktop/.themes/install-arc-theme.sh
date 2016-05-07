@@ -2,10 +2,9 @@
 
 DIRNAME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-git clone https://github.com/horst3180/arc-theme --depth 1
-cd "arc-theme"
+git clone https://github.com/horst3180/arc-theme --depth 1 $DIRNAME/arc-theme
 
-./autogen.sh \
+$DIRNAME/arc-theme/autogen.sh \
   --disable-transparency \
   --disable-darker \
   --disable-dark \
@@ -15,14 +14,12 @@ cd "arc-theme"
   --disable-unity \
   --disable-xfwm \
   --disable-xfce-notify \
-  --prefix=$DIRNAME/.themes/
+  --prefix=$DIRNAME/
 
 make install
 
-cd ..
-
-cp -r ./.themes/share/themes/Arc ./.themes/
-rm -fr ./arc-theme
-rm -fr ./.themes/share/
+cp -r $DIRNAME/share/themes/Arc $DIRNAME/
+rm -fr $DIRNAME/arc-theme
+rm -fr $DIRNAME/share/
 
 echo "Done"
