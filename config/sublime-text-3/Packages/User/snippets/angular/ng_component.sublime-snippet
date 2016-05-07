@@ -1,0 +1,54 @@
+<snippet>
+  <content><![CDATA[
+
+# ---------------------------------------------------------------------------- #
+#    #
+# ---------------------------------------------------------------------------- #
+
+component =
+  bindings: {}
+  controllerAs: ''
+
+  require: []
+  template: require( './.tmpl.haml' )
+  transclude: false
+
+
+# ---------------------------------------------------------------------------- #
+#    #CONTROLLER
+
+null
+### @ngInject ###
+component.controller = ( $element ) ->
+  vm = @
+
+  init = () ->
+    # ..
+
+  # -------------------------------------------------------------------------- #
+  # PRIVATE
+
+  _onDestroy = () ->
+    # ...
+
+  # -------------------------------------------------------------------------- #
+  # PUBLIC
+
+  # -------------------------------------------------------------------------- #
+  # INITIALIZE
+
+  vm.$onInit = init
+  vm.$onDestroy = _onDestroy
+  return
+
+
+
+# ---------------------------------------------------------------------------- #
+#    #EXPORTS
+
+module.exports = component
+
+]]></content>
+  <tabTrigger>ngcomponent</tabTrigger>
+  <scope>source.coffee</scope>
+</snippet>
