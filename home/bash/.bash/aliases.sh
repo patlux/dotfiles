@@ -42,3 +42,4 @@ alias cls=' echo -ne "\033c"'       # clear screen for real (it does not work in
 
 alias alsi='alsi -a'
 alias JDownloader='JAVA_HOME=/usr/lib/jvm/java-8-openjdk/ JDownloader'
+alias subl='subl3'
