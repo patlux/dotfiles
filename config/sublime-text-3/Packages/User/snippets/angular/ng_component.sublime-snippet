@@ -2,16 +2,16 @@
   <content><![CDATA[
 
 # ---------------------------------------------------------------------------- #
-#    #
+#    `$1`
 # ---------------------------------------------------------------------------- #
 
 component =
   bindings: {}
-  controllerAs: ''
+  controllerAs: '$1Ctrl'
 
-  require: []
-  template: require( './.tmpl.haml' )
-  transclude: false
+  # require: []
+  template: require( './$1.tmpl' )()
+  # transclude: false
 
 
 # ---------------------------------------------------------------------------- #
@@ -19,10 +19,11 @@ component =
 
 null
 ### @ngInject ###
-component.controller = ( $element ) ->
+component.controller = ( \$log, \$element ) ->
   vm = @
 
   init = () ->
+    \$log.debug( '`$1` initialized.' )
     # ..
 
   # -------------------------------------------------------------------------- #
@@ -37,8 +38,8 @@ component.controller = ( $element ) ->
   # -------------------------------------------------------------------------- #
   # INITIALIZE
 
-  vm.$onInit = init
-  vm.$onDestroy = _onDestroy
+  vm.\$onInit = init
+  vm.\$onDestroy = _onDestroy
   return
 
 
