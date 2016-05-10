@@ -28,7 +28,7 @@
 	<icon>sublime-text</icon>
 	<name>Open Sublime Text 3 here</name>
 	<unique-id>1449048189830831-6</unique-id>
-	<command>subl %d</command>
+	<command>subl3 %d</command>
 	<description>Sublime Text 3 Editor</description>
 	<patterns>*</patterns>
 	<directories/>

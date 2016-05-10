@@ -54,11 +54,11 @@ super + alt + w
 
 super + e
   notify-send -t 500 "Open Editor" "Start Sublime Text 3 .." & \
-  subl
+  subl3
 
 super + shift + e
   notify-send -t 500 "Open Editor" "Start Sublime Text 3 .." & \
-  subl -n
+  subl3 -n
 
 
 #- FILE MANAGER
