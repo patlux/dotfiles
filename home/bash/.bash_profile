@@ -2,6 +2,7 @@
 # ~/.bash_profile
 #
 
+# If not running interactively, do not do anything
 case $- in *i*) . ~/.bashrc;; esac
 
 # - !!! DO NOT REMOVE !!! -
