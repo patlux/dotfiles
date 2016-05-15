@@ -7,12 +7,14 @@
 
 component =
   bindings: {}
+  # controller: '' # ( below ↓ )
   controllerAs: '$1Ctrl'
 
   # require: []
   template: require( './$1.tmpl' )()
-  # transclude: false
+  # templateUrl: '' # ( ↑ )
 
+  # transclude: {}
 
 # ---------------------------------------------------------------------------- #
 #    #CONTROLLER
@@ -32,6 +34,12 @@ component.controller = ( \$log, \$element ) ->
   _onDestroy = () ->
     # ...
 
+  _onChanges = ( changesObj ) ->
+    # ...
+
+  # _postLink = () ->
+  #  # ..
+
   # -------------------------------------------------------------------------- #
   # PUBLIC
 
@@ -39,7 +47,9 @@ component.controller = ( \$log, \$element ) ->
   # INITIALIZE
 
   vm.\$onInit = init
-  vm.\$onDestroy = _onDestroy
+  vm.\$onDestroy =  _onDestroy
+  vm.\$onChanges =  _onChanges
+  # vm.\$postLink  =  _postLink
   return
 
 
