@@ -16,6 +16,8 @@
 		"MoveTab",
 		"Package Control",
 		"Sass",
-		"SideBarEnhancements"
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-coffeelint"
 	]
 }
