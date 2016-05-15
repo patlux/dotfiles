@@ -11,6 +11,17 @@
                 "@disable": false,
                 "args": [],
                 "excludes": []
+            },
+            "puglint": {
+                "@disable": false,
+                "args": [],
+                "excludes": [],
+                "reporter": "inline"
+            },
+            "sass": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
             }
         },
         "mark_style": "outline",

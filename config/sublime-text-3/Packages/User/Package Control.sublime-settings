@@ -18,6 +18,8 @@
 		"Sass",
 		"SideBarEnhancements",
 		"SublimeLinter",
-		"SublimeLinter-coffeelint"
+		"SublimeLinter-coffeelint",
+		"SublimeLinter-contrib-pug-lint",
+		"SublimeLinter-contrib-sass-lint"
 	]
 }
