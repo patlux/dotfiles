@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"Base16 Color Schemes",
 		"Better CoffeeScript",
 		"BracketHighlighter",
 		"Emmet",
@@ -20,6 +21,7 @@
 		"SublimeLinter",
 		"SublimeLinter-coffeelint",
 		"SublimeLinter-contrib-pug-lint",
-		"SublimeLinter-contrib-sass-lint"
+		"SublimeLinter-contrib-sass-lint",
+		"Theme - Otto"
 	]
 }
