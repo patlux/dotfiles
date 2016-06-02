@@ -8,6 +8,7 @@
 		"Alignment",
 		"Base16 Color Schemes",
 		"Better CoffeeScript",
+		"Boxy Theme",
 		"BracketHighlighter",
 		"Emmet",
 		"GitGutter",
@@ -21,7 +22,6 @@
 		"SublimeLinter",
 		"SublimeLinter-coffeelint",
 		"SublimeLinter-contrib-pug-lint",
-		"SublimeLinter-contrib-sass-lint",
-		"Theme - Otto"
+		"SublimeLinter-contrib-sass-lint"
 	]
 }

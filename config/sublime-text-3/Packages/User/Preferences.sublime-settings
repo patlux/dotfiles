@@ -41,10 +41,11 @@
   "show_encoding": true,
   "show_line_endings": true,
   "tab_size": 2,
-  "theme": "Otto Tomorrow.sublime-theme",
-  "theme_otto_accent_blue": true,
-  "theme_otto_status_bar_small": true,
-  "theme_otto_tab_small": true,
+  "theme": "Boxy Tomorrow.sublime-theme",
+  "theme_accent_blue": true,
+  "theme_status_bar_small": true,
+  "theme_tab_selected_underlined": true,
+  "theme_tab_small": true,
   "translate_tabs_to_spaces": true,
   "trim_trailing_white_space_on_save": true
 }
