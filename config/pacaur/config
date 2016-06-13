@@ -1,0 +1,5 @@
+#!/bin/bash
+
+displaybuildfiles=diff                # display build files (none|diff|full)
+sortby=popularity                     # sort method (name|votes|popularity)
+
