@@ -24,6 +24,7 @@
 		"SublimeLinter",
 		"SublimeLinter-coffeelint",
 		"SublimeLinter-contrib-pug-lint",
-		"SublimeLinter-contrib-sass-lint"
+		"SublimeLinter-contrib-sass-lint",
+		"TodoReview"
 	]
 }
