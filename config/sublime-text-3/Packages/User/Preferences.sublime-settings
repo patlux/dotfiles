@@ -43,13 +43,13 @@
   "tab_size": 2,
   "theme": "Boxy Tomorrow.sublime-theme",
   "theme_accent_blue": true,
-  "theme_tab_size_sm": true,
   "theme_find_panel_close_hidden": true,
   "theme_quick_panel_size_xs": true,
   "theme_sidebar_size_sm": true,
   "theme_size_sm": true,
-  "theme_tab_separator": true,
   "theme_tab_selected_underlined": true,
+  "theme_tab_separator": true,
+  "theme_tab_size_sm": true,
   "translate_tabs_to_spaces": true,
   "trim_trailing_white_space_on_save": true
 }
