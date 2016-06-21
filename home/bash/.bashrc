@@ -9,21 +9,7 @@
 # ---------------------------------------------------------------------------- #
 # TMUX
 
-if [[ -z "$TMUX" ]]; then
-
-  # get the id of a deattached session
-  ID="$(tmux ls | grep -vm1 attached | cut -d: -f1)"
-
-  if [[ -z "$ID" ]]; then
-    # if not available create a new one
-    tmux new-session
-  else
-    # if available attach to it
-    tmux attach-session -t "$ID"
-  fi
-
-fi
-
+[[ -z "$TMUX" ]] && exec tmux
 
 
 # ---------------------------------------------------------------------------- #
