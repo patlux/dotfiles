@@ -1,7 +1,7 @@
 #!/bin/sh
 
 IMAGE=$(mktemp --tmpdir XXXX.png)
-ICON="$HOME/Pictures/icons/lock-tina.png"
+ICON="$HOME/Pictures/images/icons/lock-blue.png"
 TEXT="NO ACCESS"
 
 # ---------------------------------------------------------------------------- #
