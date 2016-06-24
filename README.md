@@ -5,9 +5,11 @@ Just my dotfiles.
 
 #### Details
 
-- Gtk Theme from https://github.com/horst3180/arc-theme
-- Icons from https://github.com/horst3180/arc-icon-theme
-- Wallpaper from http://www.deviantart.com/art/X-IV-492416104
+- Gtk Theme: [Arc Theme](https://github.com/horst3180/arc-theme)
+- Icons: [Arc Icon Theme](https://github.com/horst3180/arc-icon-theme)
+- Wallpaper: [X : IV](http://www.deviantart.com/art/X-IV-492416104)
+- Bar: [Lemonbar](https://github.com/LemonBoy/bar)
+- Dock: [Plank](https://launchpad.net/plank)
 
 ### Dirty
 
