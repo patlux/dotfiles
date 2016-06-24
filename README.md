@@ -1,7 +1,13 @@
 # dotfiles
 Just my dotfiles.
 
-## Desktop screenshot
+## My desktop
+
+#### Details
+
+- Gtk Theme from https://github.com/horst3180/arc-theme
+- Icons from https://github.com/horst3180/arc-icon-theme
+- Wallpaper from http://www.deviantart.com/art/X-IV-492416104
 
 ### Dirty
 
