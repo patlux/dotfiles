@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TARGET="$HOME/Pictures/wallpaper/.wallpaper"
+TARGET="$HOME/Pictures/images/wallpaper/.current"
 IMAGE=${1:-$TARGET}
 
 notify-send 'Set wallpaper' $IMAGE
