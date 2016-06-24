@@ -8,7 +8,7 @@ notify-send 'Set wallpaper' $IMAGE
 # ---------------------------------------------------------------------------- #
 # MODIFY IMAGE
 
-/usr/bin/cp $IMAGE $TARGET &> /dev/null
+/usr/bin/cp "$IMAGE" "$TARGET" &> /dev/null
 
 read RES_X RES_Y <<<$(xdpyinfo | awk -F'[ x]+' '/dimensions:/{print $3, $4}')
 
@@ -18,11 +18,11 @@ gm mogrify \
   -crop "$RES_X"x"$RES_Y"+0+0 \
   -region "$RES_X"x18+0+0 \
   -blur 10x25 \
-  $TARGET
+  "$TARGET"
 
 
 
 # ---------------------------------------------------------------------------- #
 # SET BACKGROUND IMAGE
 
-hsetroot -center $TARGET
+hsetroot -center "$TARGET"
