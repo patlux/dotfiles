@@ -7,10 +7,10 @@ root: ~/Documents/dev/helloguest/
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-# pre: sudo systemctl start postgresql redis nginx
+pre: sudo systemctl start postgresql nginx
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-# pre_window: rvm gemset use roompad
+pre_window: rvm gemset use helloguest
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -22,6 +22,12 @@ root: ~/Documents/dev/helloguest/
 startup_window: webview-app
 
 windows:
+  - backend:
+      layout: main-vertical
+      root: ~/Documents/dev/helloguest/helloguest-backend/
+      panes:
+        - git status
+        -
   - ios-app:
       layout: main-vertical
       root: ~/Documents/dev/helloguest/byod-ios-app/
