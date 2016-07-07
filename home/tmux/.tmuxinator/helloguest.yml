@@ -7,7 +7,7 @@ root: ~/Documents/dev/helloguest/
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-pre: sudo systemctl start postgresql nginx
+pre: sudo systemctl start postgresql redis nginx
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 pre_window: rvm gemset use helloguest
