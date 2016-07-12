@@ -1,6 +1,6 @@
 #!/bin/sh
 
-IMAGE=$(mktemp --tmpdir XXXX.png)
+IMAGE="$(mktemp --tmpdir XXXX.png)"
 ICON="$HOME/Pictures/images/icons/lock-blue.png"
 TEXT="NO ACCESS"
 
@@ -8,7 +8,6 @@ TEXT="NO ACCESS"
 # TAKE SCREENSHOT
 
 scrot $IMAGE
-
 
 # ---------------------------------------------------------------------------- #
 # MANIPULATE IMAGE
@@ -25,13 +24,6 @@ gm composite \
   -gravity center \
   $ICON $IMAGE $IMAGE
 
-#- TEXT
-gm convert \
-  -fill white \
-  -pointsize 62 \
-  -gravity center \
-  -draw "text 0,300 '$TEXT'" \
-  $IMAGE $IMAGE
 
 
 
