@@ -1,6 +1,6 @@
 // Place your settings in this file to overwrite the default settings
 {
-  "editor.fontFamily": "Source Code Pro",
+  "editor.fontFamily": "Hack",
   "editor.glyphMargin": false,
   "editor.fontSize": 14,
   "editor.renderWhitespace": true,
