@@ -1,5 +1,5 @@
 
-URxvt*background:         #333333
+URxvt*background:         #2D2D2D
 URxvt*foreground:         #cccccc
 
 URxvt*cursorColor:        #5294e2
