@@ -17,7 +17,7 @@ set_prompt() {
   # DISPLAY CURRENT DIR
 
   # add "["
-  PS1+='['
+  PS1+=''
 
   # blue
   PS1+='\[\e[0;34m\]'
@@ -32,18 +32,18 @@ set_prompt() {
   PS1+='\[\e[1;36m\]'
 
   # git current branch -> git function in .bash_functions
-  PS1+='$(__git_ps1_hide " (%s)")'
+  PS1+='$(__git_ps1_hide " %s")'
 
   # reset color
   PS1+=$reset_color
 
   # add "]"
-  PS1+=']'
+  PS1+=''
 
   # --------------
   # END
 
-  PS1+=' # '
+  PS1+=' '
 }
 
 PROMPT_COMMAND='set_prompt'

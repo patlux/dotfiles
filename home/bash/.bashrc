@@ -22,6 +22,7 @@ export OOO_FORCE_DESKTOP=gnome
 export TERMINAL="urxvt"
 export EDITOR="nano"
 export PYTHON=python2
+export DE=mate
 
 if [ -n "$DISPLAY" ]; then
     export BROWSER="inox"

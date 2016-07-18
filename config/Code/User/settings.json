@@ -2,9 +2,9 @@
 {
   "editor.fontFamily": "Hack",
   "editor.glyphMargin": false,
-  "editor.fontSize": 14,
+  "editor.fontSize": 13,
   "editor.renderWhitespace": true,
-  "editor.rulers": [ 80, 120 ],
+  "editor.rulers": [ 80 ],
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.cursorStyle": "line",
