@@ -97,13 +97,15 @@ XF86Tools
 # ---------------------------------------------------------------------------- #
 # SERVICES
 
+#- DNS SERVICE ( CACHING && ADBLOCK )
+
 super + shift + F8
-  notify-send -t 2000 "Start DNS .." "systemctl start dnsmasq" & \
-  sudo systemctl start dnsmasq
+  notify-send -t 2000 "DNS START" "systemctl start pdnsd" & \
+  sudo systemctl start pdnsd
 
 super + shift + F9
-  notify-send -t 2000 "Stop DNS .." "systemctl stop dnsmasq" & \
-  sudo systemctl stop dnsmasq
+  notify-send -t 2000 "DNS STOP" "systemctl stop pdnsd" & \
+  sudo systemctl stop pdnsd
 
 
 
