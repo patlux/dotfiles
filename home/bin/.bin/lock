@@ -2,27 +2,41 @@
 
 IMAGE="$(mktemp --tmpdir XXXX.png)"
 ICON="$HOME/Pictures/images/icons/lock-blue.png"
-TEXT="NO ACCESS"
+read RES_X RES_Y <<<$(xdpyinfo | awk -F'[ x]+' '/dimensions:/{print $3, $4}')
 
-# ---------------------------------------------------------------------------- #
-# TAKE SCREENSHOT
+# https://www.reddit.com/r/unixporn/comments/4yj29e/i3lock_simple_blur_script/?st=is21che7&sh=d753f314
+# - NEW WAY -
 
-scrot $IMAGE
+ffmpeg \
+  -f x11grab \
+  -video_size "$RES_X"x"$RES_Y" \
+  -y \
+  -i $DISPLAY \
+  -i $ICON \
+  -filter_complex "boxblur=5:1,overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2" \
+  -vframes 1 $IMAGE
 
-# ---------------------------------------------------------------------------- #
-# MANIPULATE IMAGE
 
-#- GRAY EFFECT
-gm mogrify \
-  -colorspace gray \
-  -scale 10% \
-  -scale 1000% \
-  $IMAGE
+# - OLD WAY -
+  # ---------------------------------------------------------------------------- #
+  # TAKE SCREENSHOT
 
-#- PLACE ICON
-gm composite \
-  -gravity center \
-  $ICON $IMAGE $IMAGE
+  # scrot $IMAGE
+
+  # ---------------------------------------------------------------------------- #
+  # MANIPULATE IMAGE
+
+  # #- GRAY EFFECT
+  # gm mogrify \
+  #   -colorspace gray \
+  #   -scale 10% \
+  #   -scale 1000% \
+  #   $IMAGE
+
+  # #- PLACE ICON
+  # gm composite \
+  #   -gravity center \
+  #   $ICON $IMAGE $IMAGE
 
 
 
@@ -30,7 +44,7 @@ gm composite \
 # ---------------------------------------------------------------------------- #
 # CALL LOCKSCREEN
 
-i3lock -ui $IMAGE
+i3lock -i $IMAGE
 
 
 
