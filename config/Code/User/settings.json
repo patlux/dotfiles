@@ -13,5 +13,8 @@
     "**/bower_components": true,
     "**/.tmp": true,
     "**/.sass-cache": true
-  }
+  },
+  "gitProjectManager.baseProjectsFolders": [
+    "/home/patrick/Documents/dev/"
+  ]
 }
