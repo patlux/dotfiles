@@ -2,7 +2,7 @@
 {
   "editor.fontFamily": "Hack",
   "editor.glyphMargin": false,
-  "editor.fontSize": 13,
+  "editor.fontSize": 12,
   "editor.renderWhitespace": true,
   "editor.rulers": [ 80 ],
   "editor.tabSize": 2,
@@ -12,9 +12,14 @@
     "**/node_modules": true,
     "**/bower_components": true,
     "**/.tmp": true,
-    "**/.sass-cache": true
+    "**/.sass-cache": true,
+    "**/dist": true
   },
   "gitProjectManager.baseProjectsFolders": [
     "/home/patrick/Documents/dev/"
-  ]
+  ],
+  "files.associations": {
+    "*.sass": "sass"
+  },
+  "sasslint.enable": false
 }
