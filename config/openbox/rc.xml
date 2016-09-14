@@ -214,7 +214,7 @@
     <keybind key="A-KP_0">
       <action name="Move"/>
     </keybind>
-    <keybind key="W-Tab">
+    <keybind key="A-Tab">
       <action name="NextWindow">
         <allDesktops>yes</allDesktops>
       </action>
@@ -235,7 +235,7 @@
         <command>openbox --reconfigure</command>
       </action>
     </keybind>
-    <keybind key="W-S-Tab">
+    <keybind key="A-S-Tab">
       <action name="PreviousWindow">
         <allDesktops>yes</allDesktops>
       </action>
@@ -256,16 +256,16 @@
         <menu>client-menu</menu>
       </action>
     </keybind>
-    <keybind key="W-S-Right">
+    <keybind key="A-S-Right">
       <action name="DirectionalCycleWindows"/>
     </keybind>
-    <keybind key="W-S-Left">
+    <keybind key="A-S-Left">
       <action name="DirectionalCycleWindows"/>
     </keybind>
-    <keybind key="W-S-Up">
+    <keybind key="A-S-Up">
       <action name="DirectionalCycleWindows"/>
     </keybind>
-    <keybind key="W-S-Down">
+    <keybind key="A-S-Down">
       <action name="DirectionalCycleWindows"/>
     </keybind>
     <keybind key="W-Left">
