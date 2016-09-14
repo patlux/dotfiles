@@ -15,6 +15,9 @@
     "**/.sass-cache": true,
     "**/dist": true
   },
+  "gitProjectManager.baseProjectsFolders": [
+    "/home/patrick/Documents/dev/"
+  ],
   "files.associations": {
     "*.sass": "sass"
   },

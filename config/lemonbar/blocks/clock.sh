@@ -3,7 +3,7 @@
 source "$HOME/.config/lemonbar/config.sh"
 
 getDate() {
-  echo -n $(date "+%a %b %d")
+  echo -n $(date "+%A, %B %d")
 }
 getTime() {
   echo -n $(date "+%T")
