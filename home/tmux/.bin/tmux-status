@@ -39,4 +39,9 @@ version_npm() {
   echo "#[bg=colour5]#[fg=$statusbar_bg] npm #[bg=$statusbar_bg]#[fg=colour5] $version"
 }
 
-echo "`git_branch` #[default] `version_ruby` #[default] `version_node` #[default] `version_npm` "
+version_yarn() {
+  local version=$(yarn --version)
+  echo "#[bg=colour38]#[fg=$statusbar_bg] yarn #[bg=$statusbar_bg]#[fg=colour38] $version"
+}
+
+echo "`git_branch` #[default] `version_ruby` #[default] `version_node` #[default] `version_npm` #[default] `version_yarn` "
