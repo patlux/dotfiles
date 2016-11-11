@@ -51,10 +51,14 @@
   "theme_panel_switcher_materialized": true,
   "theme_scrollbar_colored": true,
   "theme_scrollbar_line": true,
+  "theme_scrollbar_semi_overlayed": true,
+  "theme_sidebar_border": true,
+  "theme_sidebar_folder_materialized": true,
   "theme_sidebar_folder_mono": true,
+  "theme_sidebar_font_xs": true,
+  "theme_sidebar_size_xs": true,
+  "theme_statusbar_font_xs": true,
   "theme_tab_arrows_hidden": true,
-  "theme_tab_line_size_lg": true,
-  "theme_tab_size_lg": true,
   "translate_tabs_to_spaces": true,
   "trim_trailing_white_space_on_save": true
 }
