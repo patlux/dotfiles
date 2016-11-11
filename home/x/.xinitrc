@@ -22,6 +22,8 @@ urxvtd -q -o -f
 # SYSTEMD USER INSTANCE
 # systemd --user &
 
+# set dpi
+xrandr --dpi 192
 
 # ---------------------------------------------------------------------------- #
 # WINDOW MANAGER

@@ -13,6 +13,7 @@ rofi.padding:                        5
 rofi.hide-scrollbar:                 false
 rofi.fullscreen:                     false
 rofi.separator-style:                none
+rofi.dpi:                            192
 
 ! Y-offset relative to location
 ! rofi.yoffset:                        0
