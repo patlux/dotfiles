@@ -8,7 +8,7 @@
 ;=====================================================
 
 [colors]
-background = #222
+background = #2D2D2D
 background-alt = #444
 foreground = #dfdfdf
 foreground-alt = #55
@@ -18,12 +18,12 @@ alert = #bd2c40
 
 [global/wm]
 margin-top = 5
-margin-bottom = 5
+margin-bottom = 0
 
 [bar/topbar]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 25
 offset-x = 0
 offset-y = 0
 
@@ -31,16 +31,16 @@ offset-y = 0
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-overline-size = 2
+overline-size = 0
 overline-color = #f00
-underline-size = 2
+underline-size = 0
 underline-color = #00f
 
-border-bottom = 2
+border-bottom = 0
 border-bottom-color = #333
 
 spacing = 1
-padding-left = 0
+padding-left = 2
 padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
@@ -49,9 +49,9 @@ font-0 = fixed:pixelsize=10;0
 font-1 = unifont:size=6:heavy:fontformat=truetype;-2
 font-2 = siji:pixelsize=10;0
 
-modules-left = bspwm xwindow
-modules-center =
-modules-right = backlight volume xkeyboard memory cpu wlan eth battery temperature date
+modules-left = cpu memory
+modules-center = filesystem
+modules-right = volume wlan eth battery temperature date
 
 tray-position = right
 tray-padding = 2
@@ -94,7 +94,6 @@ interval = 25
 
 mount-0 = /
 mount-1 = /home
-mount-2 = /invalid/mountpoint
 
 label-mounted = %mountpoint%: %percentage_free%
 
@@ -188,19 +187,53 @@ bar-empty-foreground = ${colors.foreground-alt}
 
 [module/cpu]
 type = internal/cpu
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
-label = %percentage%
+interval = 0.5
+format = <label> <ramp-coreload>
+label = CPU
+
+ramp-coreload-0 = ▁
+ramp-coreload-0-font = 2
+ramp-coreload-0-foreground = #aaff77
+ramp-coreload-1 = ▂
+ramp-coreload-1-font = 2
+ramp-coreload-1-foreground = #aaff77
+ramp-coreload-2 = ▃
+ramp-coreload-2-font = 2
+ramp-coreload-2-foreground = #aaff77
+ramp-coreload-3 = ▄
+ramp-coreload-3-font = 2
+ramp-coreload-3-foreground = #aaff77
+ramp-coreload-4 = ▅
+ramp-coreload-4-font = 2
+ramp-coreload-4-foreground = #fba922
+ramp-coreload-5 = ▆
+ramp-coreload-5-font = 2
+ramp-coreload-5-foreground = #fba922
+ramp-coreload-6 = ▇
+ramp-coreload-6-font = 2
+ramp-coreload-6-foreground = #ff5555
+ramp-coreload-7 = █
+ramp-coreload-7-font = 2
+ramp-coreload-7-foreground = #ff5555
 
 [module/memory]
 type = internal/memory
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
-label = %percentage_used%
+format = <label> <bar-used>
+label = RAM
+
+bar-used-width = 30
+bar-used-foreground-0 = #aaff77
+bar-used-foreground-1 = #aaff77
+bar-used-foreground-2 = #fba922
+bar-used-foreground-3 = #ff5555
+bar-used-indicator = |
+bar-used-indicator-font = 6
+bar-used-indicator-foreground = #ff
+bar-used-fill = ─
+bar-used-fill-font = 6
+bar-used-empty = ─
+bar-used-empty-font = 6
+bar-used-empty-foreground = #444444
 
 [module/wlan]
 type = internal/network
@@ -238,12 +271,12 @@ label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 date =
 date-alt = " %Y-%m-%d"
 
-time = %H:%M
+time = %H:%M:%S
 time-alt = %H:%M:%S
 
 format-prefix = 
@@ -353,3 +386,6 @@ menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
 ; vim:ft=dosini
+
+
+
