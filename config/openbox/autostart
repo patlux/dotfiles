@@ -39,8 +39,7 @@
 (compton) &
 
 # Panel
-#(sleep 1s && tint2) &
-(sleep 1s && ~/.bin/run-lemonbar) &
+(sleep 1s && ~/.config/polybar/launch.sh) &
 
 # Dock bar
 (sleep 1s && plank) &
