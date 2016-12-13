@@ -2,7 +2,7 @@
 {
   "editor.fontFamily": "Hack",
   "editor.glyphMargin": false,
-  "editor.fontSize": 11,
+  "editor.fontSize": 10,
   "editor.renderWhitespace": true,
   "editor.rulers": [ 80 ],
   "editor.tabSize": 2,
