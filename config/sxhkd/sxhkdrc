@@ -93,6 +93,13 @@ XF86Tools
   vlc
 
 
+#- SPOTIFY
+
+super + t
+  notify-send -t 1000 "Open spotify" "Start \`spotify\` .." & \
+  spotify --force-device-scale-factor=1.5
+
+
 
 # ---------------------------------------------------------------------------- #
 # SERVICES
