@@ -30,6 +30,7 @@
 		"SublimeLinter-contrib-sass-lint",
 		"Swift",
 		"TodoReview",
-		"TypeScript"
+		"TypeScript",
+		"zz File Icons"
 	]
 }
