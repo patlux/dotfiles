@@ -16,6 +16,7 @@
     "GitGutter",
     "GitSavvy",
     "Hide Menu",
+    "HTML-CSS-JS Prettify",
     "Jade",
     "MoveTab",
     "Package Control",
@@ -29,6 +30,7 @@
     "SublimeLinter-contrib-sass-lint",
     "Swift",
     "TodoReview",
-    "TypeScript"
+    "TypeScript",
+    "zz File Icons"
   ]
 }

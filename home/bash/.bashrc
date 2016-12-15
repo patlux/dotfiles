@@ -9,7 +9,9 @@
 # ---------------------------------------------------------------------------- #
 # TMUX (run only on desktop)
 
-[[ -n $DISPLAY && $XDG_VTNR -eq 1 && -z "$TMUX" ]] && exec tmux
+if command -v tmux>/dev/null; then
+ [ ! "$TERM" = "linux" ] && [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
 
 
 # ---------------------------------------------------------------------------- #

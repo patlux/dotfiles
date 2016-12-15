@@ -2,11 +2,12 @@
 {
   "editor.fontFamily": "Hack",
   "editor.glyphMargin": false,
-  "editor.fontSize": 12,
+  "editor.fontSize": 11,
   "editor.renderWhitespace": true,
   "editor.rulers": [ 80 ],
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
+  "editor.lineNumbers": "on",
   "editor.cursorStyle": "line",
   "search.exclude": {
     "**/node_modules": true,
