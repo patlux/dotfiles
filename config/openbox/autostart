@@ -42,7 +42,7 @@
 (sleep 1s && ~/.config/polybar/launch.sh) &
 
 # Dock bar
-(sleep 1s && plank) &
+(sleep 1s && ~/.config/plank/launch.sh) &
 
 # Conky
 # (sleep 1s && ~/.config/conky/start_all.sh) &
