@@ -10,7 +10,7 @@
 # TMUX (run only on desktop)
 
 if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+ [ ! "$TERM" = "linux" ] && [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
 
 
