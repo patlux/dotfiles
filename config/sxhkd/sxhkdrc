@@ -1,13 +1,8 @@
 # hotkeys
 
-# reload sxhkd
-super + Escape
-  notify-send -t 250 "Hotkeys reloaded!" & \
-  pkill -USR1 -x sxhkd
-
 super + shift + Escape
-  notify-send -t 250 "Reload top panel!" & \
-  ~/.config/polybar/launch.sh
+  ~/.bin/rofi-restart_menu.sh
+
 
 # ---------------------------------------------------------------------------- #
 # DESKTOP

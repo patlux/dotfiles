@@ -58,6 +58,7 @@ while IFS='' read -r cmd; do
   output+="%{r}"
   # output+="$(SysInfos)"
   output+="${blocks[vpn]}"
+  output+="  ${blocks[battery]}"
   output+="  ${blocks[cpu]}"
   output+="  ${blocks[ram]}"
   output+="  ${blocks[volume]}"

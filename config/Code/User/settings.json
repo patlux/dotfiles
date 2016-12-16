@@ -1,9 +1,9 @@
 // Place your settings in this file to overwrite the default settings
 {
   "editor.fontFamily": "Hack",
-  "editor.glyphMargin": false,
-  "editor.fontSize": 10,
-  "editor.renderWhitespace": true,
+  "editor.glyphMargin": true,
+  "editor.fontSize": 11,
+  "editor.renderWhitespace": "all",
   "editor.rulers": [ 80 ],
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
@@ -16,7 +16,7 @@
     "**/.sass-cache": true,
     "**/dist": true
   },
-  "gitProjectManager.baseProjectsFolders": [
+  "projectManager.vscode.baseFolders": [
     "/home/patrick/Documents/dev/"
   ],
   "files.associations": {
