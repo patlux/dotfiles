@@ -22,7 +22,7 @@ super + x
 #- LAUNCHER
 
 super + {space,p}
-  rofi -show run
+  rofi -monitor -2 -show run
 
 #- TERMINAL
 
