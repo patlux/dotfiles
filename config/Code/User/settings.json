@@ -1,8 +1,8 @@
-// Place your settings in this file to overwrite the default settings
+  // Place your settings in this file to overwrite the default settings
 {
   "editor.fontFamily": "Hack",
   "editor.glyphMargin": true,
-  "editor.fontSize": 11,
+  "editor.fontSize": 12,
   "editor.renderWhitespace": "all",
   "editor.rulers": [ 80 ],
   "editor.tabSize": 2,
@@ -22,5 +22,12 @@
   "files.associations": {
     "*.sass": "sass"
   },
-  "sasslint.enable": false
+  "sasslint.enable": false,
+  "window.zoomLevel": 0.3,
+  "gitProjectManager.baseProjectsFolders": [
+    "/home/patrick/Documents/dev"
+  ],
+  "gitProjectManager.storeRepositoriesBetweenSessions": true,
+  "gitProjectManager.ignoredFolders": ["node_modules", "bower_components"],
+  "window.menuBarVisibility": "toggle"
 }
