@@ -1,36 +1,37 @@
 {
-  "bootstrapped": true,
-  "in_process_packages":
-  [
-  ],
-  "installed_packages":
-  [
-    "Alignment",
-    "Babel",
-    "Base16 Color Schemes",
-    "Better CoffeeScript",
-    "Boxy Theme",
-    "BracketHighlighter",
-    "Dockerfile Syntax Highlighting",
-    "Emmet",
-    "GitGutter",
-    "GitSavvy",
-    "Hide Menu",
-    "HTML-CSS-JS Prettify",
-    "Jade",
-    "MoveTab",
-    "Package Control",
-    "Pretty JSON",
-    "Pug",
-    "Sass",
-    "SideBarEnhancements",
-    "SublimeLinter",
-    "SublimeLinter-coffeelint",
-    "SublimeLinter-contrib-pug-lint",
-    "SublimeLinter-contrib-sass-lint",
-    "Swift",
-    "TodoReview",
-    "TypeScript",
-    "zz File Icons"
-  ]
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"Alignment",
+		"Babel",
+		"Base16 Color Schemes",
+		"Better CoffeeScript",
+		"Boxy Theme",
+		"BracketHighlighter",
+		"Dockerfile Syntax Highlighting",
+		"Emmet",
+		"GitGutter",
+		"GitSavvy",
+		"Hide Menu",
+		"HTML-CSS-JS Prettify",
+		"INI",
+		"Jade",
+		"MoveTab",
+		"Package Control",
+		"Pretty JSON",
+		"Pug",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-coffeelint",
+		"SublimeLinter-contrib-pug-lint",
+		"SublimeLinter-contrib-sass-lint",
+		"Swift",
+		"TodoReview",
+		"TypeScript"
+	]
 }

@@ -1,64 +1,62 @@
 {
-  "always_show_minimap_viewport": true,
-  "bold_folder_labels": true,
-  "caret_style": "phase",
-  "color_scheme": "Packages/Boxy Theme/schemes/Boxy Tomorrow.tmTheme",
-  "draw_white_space": "all",
-  "ensure_newline_at_eof_on_save": true,
-  "fade_fold_buttons": false,
-  "font_face": "Hack",
-  "font_options":
-  [
-    "gray_antialias",
-    "subpixel_antialias"
-  ],
-  "font_size": 10,
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
-  "indent_guide_options":
-  [
-    "draw_normal",
-    "draw_active"
-  ],
-  "line_numbers": true,
-  "line_padding_bottom": 3,
-  "line_padding_top": 3,
-  "margin": 0,
-  "material_theme_accent_arc": true,
-  "material_theme_compact_panel": true,
-  "material_theme_compact_sidebar": true,
-  "material_theme_disable_folder_animation": false,
-  "material_theme_panel_separator": true,
-  "material_theme_small_statusbar": true,
-  "material_theme_small_tab": true,
-  "overlay_scroll_bars": "enabled",
-  "rulers":
-  [
-    80
-  ],
-  "show_encoding": true,
-  "show_line_endings": true,
-  "tab_size": 2,
-  "theme": "Boxy Tomorrow.sublime-theme",
-  "theme_accent_blue": true,
-  "theme_bar": true,
-  "theme_bar_logo_materialized": true,
-  "theme_dirty_materialized": true,
-  "theme_dropdown_materialized": true,
-  "theme_icons_materialized": true,
-  "theme_panel_switcher_materialized": true,
-  "theme_scrollbar_colored": true,
-  "theme_scrollbar_line": true,
-  "theme_scrollbar_semi_overlayed": true,
-  "theme_sidebar_border": true,
-  "theme_sidebar_folder_materialized": true,
-  "theme_sidebar_folder_mono": true,
-  "theme_sidebar_font_xs": true,
-  "theme_sidebar_size_xs": true,
-  "theme_statusbar_font_xs": true,
-  "theme_tab_arrows_hidden": true,
-  "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Tomorrow.tmTheme",
+	"dpi_scale": 1.8,
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": false,
+	"font_face": "Hack",
+	"font_options":
+	[
+		"gray_antialias",
+		"subpixel_antialias"
+	],
+	"font_size": 10,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_numbers": true,
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"margin": 0,
+	"material_theme_accent_arc": true,
+	"material_theme_compact_panel": true,
+	"material_theme_compact_sidebar": true,
+	"material_theme_disable_folder_animation": false,
+	"material_theme_panel_separator": true,
+	"material_theme_small_statusbar": true,
+	"material_theme_small_tab": true,
+	"overlay_scroll_bars": "enabled",
+	"rulers":
+	[
+		80
+	],
+	"show_encoding": true,
+	"show_line_endings": true,
+	"tab_size": 2,
+	"theme": "Boxy Tomorrow.sublime-theme",
+	"theme_accent_blue": true,
+	"theme_bar": true,
+	"theme_bar_logo_materialized": true,
+	"theme_dirty_materialized": true,
+	"theme_dropdown_materialized": true,
+	"theme_icons_materialized": true,
+	"theme_panel_switcher_materialized": true,
+	"theme_scrollbar_colored": true,
+	"theme_scrollbar_line": true,
+	"theme_scrollbar_semi_overlayed": true,
+	"theme_sidebar_border": true,
+	"theme_sidebar_folder_materialized": true,
+	"theme_sidebar_folder_mono": true,
+	"theme_tab_arrows_hidden": true,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
 }
