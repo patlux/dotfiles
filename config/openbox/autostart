@@ -19,7 +19,7 @@
 (numlockx) &
 
 # set mouse pointer speed
-(xset m 4/1 4) &
+(xset m 3/2 0) &
 
 # set lockscreen after 10 minutes
 (xautolock -time 10 -locker "$HOME_BIN/lock") &
@@ -51,7 +51,7 @@
 # (pnmixer) &
 
 # MEGA
-(sleep 3s && megasync) &
+# (sleep 3s && megasync) &
 
 # Data Manager For Crypted Files
 # (cryptkeeper) &
