@@ -52,8 +52,8 @@ window.label.text.justify: center
 
 border.width: 0
 border.color: #2d2d2d
-window.active.border.color: #2d2d2d
-window.inactive.border.color: #2d2d2d
+window.active.border.color: #000000
+window.inactive.border.color: #000000
 
 #- PADDING
 

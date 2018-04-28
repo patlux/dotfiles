@@ -6,9 +6,10 @@
 !  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝     ╚═╝
 
 URxvt.font: xft:fontFamily:pixelsize=fontSize
-URxvt.saveLines: 0
+! URxvt.saveLines: 0
 URxvt.iso14755: False
 
+URxvt.internalBorder: 25
 
 ! ---------------------------------------------------------------------------- !
 ! SCROLL
@@ -31,11 +32,11 @@ URxvt*scrollTtyKeypress: true
 ! ---------------------------------------------------------------------------- !
 ! EXTENSIONS
 
-! URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,selection-to-clipboard
 
 ! disable extensions
-URxvt.perl-ext:
-URxvt.perl-ext-common:
+! URxvt.perl-ext:
+! URxvt.perl-ext-common:
 
 
 ! ---------------------------------------------------------------------------- !
@@ -51,4 +52,4 @@ URxvt.perl-ext-common:
 ! ---------------------------------------------------------------------------- !
 ! THEME
 
-#include "urxvt-themes/visibone"
+#include "urxvt-themes/default"

@@ -1,19 +1,72 @@
 {
 	"always_show_minimap_viewport": true,
+	"binary_file_patterns":
+	[
+		"generated/*",
+		"*.tbz2",
+		"*.gzip",
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip"
+	],
 	"bold_folder_labels": true,
 	"caret_style": "phase",
+	"close_windows_when_empty": false,
 	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Tomorrow.tmTheme",
-	"dpi_scale": 1.8,
+	"create_window_at_startup": false,
+	"dpi_scale": 2.0,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
-	"font_face": "Hack",
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace"
+	],
+	"folder_exclude_patterns":
+	[
+		"node_modules",
+		".svn",
+		".git",
+		".hg",
+		"CVS"
+	],
+	"font_face": "Fira Code",
 	"font_options":
 	[
 		"gray_antialias",
 		"subpixel_antialias"
 	],
 	"font_size": 10,
+	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -35,9 +88,10 @@
 	"material_theme_small_statusbar": true,
 	"material_theme_small_tab": true,
 	"overlay_scroll_bars": "enabled",
+	"remember_open_files": false,
 	"rulers":
 	[
-		80
+		100
 	],
 	"show_encoding": true,
 	"show_line_endings": true,

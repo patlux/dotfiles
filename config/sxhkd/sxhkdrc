@@ -21,15 +21,29 @@ super + x
 
 #- LAUNCHER
 
-super + {space,p}
-  rofi -monitor -2 -show run
+#super + space
+#  rofi -monitor -2 -show run
 
 #- TERMINAL
 
-super + {q,Return}
+super + Return
+  notify-send -t 500 "Open Terminal" "Start \`alacritty\` .." & \
+  WAYLAND_DISPLAY= urxvt
+
+# wait for https://github.com/jwilm/alacritty/pull/657
+# super + Return
+#   notify-send -t 500 "Open Terminal" "Start \`alacritty\` .." & \
+#   WAYLAND_DISPLAY= alacritty -d 225 75
+
+super + shift + Return
   notify-send -t 500 "Open Terminal" "Start \`urxvt\` .." & \
   urxvt
 
+#- DISPLAY MANAGER
+
+super + p
+  notify-send -t 100 "Select Display" & \
+  ~/.bin/rofi-xrandr
 
 #- WEB BROWSER
 
@@ -58,23 +72,23 @@ super + shift + e
 
 #- FILE MANAGER
 
-super + f
-  notify-send -t 500 "Open File Manager" "Start \`thunar\` .." & \
-  thunar
+#super + f
+#  notify-send -t 500 "Open File Manager" "Start \`thunar\` .." & \
+#  thunar
 
 
 #- MAIL CLIENT
 
 super + m
-  notify-send -t 500 "Open Mail Client" "Start \`thunderbird\` .." & \
-  thunderbird
+  notify-send -t 500 "Open Mail Client" "Start \`nylas n1\` .." & \
+  nylas
 
 
 #- CHAT CLIENT
 
 super + c
-  notify-send -t 500 "Open Chat Client" "Start \`pidgin\` .." & \
-  pidgin
+  notify-send -t 500 "Open Chat Client" "Start \`franz-bin\` .." & \
+  franz-bin
 
 
 #- DOWNLOAD CLIENT
@@ -86,6 +100,10 @@ super + j
 XF86Tools
   notify-send -t 1000 "Open Media Player" "Start \`vlc\` .." & \
   vlc
+
+super + t
+  notify-send -t 1000 "Open spotify" "Start \`spotify\` .." & \
+  spotify --force-device-scale-factor=2.0
 
 
 
@@ -107,47 +125,61 @@ super + shift + F9
 # ---------------------------------------------------------------------------- #
 # DESKTOP SCREENSHOTS
 
-@Print
-  scrot \
-    '%Y-%m-%d-%H%M%S_$wx$h_scrot.jpg' \
-    -z \
-    -m \
-    -q 100 \
-    -e 'mv $f ~/Pictures/screenshots/' && \
+# Full desktop
 
-  notify-send -t 2000 "Shot Desktop Screenshot" "in ~/Pictures/screenshots/"
+@Print
+  maim \
+  --hidecursor \
+  ~/Pictures/screenshots/$(date +%Y-%m-%d-%H%M%S)-desktop.png \
+  && notify-send -t 2000 "Shot Desktop Screenshot" "in ~/Pictures/screenshots/"
+
+# Window
 
 shift + @Print
-  notify-send -t 2000 "Select Area for Screenshot" "Will saved in ~/Pictures/screenshots/" && \
-  scrot \
-    '%Y-%m-%d-%H%M%S_$wx$h_scrot.jpg' \
-    -z \
-    -s \
-    -q 100 \
-    -e 'mv $f ~/Pictures/screenshots/'
+  notify-send -t 2000 "Select a window" "" && \
+  maim \
+  --hidecursor \
+  --select --tolerance=9999999 \
+  | convert - \( +clone -background black -shadow 80x3+5+5 \) +swap -background none -layers merge +repage \
+  ~/Pictures/screenshots/$(date +%Y-%m-%d-%H%M%S)-window.png
+
+# Region
+
+super + shift + @Print
+  notify-send -t 2000 "Select a region" "" && \
+  maim \
+  --hidecursor \
+  --select --tolerance=0 \
+  | convert - \( +clone -background black -shadow 80x3+5+5 \) +swap -background none -layers merge +repage \
+  ~/Pictures/screenshots/$(date +%Y-%m-%d-%H%M%S)-selected.png
+
+# Open last screenshot
 
 super + @Print
   notify-send -t 2000 "Open last screenshot" "in Gimp" && \
   gimp `find ~/Pictures/screenshots/ -type f | sort -n | tail -n1`
 
 
-
 # ---------------------------------------------------------------------------- #
-# DESKTOP SCREENSHOTS
+# AUDIO
 
-XF86Audio{Prev,Next}
-  mpc -q {prev,next}
-
-#- MASTER
+XF86Audio{Prev,Next,Play,Stop}
+  dbus-send --print-reply \
+  --dest=org.mpris.MediaPlayer2.spotify \
+  /org/mpris/MediaPlayer2 \
+  org.mpris.MediaPlayer2.Player.{Previous,Next,PlayPause,Stop}
 
 XF86AudioRaiseVolume
-  amixer set Master 5%+
+  amixer set Master 5%+ && \
+  volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1)
 
 XF86AudioLowerVolume
-  amixer set Master 5%-
+  amixer set Master 5%- && \
+  volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1)
 
 XF86AudioMute
-  amixer set Master toggle
+  amixer set Master toggle; \
+  if amixer get Master | grep -Fq "[off]"; then volnoti-show -m; else volnoti-show $(amixer get Master | grep -Po "[0-9]+(?=%)" | tail -1); fi
 
 shift + KP_Add
   amixer set Master 5%+
@@ -165,3 +197,13 @@ shift + alt + KP_Add
 
 shift + alt + KP_Subtract
   amixer set PCM 5%-
+
+
+# ---------------------------------------------------------------------------- #
+# DISPLAY BRIGHTNESS
+
+XF86MonBrightnessUp
+  light -A 10
+
+XF86MonBrightnessDown
+  light -U 10

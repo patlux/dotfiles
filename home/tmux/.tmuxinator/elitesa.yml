@@ -1,7 +1,7 @@
 # ~/.tmuxinator/roompad.yml
 
-name: roompad
-root: ~/Documents/dev/roompad/
+name: elitesa
+root: ~/Documents/dev/roompad/ELITE-SA/
 
 # Optional tmux socket
 # socket_name: foo
@@ -10,7 +10,7 @@ root: ~/Documents/dev/roompad/
 pre: sudo systemctl start postgresql redis nginx
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-pre_window: rvm gemset use roompad
+pre_window: rvm gemset use elitesa
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -24,43 +24,31 @@ startup_window: backend
 windows:
   - backend:
       layout: main-horizontal
-      root: ~/Documents/dev/roompad/roompad-backend
+      root: ~/Documents/dev/roompad/ELITE-SA/hkm-backend
       panes:
         - git status
         -
   - backoffice:
       layout: main-horizontal
-      root: ~/Documents/dev/roompad/roompad-fe-backoffice
+      root: ~/Documents/dev/roompad/ELITE-SA/hkm-fe-backoffice
       panes:
         - git status
         -
-  - cms:
+  - tablet:
       layout: main-horizontal
-      root: ~/Documents/dev/roompad/roompad-fe-cms
+      root: ~/Documents/dev/roompad/ELITE-SA/hkm-fe-frontend
       panes:
         - git status
         -
-  - frontend:
+  - byod:
       layout: main-horizontal
-      root: ~/Documents/dev/roompad/roompad-fe-feapp
+      root: ~/Documents/dev/roompad/ELITE-SA/hkm-fe-frontend-byod
       panes:
         - git status
         -
-  - terminal:
+  - byod-android:
       layout: main-horizontal
-      root: ~/Documents/dev/roompad/roompad-fe-terminal
-      panes:
-        - git status
-        -
-  - shared:
-      layout: main-horizontal
-      root: ~/Documents/dev/roompad/roompad-fe-shared
-      panes:
-        - git status
-        -
-  - android:
-      layout: main-horizontal
-      root: ~/Documents/dev/roompad/roompad-android-app
+      root: ~/Documents/dev/roompad/ELITE-SA/hkm-byod-android
       panes:
         - git status
         -

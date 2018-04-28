@@ -7,14 +7,14 @@ read RES_X RES_Y <<<$(xdpyinfo | awk -F'[ x]+' '/dimensions:/{print $3, $4}')
 # https://www.reddit.com/r/unixporn/comments/4yj29e/i3lock_simple_blur_script/?st=is21che7&sh=d753f314
 # - NEW WAY -
 
-ffmpeg \
-  -f x11grab \
-  -video_size "$RES_X"x"$RES_Y" \
-  -y \
-  -i $DISPLAY \
-  -i $ICON \
-  -filter_complex "boxblur=5:1,overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2" \
-  -vframes 1 $IMAGE
+# ffmpeg \
+#   -f x11grab \
+#   -video_size "$RES_X"x"$RES_Y" \
+#   -y \
+#   -i $DISPLAY \
+#   -i $ICON \
+#   -filter_complex "boxblur=5:1,overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2" \
+#   -vframes 1 $IMAGE
 
 
 # - OLD WAY -
@@ -44,8 +44,16 @@ ffmpeg \
 # ---------------------------------------------------------------------------- #
 # CALL LOCKSCREEN
 
-i3lock -i $IMAGE
+# i3lock -c 000000
+# i3lock -e -f -c 000000 -i "/home/patrick/Pictures/wallpaper/archlinux_darkblue.png"
 
+revert() {
+  xset dpms 0 0 0
+}
+trap revert HUP INT TERM
+xset +dpms dpms 2 2 2
+i3lock -n -e -f -c 000000
+revert
 
 
 # ---------------------------------------------------------------------------- #

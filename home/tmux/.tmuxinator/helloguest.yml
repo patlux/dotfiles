@@ -23,25 +23,25 @@ startup_window: webview-app
 
 windows:
   - backend:
-      layout: main-vertical
+      layout: main-horizontal
       root: ~/Documents/dev/helloguest/helloguest-backend/
       panes:
         - git status
         -
   - ios-app:
-      layout: main-vertical
+      layout: main-horizontal
       root: ~/Documents/dev/helloguest/byod-ios-app/
       panes:
         - git status
         -
   - android-app:
-      layout: main-vertical
+      layout: main-horizontal
       root: ~/Documents/dev/helloguest/byod-android-app/
       panes:
         - git status
         -
   - webview-app:
-      layout: main-vertical
+      layout: main-horizontal
       root: ~/Documents/dev/helloguest/byod-webview-app/
       panes:
         - git status

@@ -9,9 +9,9 @@
 # ---------------------------------------------------------------------------- #
 # TMUX (run only on desktop)
 
-if command -v tmux>/dev/null; then
- [ ! "$TERM" = "linux" ] && [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
+#if command -v tmux>/dev/null; then
+# [ ! "$TERM" = "linux" ] && [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+#fi
 
 
 # ---------------------------------------------------------------------------- #
@@ -147,5 +147,14 @@ for config in ~/.bash/*.sh
     source $config
 done
 
+# fix gpg passphrase-prompt
+export GPG_TTY=$(tty)
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# export XKB_DEFAULT_LAYOUT=de; export XKB_DEFAULT_VARIANT=colemak; export XKB_DEFAULT_MODEL=pc101
+export XKB_DEFAULT_LAYOUT=de
+
+# https://wiki.archlinux.org/index.php/Firefox/Tweaks#Pixel-perfect_trackpad_scrolling
+MOZ_USE_XINPUT2=1

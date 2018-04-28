@@ -3,11 +3,16 @@
         "debug": false, 
         "delay": 0.25, 
         "error_color": "D02000", 
-        "gutter_theme": "Packages/Boxy Theme/linter/Boxy.gutter-theme", 
+        "gutter_theme": "Packages/Boxy Theme/extras/SublimeLinter/Boxy.gutter-theme", 
         "gutter_theme_excludes": [], 
         "lint_mode": "background", 
         "linters": {
             "coffeelint": {
+                "@disable": false, 
+                "args": [], 
+                "excludes": []
+            }, 
+            "eslint": {
                 "@disable": false, 
                 "args": [], 
                 "excludes": []
@@ -58,6 +63,7 @@
             "javascript (gruntfile)": "javascript", 
             "javascript (gulpfile)": "javascript", 
             "javascript (postcss)": "javascript", 
+            "javascript (puglint)": "javascript", 
             "javascript (stylelint)": "javascript", 
             "javascript (webpack)": "javascript", 
             "json (babel)": "json", 
@@ -66,9 +72,11 @@
             "json (eslint)": "json", 
             "json (npm)": "json", 
             "json (postcss)": "json", 
+            "json (puglint)": "json", 
             "json (settings)": "json", 
             "json (stylelint)": "json", 
             "json (sublime)": "json", 
+            "json (tern js)": "json", 
             "magicpython": "python", 
             "php": "html", 
             "python django": "python", 

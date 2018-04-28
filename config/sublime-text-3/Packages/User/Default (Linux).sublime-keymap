@@ -7,7 +7,8 @@
   { "keys": ["super+shift+enter"], "command": "max_pane" },
   { "keys": ["ctrl+0"], "command": "focus_side_bar" },
   { "keys": [ "ctrl+k", "ctrl+n" ], "command": "focus_neighboring_group", "args": {"forward": false} },
-  { "keys": [ "ctrl+shift+o" ], "command": "prompt_open_folder" }
+  { "keys": [ "ctrl+shift+o" ], "command": "prompt_open_folder" },
 
-
+  { "keys": ["ctrl+shift+#"], "command": "show_panel", "args": {"panel": "console", "toggle": true} }
 ]
+

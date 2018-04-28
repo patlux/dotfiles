@@ -24,8 +24,11 @@
 # set lockscreen after 10 minutes
 (xautolock -time 10 -locker "$HOME_BIN/lock") &
 
+# start lockscreen
+(xss-lock -- "$HOME_BIN/lock") &
+
 # start hotkey daemon
-(sxhkd) &
+# (sxhkd) &
 
 
 

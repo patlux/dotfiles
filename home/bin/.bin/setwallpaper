@@ -3,26 +3,32 @@
 TARGET="$HOME/Pictures/images/wallpaper/.current"
 IMAGE=${1:-$TARGET}
 
-notify-send 'Set wallpaper' $IMAGE
 
 # ---------------------------------------------------------------------------- #
 # MODIFY IMAGE
 
-/usr/bin/cp "$IMAGE" "$TARGET" &> /dev/null
+if [ ! "$TARGET" = "$IMAGE" ]; then
 
-read RES_X RES_Y <<<$(xdpyinfo | awk -F'[ x]+' '/dimensions:/{print $3, $4}')
+  /usr/bin/cp "$IMAGE" "$TARGET" &> /dev/null
 
-gm mogrify \
-  -compress JPEG \
-  -quality 100 \
-  -crop "$RES_X"x"$RES_Y"+0+0 \
-  -region "$RES_X"x18+0+0 \
-  -blur 10x25 \
-  "$TARGET"
+  # read RES_X RES_Y <<<$(xdpyinfo | awk -F'[ x]+' '/dimensions:/{print $3, $4}')
 
+  # gm mogrify \
+  #   -compress JPEG \
+  #   -quality 100 \
+  #   -crop "$RES_X"x"$RES_Y"+0+0 \
+  #   -region "$RES_X"x18+0+0 \
+  #   -blur 10x25 \
+  #   "$TARGET"
+
+  notify-send 'Set wallpaper' $IMAGE
+else
+  notify-send 'Update wallpaper' $IMAGE
+fi
 
 
 # ---------------------------------------------------------------------------- #
 # SET BACKGROUND IMAGE
 
-hsetroot -center "$TARGET"
+# hsetroot -center "$TARGET"
+feh --bg-fill "$TARGET"
