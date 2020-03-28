@@ -12,7 +12,7 @@ echo "alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=\$HOME'" >> ~/.zshr
 dgit reset --hard
 ```
 
-## ✨ Bootstraping
+## ✨ Bootstrapping
 
 ```bash
 echo "alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=\$HOME'" >> ~/.zshrc
