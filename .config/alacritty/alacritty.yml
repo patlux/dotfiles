@@ -1,51 +1,73 @@
-# Colors (Ayu Dark)
+# Colors (Ayu Mirage)
 colors:
   # Default colors
   primary:
-    background: '0x0A0E14'
-    foreground: '0xB3B1AD'
+    background: '#202734'
+    foreground: '#CBCCC6'
 
   # Normal colors
   normal:
-    black: '0x01060E'
-    red: '0xEA6C73'
-    green: '0x91B362'
-    yellow: '0xF9AF4F'
-    blue: '0x53BDFA'
-    magenta: '0xFAE994'
-    cyan: '0x90E1C6'
-    white: '0xC7C7C7'
+    black: '#191E2A'
+    red: '#FF3333'
+    green: '#BAE67E'
+    yellow: '#FFA759'
+    blue: '#73D0FF'
+    magenta: '#FFD580'
+    cyan: '#95E6CB'
+    white: '#C7C7C7'
 
   # Bright colors
   bright:
-    black: '0x686868'
-    red: '0xF07178'
-    green: '0xC2D94C'
-    yellow: '0xFFB454'
-    blue: '0x59C2FF'
-    magenta: '0xFFEE99'
-    cyan: '0x95E6CB'
-    white: '0xFFFFFF'
+    black: '#686868'
+    red: '#F27983'
+    green: '#A6CC70'
+    yellow: '#FFCC66'
+    blue: '#5CCFE6'
+    magenta: '#FFEE99'
+    cyan: '#95E6CB'
+    white: '#FFFFFF'
 
 font:
+  size: 16.0
+  
   # Normal (roman) font face
   normal:
-    # Font family
-    #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux) monospace
-    #   - (Windows) Consolas
-    family: 'Fira Code'
-
+    family: JetBrains Mono
     # The `style` can be specified to pick a specific face.
-    style: Retina
-  size: 16.0
+    style: ExtraLight 
 
+  # Bold font face
+  bold:
+    family: JetBrains Mono
+    # The `style` can be specified to pick a specific face.
+    style: Bold
 
+  # Italic font face
+  italic:
+    family: JetBrains Mono
+    # The `style` can be specified to pick a specific face.
+    style: Italic   
+
+# See: https://github.com/alacritty/alacritty/wiki/Keyboard-mappings#german-de_de
 key_bindings:
-  - { key: N,        mods: Command, command: { program: "open", args: ["-n", "/Applications/Alacritty.app"] } }
-
+  - { key: Comma,     mods: Command,      command:
+      {program: "open", args: ["~/.config/alacritty/alacritty.yml"]}     }
+  - { key: N,         mods: Command,      action: SpawnNewInstance       }
+  - { key: Left,     mods: Alt,     chars: "\x1bb"                       } # one word left
+  - { key: Right,    mods: Alt,     chars: "\x1bf"                       } # one word right
+  - { key: Left,     mods: Command, chars: "\x1bOH",   mode: AppCursor   } # Home
+  - { key: Right,    mods: Command, chars: "\x1bOF",   mode: AppCursor   } # End
+  - { key: 28,      mods: Alt, chars: "{" }
+  - { key: 25,      mods: Alt, chars: "}" }
+  - { key: 37,      mods: Alt, chars: "@" }
+  - { key: 26,      mods: Alt|Shift, chars: "\\" }
+  - { key: 26,      mods: Alt, chars: "|" }
+  # - { key: 45,      mods: Alt, chars: "~" }
+  - { key: 23,      mods: Alt, chars: "[" }
+  - { key: 22,      mods: Alt, chars: "]" }
 
 window:
-  decorations: none
+  decorations: full 
+  padding:
+    x: 5 
+    y: 5 
