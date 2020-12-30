@@ -1,0 +1,44 @@
+[user]
+	name = Patrick Wozniak
+	email = email@patwoz.de
+	signingkey = 0D4DE3BE5B9D660B
+[core]
+	editor = nano
+	pager = delta --dark --theme="ansi-dark"
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[alias]
+	co = checkout
+	ci = commit
+	br = branch
+	pushf = push --force-with-lease
+        cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+[commit]
+	gpgsign = true
+[credential]
+	helper = osxkeychain
+[github]
+	username = patlux
+
+[includeIf "gitdir:~/dev/dwins/"]
+    path = ~/dev/dwins/.gitconfig
+[pull]
+	rebase = true
+[interactive]
+    diffFilter = delta --color-only
+
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
