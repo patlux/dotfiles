@@ -33,7 +33,7 @@ export LANG="en_US"
 export MANPAGER="less -X"
 
 # JAVA set to java 8
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # MacOS Java 10 fix for the android sdk
 # export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 
