@@ -10,6 +10,7 @@ export PATH="/usr/local/bin:$PATH"
 export N_PREFIX="$HOME/.bin/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 export PATH="$PATH:$HOME/.bin"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=/opt/homebrew/bin:$PATH
 
 # - ALIAS
 
