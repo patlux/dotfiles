@@ -48,9 +48,9 @@ export PATH=$ANDROID_HOME/emulator:$PATH
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nano'
+  export EDITOR='nvim'
 else
-  export EDITOR='nano'
+  export EDITOR='nvim'
 fi
 
 # Prefer US English and use UTF-8
