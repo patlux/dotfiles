@@ -35,6 +35,11 @@ rsync -avR \
 
 rsync -avR $ROOT_DIR/.config/alacritty/alacritty.yml $TMP_DIR
 rsync -avR $ROOT_DIR/dev/dwins/.gitconfig $TMP_DIR
+rsync -avR \
+  $ROOT_DIR/.config/nvim/init.vim \
+  $ROOT_DIR/.config/nvim/coc-config.vim \
+  $ROOT_DIR/.config/nvim/vim-plug/plugins.vim \
+  $TMP_DIR
 
 WORK_DIR="${TMP_DIR}${ROOT_DIR}"
 
