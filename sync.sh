@@ -38,6 +38,7 @@ rsync -avR $ROOT_DIR/dev/dwins/.gitconfig $TMP_DIR
 rsync -avR \
   $ROOT_DIR/.config/nvim/init.vim \
   $ROOT_DIR/.config/nvim/coc-config.vim \
+  $ROOT_DIR/.config/nvim/coc-settings.json \
   $ROOT_DIR/.config/nvim/vim-plug/plugins.vim \
   $TMP_DIR
 

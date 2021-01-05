@@ -1,4 +1,4 @@
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-yaml', 'coc-tailwindcss', 'coc-flow']
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-yaml', 'coc-tailwindcss', 'coc-flow', 'coc-prettier']
 
 source $HOME/.config/nvim/vim-plug/plugins.vim
 
@@ -25,6 +25,9 @@ if !exists('*ReloadVimrc')
 endif
 autocmd! BufWritePost $MYVIMRC call ReloadVimrc()
 
+" NerdTree
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.DS_Store$', '\.git$'] 
 
 " NerdTree plugin
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -40,3 +43,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
+
+" coc-prettier
+" Add command :Prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
