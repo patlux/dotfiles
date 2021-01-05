@@ -1,11 +1,9 @@
 # Colors (Ayu Mirage)
 colors:
-  # Default colors
   primary:
     background: '#202734'
     foreground: '#CBCCC6'
 
-  # Normal colors
   normal:
     black: '#191E2A'
     red: '#FF3333'
@@ -15,8 +13,7 @@ colors:
     magenta: '#FFD580'
     cyan: '#95E6CB'
     white: '#C7C7C7'
-
-  # Bright colors
+ 
   bright:
     black: '#686868'
     red: '#F27983'
@@ -29,24 +26,8 @@ colors:
 
 font:
   size: 16.0
-  
-  # Normal (roman) font face
   normal:
-    family: JetBrains Mono
-    # The `style` can be specified to pick a specific face.
-    style: ExtraLight 
-
-  # Bold font face
-  bold:
-    family: JetBrains Mono
-    # The `style` can be specified to pick a specific face.
-    style: Bold
-
-  # Italic font face
-  italic:
-    family: JetBrains Mono
-    # The `style` can be specified to pick a specific face.
-    style: Italic   
+    family: MesloLGS NF 
 
 # See: https://github.com/alacritty/alacritty/wiki/Keyboard-mappings#german-de_de
 key_bindings:
