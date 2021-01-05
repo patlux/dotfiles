@@ -18,5 +18,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'junegunn/fzf.vim'
   " Makes nvim as smart as vscode
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " File explorer
+  Plug 'preservim/nerdtree'
 
 call plug#end()
