@@ -17,6 +17,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/.bin:$PATH # custom binaries in home folder
 export PATH=$HOME/.bin/n/bin:$PATH # node 
 export PATH=$HOME/.cargo/bin:$PATH # rust
+export PATH=$(ruby -e "puts Gem.user_dir")/bin:$PATH # rubygems
 export PATH=/opt/homebrew/bin:$PATH # brew on apple silicon
 export PATH="/usr/local/bin:$PATH"
 

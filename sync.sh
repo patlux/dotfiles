@@ -31,6 +31,7 @@ ROOT_DIR=$HOME
 rsync -avR \
   $ROOT_DIR/.zshrc \
   $ROOT_DIR/.gitconfig \
+  $ROOT_DIR/.gemrc \
   $TMP_DIR
 
 rsync -avR $ROOT_DIR/.config/alacritty/alacritty.yml $TMP_DIR
