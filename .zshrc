@@ -31,6 +31,7 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 export EDITOR='vim'
 alias vim='nvim'
+export FZF_DEFAULT_COMMAND='fd --type f'
 
 # JAVA
 
