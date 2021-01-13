@@ -31,7 +31,8 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 export EDITOR='vim'
 alias vim='nvim'
-export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND='fd --type file --hidden --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # JAVA
 
@@ -51,6 +52,11 @@ export PATH=$ANDROID_HOME/emulator:$PATH
 # BASH 
 
 export HISTCONTROL=ignoreboth
+
+# CUSTOM
+
+fpath=( $HOME/.config/custom/zshfn "${fpath[@]}" )
+autoload -Uz $fpath[1]/*(.:t)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

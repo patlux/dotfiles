@@ -25,9 +25,40 @@ if !exists('*ReloadVimrc')
 endif
 autocmd! BufWritePost $MYVIMRC call ReloadVimrc()
 
+set nu relativenumber
+set cursorline " highlight current line
+
+set hls          "highlight search matches
+set is           "higlight on search
+nnoremap <CR> :noh<CR><CR>
+
+" Copy to clipboard with capital Y in visual mode
+noremap Y "*y
+
+" Overwrite .js with javascriptreact
+augroup filetype_jsx
+    autocmd!
+    autocmd FileType javascript set filetype=javascriptreact
+augroup END
+
+" Moving around between panes
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Avoid backups and extra files creation
+set nowritebackup
+set noswapfile
+set nobackup
+
+" vim-javascript (included in vim-polygot)
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
+
 " NerdTree
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.DS_Store$', '\.git$'] 
+let NERDTreeIgnore=['\.DS_Store$', '\.git$']
 
 " NerdTree plugin
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -35,10 +66,9 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-" Start NERDTree when Vim starts with a directory argument.
+" Start NERDTree, unless a file or session is specified, eg. vim -S session_file.vim.
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
-    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') && v:this_session == '' | NERDTree | endif
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
@@ -47,3 +77,9 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " coc-prettier
 " Add command :Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" Ctrl-P
+let g:ctrlp_user_command = 'fd --type f --color=never "" %s'
+let g:ctrlp_use_caching = 0
+
+

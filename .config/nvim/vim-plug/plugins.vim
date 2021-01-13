@@ -20,5 +20,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " File explorer
   Plug 'preservim/nerdtree'
+  " Ctrl-P
+  Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
