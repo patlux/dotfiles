@@ -22,5 +22,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'preservim/nerdtree'
   " Ctrl-P
   Plug 'ctrlpvim/ctrlp.vim'
+  " Toggle linenumbers on window focus
+  Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 call plug#end()
