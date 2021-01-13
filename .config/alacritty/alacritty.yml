@@ -48,7 +48,7 @@ key_bindings:
   - { key: 22,      mods: Alt, chars: "]" }
 
 window:
-  decorations: full 
+  decorations: buttonless 
   padding:
-    x: 5 
-    y: 5 
+    x: 10 
+    y: 10 
