@@ -24,5 +24,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'ctrlpvim/ctrlp.vim'
   " Toggle linenumbers on window focus
   Plug 'jeffkreeftmeijer/vim-numbertoggle'
+  " Search project files
+  Plug 'mileszs/ack.vim'
 
 call plug#end()
