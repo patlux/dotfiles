@@ -1,0 +1,34 @@
+# Open terminal
+cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+
+# Restart yabai 
+shift + lctrl + alt - r : \
+    /usr/bin/env osascript <<< \
+        'display notification "Restarting yabai" with title "yabai"'; \
+    brew services restart yabai
+
+# Reload skhd 
+shift + lctrl + alt - s : \
+    /usr/bin/env osascript <<< \
+        'display notification "Reload skhd" with title "skhd"'; \
+    skhd -r
+
+# Navigation
+lalt - h : yabai -m window --focus west
+lalt - j : yabai -m window --focus south
+lalt - k : yabai -m window --focus north
+lalt - l : yabai -m window --focus east
+
+# Moving windows
+shift + alt - h : yabai -m window --warp west
+shift + alt - j : yabai -m window --warp south
+shift + alt - k : yabai -m window --warp north
+shift + alt - l : yabai -m window --warp east
+
+# Float / Unfloat window
+shift + alt - space : \
+    yabai -m window --toggle float; \
+    yabai -m window --toggle border
+
+# Split windows
+alt - s : yabai -m window --toggle split 
