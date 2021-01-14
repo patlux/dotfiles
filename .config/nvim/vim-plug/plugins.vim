@@ -26,5 +26,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'jeffkreeftmeijer/vim-numbertoggle'
   " Search project files
   Plug 'mileszs/ack.vim'
+  " Statusbar
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()

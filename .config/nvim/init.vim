@@ -56,6 +56,9 @@ set nobackup
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
 
+" vim-airline
+let g:airline_theme='ayu_mirage'
+
 " NerdTree
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.DS_Store$', '\.git$']
