@@ -26,7 +26,8 @@ export PATH="/usr/local/bin:$PATH"
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
 alias mkdir='mkdir -p -v'
 alias nano='nano -w -c'
-alias ll='ls -lh'
+alias ls='exa'
+alias ll='exa -l --all --all --group-directories-first --git'
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 export EDITOR='vim'
