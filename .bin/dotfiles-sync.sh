@@ -43,6 +43,7 @@ rsync -avR \
   $TMP_DIR
 
 rsync -avR $ROOT_DIR/.config/alacritty $TMP_DIR
+rsync -avR $ROOT_DIR/.config/kitty $TMP_DIR
 rsync -avR $ROOT_DIR/.config/yabai $TMP_DIR
 rsync -avR $ROOT_DIR/.config/skhd $TMP_DIR
 
