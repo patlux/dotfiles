@@ -32,6 +32,7 @@ rsync -avR \
   $ROOT_DIR/.zshrc \
   $ROOT_DIR/.gitconfig \
   $ROOT_DIR/.gemrc \
+  $ROOT_DIR/Brewfile \
   $TMP_DIR
 
 rsync -avR $ROOT_DIR/dev/dwins/.gitconfig $TMP_DIR
