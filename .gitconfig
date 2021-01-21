@@ -24,21 +24,27 @@
 	ci = commit
 	br = branch
 	pushf = push --force-with-lease
-        cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+  cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+  dff = difftool --no-symlinks --dir-diff
 [commit]
 	gpgsign = true
 [credential]
 	helper = osxkeychain
 [github]
 	username = patlux
-
 [includeIf "gitdir:~/dev/dwins/"]
     path = ~/dev/dwins/.gitconfig
 [pull]
 	rebase = true
 [interactive]
     diffFilter = delta --color-only
-
-[difftool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
-
+[diff]
+    tool = kitty
+    guitool = kitty.gui
+[difftool]
+    prompt = false
+    trustExitCode = true
+[difftool "kitty"]
+    cmd = kitty +kitten diff $LOCAL $REMOTE
+[difftool "kitty.gui"]
+    cmd = kitty kitty +kitten diff $LOCAL $REMOTE

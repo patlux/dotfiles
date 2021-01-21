@@ -1,19 +1,20 @@
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-yaml', 'coc-tailwindcss', 'coc-flow', 'coc-prettier']
-
 source $HOME/.config/nvim/vim-plug/plugins.vim
-
-" See: https://github.com/neoclide/coc.nvim#example-vim-configuration 
-source $HOME/.config/nvim/coc-config.vim
 
 set termguicolors
 let ayucolor="mirage"
 colorscheme ayu
 
 set number
+set title
 
 set hidden
 let mapleader=","
 nnoremap <Leader>v :e $MYVIMRC<cr>
+
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-yaml', 'coc-tailwindcss', 'coc-flow', 'coc-prettier', 'coc-rls', 'coc-tsserver', 'coc-eslint']
+
+" See: https://github.com/neoclide/coc.nvim#example-vim-configuration 
+source $HOME/.config/nvim/coc-config.vim
 
 " Reloads vimrc after saving but keep cursor position
 if !exists('*ReloadVimrc')
@@ -104,3 +105,4 @@ cnoreabbrev Ack Ack!
 
 " Maps <leader>/ so we're ready to type the search keyword
 nnoremap <Leader>/ :Ack!<Space>
+

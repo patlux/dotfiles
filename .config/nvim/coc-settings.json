@@ -1,3 +1,8 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "typescript", "typescriptreact", "javascript"]
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "typescript", "typescriptreact", "javascript"],
+  "javascript.validate.enable": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "flow.stopFlowOnExit": true,
+  "flow.lazyMode": "fs"
 }

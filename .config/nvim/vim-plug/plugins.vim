@@ -29,5 +29,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Statusbar
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  " Surround
+  Plug 'tpope/vim-surround'
+  " Highlighting colors
+  Plug 'chrisbra/colorizer'
 
 call plug#end()
