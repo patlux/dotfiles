@@ -28,6 +28,32 @@ cd ~
 dgit reset --hard
 ```
 
+## Keyboard bindings
+
+### Window Management
+
+Controlled by [skhd](https://github.com/koekeishiya/skhd). Managed by [yabai](https://github.com/koekeishiya/yabai).
+
+| Shortcut                 | Description      |
+| ------------------------ | ---------------- |
+| `alt` + `hjkl`           | Switch focus     |
+| `alt` + `shift` + `hjkl` | Swap windows     |
+| `alt` + `s`              | Toggle splitting |
+
+### Vim
+
+| Shortcut         | Description  |
+| ---------------- | ------------ |
+| `lctrl` + `hjkl` | Switch focus |
+
+### Special
+
+Controlled by [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements).
+
+| Shortcut      | Description                                                        |
+| ------------- | ------------------------------------------------------------------ |
+| `rctrl` + `l` | Mapped to `@` (because Keychron v2 doesn't have a right option key |
+
 ## 🦸‍♂️⤵️
 
 Created with 🔥 by [@de_patwoz](https://twitter.com/de_patwoz)
