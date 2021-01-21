@@ -34,11 +34,14 @@ dgit reset --hard
 
 Controlled by [skhd](https://github.com/koekeishiya/skhd). Managed by [yabai](https://github.com/koekeishiya/yabai).
 
-| Shortcut                 | Description      |
-| ------------------------ | ---------------- |
-| `alt` + `hjkl`           | Switch focus     |
-| `alt` + `shift` + `hjkl` | Swap windows     |
-| `alt` + `s`              | Toggle splitting |
+| Shortcut                   | Description          |
+| -------------------------- | -------------------- |
+| `alt` + `hjkl`             | Switch focus         |
+| `lctrl` + `cmd` + `hjkl`   | Swap windows         |
+| `alt` + `s`                | Toggle splitting     |
+| `alt` + `shift` + `hjkl`   | Increase window size |
+| `lctrl` + `shift` + `hjkl` | Decrease window size |
+| `alt` + `shift` + `0`      | Balance windows      |
 
 ### Vim
 
