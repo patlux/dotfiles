@@ -18,6 +18,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH # brew on apple silicon
 export GOPATH=$HOME/.golang
 export PATH=$GOPATH/bin:$PATH
+export GEM_HOME=$(ruby -e "puts Gem.user_dir")
 export PATH=$(ruby -e "puts Gem.user_dir")/bin:$PATH # rubygems
 export PATH=$HOME/.cargo/bin:$PATH # rust
 export PATH=$HOME/.bin/n/bin:$PATH # node 
@@ -38,6 +39,7 @@ export FZF_DEFAULT_COMMAND='fd --type file --hidden --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias dff="kitty +kitten diff"
 export N_PREFIX=$HOME/.bin/n
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
 # JAVA
 
