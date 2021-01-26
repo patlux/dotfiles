@@ -35,6 +35,7 @@ rsync -avR \
   $ROOT_DIR/Brewfile \
   $TMP_DIR
 
+rsync -avR $ROOT_DIR/Library/LaunchAgents/de.patwoz.KeyRemapping.plist $TMP_DIR
 rsync -avR $ROOT_DIR/dev/dwins/.gitconfig $TMP_DIR
 rsync -avR \
   $ROOT_DIR/.config/nvim/init.vim \

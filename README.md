@@ -49,13 +49,15 @@ Controlled by [skhd](https://github.com/koekeishiya/skhd). Managed by [yabai](ht
 | ---------------- | ------------ |
 | `lctrl` + `hjkl` | Switch focus |
 
-### Special
+### Mappings
 
-Controlled by [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements).
+Controlled by [hidutil](https://developer.apple.com/library/archive/technotes/tn2450/_index.html).
 
-| Shortcut      | Description                                                        |
-| ------------- | ------------------------------------------------------------------ |
-| `rctrl` + `l` | Mapped to `@` (because Keychron v2 doesn't have a right option key |
+| Shortcut                             | Description                                                       |
+| ------------------------------------ | ----------------------------------------------------------------- |
+| `right cmd` mapped to `right option` | To enter `@` (because Keychron v2 doesn't have a right option key |
+| `capslock` mapped to `esc`           | Easier access to `esc`                                            |
+| `esc` mapped to `^`                  | Easier to enter something like `^g` :)                            |
 
 ## 🦸‍♂️⤵️
 
