@@ -40,6 +40,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   \}
   " git
   Plug 'tpope/vim-fugitive'
+  " quick-scope
+  Plug 'unblevable/quick-scope'
 
 call plug#end()
 
@@ -200,4 +202,12 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_browse_split = 2 
 let g:netrw_winsize = 25
+" }}}
+
+" quick-scope {{{
+
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+
 " }}}
