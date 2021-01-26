@@ -4,5 +4,6 @@
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
   "flow.stopFlowOnExit": true,
-  "flow.lazyMode": "fs"
+  "flow.lazyMode": "fs",
+  "tsserver.enableJavascript": true 
 }
