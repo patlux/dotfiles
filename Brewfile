@@ -22,6 +22,7 @@ cask "cleanshot"
 cask "pixelsnap"
 # cask "karabiner-elements"
 cask "appcleaner"
+cask "keyboard-maestro"
 
 tap "mattisg/mattisg"
 brew "adblock"
