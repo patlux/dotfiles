@@ -23,6 +23,7 @@ cask "pixelsnap"
 # cask "karabiner-elements"
 cask "appcleaner"
 cask "keyboard-maestro"
+cask "netnewswire"
 
 tap "mattisg/mattisg"
 brew "adblock"
