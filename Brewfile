@@ -9,6 +9,7 @@ brew "wireguard-tools"
 brew "fd"
 brew "ripgrep"
 brew "exa"
+brew "node"
 
 cask "react-native-debugger"
 cask "figma"
