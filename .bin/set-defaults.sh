@@ -51,6 +51,9 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write -g KeyRepeat -int 2 # "Key Repeat"
 defaults write -g InitialKeyRepeat -int 15 # "Delay Until Repeat"
 
+# enable Ctrl + Cmd + Click in any window to move
+defaults write -g NSWindowShouldDragOnGesture -bool true
+
 # ------------------------------------------------------------------------------------------------ -
 # Screen
 
