@@ -42,6 +42,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'tpope/vim-fugitive'
   " quick-scope
   Plug 'unblevable/quick-scope'
+  " keybindings helper
+  Plug 'liuchengxu/vim-which-key'
 
 call plug#end()
 
@@ -213,4 +215,9 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 
+" }}}
+
+" Which key {{{
+nnoremap <silent> <Space> :WhichKey '<Space>'<CR>
+nnoremap <silent> <leader> :WhichKey ','<CR>
 " }}}
