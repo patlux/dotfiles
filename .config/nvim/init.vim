@@ -112,7 +112,8 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-rls',
   \ 'coc-tsserver',
-  \ 'coc-eslint'
+  \ 'coc-eslint',
+  \ 'coc-explorer'
   \ ]
 
 " See: https://github.com/neoclide/coc.nvim#example-vim-configuration 
@@ -202,6 +203,8 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_browse_split = 2 
 let g:netrw_winsize = 25
+
+:nmap <space>f :CocCommand explorer<CR>
 " }}}
 
 " quick-scope {{{
