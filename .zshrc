@@ -44,6 +44,14 @@ alias ibrew='arch -x86_64 /usr/local/bin/brew'
 # JAVA
 
 export JAVA_HOME=`/usr/libexec/java_home`
+useJava8 () {
+  export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+  java -version
+}
+useJava11 () {
+  export JAVA_HOME=`/usr/libexec/java_home -v 11.0`
+  java -version
+}
 
 # ANDROID
 
