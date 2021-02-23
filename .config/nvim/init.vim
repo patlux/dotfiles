@@ -44,6 +44,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'unblevable/quick-scope'
   " keybindings helper
   Plug 'liuchengxu/vim-which-key'
+  " Show indent level lines
+  Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
@@ -156,11 +158,14 @@ set colorcolumn=120       " max length 120 characters
 set background=dark       " Use colors that suit a dark background
 set showcmd
 set showmatch             " Show matching closing brackets
+set showbreak=↪\
+set list
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
+" set listchars+=eol:¬
 " format text
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set autoindent
 
-" Search
 set hlsearch      " highlight search matches
 set incsearch     " higlight on search
 set ignorecase
@@ -171,7 +176,6 @@ nnoremap <CR> :noh<CR><CR>
 set backupdir=~/.vim/backups/,/tmp/
 set directory=~/.vim/swp/,/tmp/
 set undodir=~/.vim/undo/,/tmp/
-
 " }}}
 
 " ack.vim {{{
@@ -233,3 +237,4 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=und
 nnoremap <silent> <Space> :WhichKey '<Space>'<CR>
 nnoremap <silent> <leader> :WhichKey ','<CR>
 " }}}
+
