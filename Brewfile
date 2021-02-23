@@ -25,6 +25,7 @@ cask "pixelsnap"
 cask "appcleaner"
 cask "keyboard-maestro"
 cask "netnewswire"
+cask "startupizer"
 
 tap "mattisg/mattisg"
 brew "adblock"
