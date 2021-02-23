@@ -1,6 +1,3 @@
-# Open terminal
-cmd - return : /Applications/kitty.app/Contents/MacOS/kitty -d $HOME
-
 # Restart yabai 
 shift + lctrl + alt - r : \
     /usr/bin/env osascript <<< \
