@@ -10,6 +10,7 @@ brew "fd"
 brew "ripgrep"
 brew "exa"
 brew "node"
+brew "golangci-lint"
 
 cask "react-native-debugger"
 cask "figma"
