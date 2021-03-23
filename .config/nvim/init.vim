@@ -1,5 +1,11 @@
 " vim:foldmethod=marker:foldlevel=0
 
+" Polyglot {{{
+" not working, so disable:
+let g:vim_markdown_conceal_code_blocks = 0
+let g:polyglot_disabled = ['markdown']
+" }}}
+
 " Plugins {{{
 
 " auto-install vim-plug
@@ -14,7 +20,7 @@ set nocompatible
 call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Color Theme
-  Plug 'ayu-theme/ayu-vim'
+  Plug 'sainnhe/sonokai'
   " A collection of language packs
   Plug 'sheerun/vim-polyglot'
  " Search files
@@ -47,17 +53,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Show indent level lines
   Plug 'Yggdroot/indentLine'
 
-call plug#end()
+ call plug#end()
 
 " }}}
 
 " Statusbar {{{
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'sonokai',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ],
-      \             [  'coc_info', 'coc_hints', 'coc_errors', 'coc_warnings', 'coc_ok' ], [ 'coc_status'  ] ]
+      \             [ 'coc_info', 'coc_hints', 'coc_errors', 'coc_warnings', 'coc_ok' ], [ 'coc_status'  ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead'
@@ -73,16 +79,26 @@ set noshowmode
 " }}}
 
 " Appearance {{{
-set termguicolors
-let ayucolor="mirage"
+if has('termguicolors')
+  set termguicolors
+endif
 syntax on
-colorscheme ayu
+" let ayucolor="mirage"
+" colorscheme ayu
+" let g:sonokai_style = 'andromeda'
+let g:sonokai_style = 'atlantis'
+" let g:sonokai_style = 'maia'
+colorscheme sonokai
 " }}}
 
 " Mappings {{{
 let mapleader=","
 nnoremap <Leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Buffer
+" https://stackoverflow.com/questions/1444322/how-can-i-close-a-buffer-without-closing-the-window
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 
 " Mappings to transform text
 inoremap <c-d> <esc>ddi
@@ -104,6 +120,18 @@ cnoreabbrev W w
 
 " fzf
 nnoremap <Leader>d :Files<cr><Space>
+
+" Tabs
+nnoremap th  :tabfirst<CR>
+nnoremap tk  :tabnext<CR>
+nnoremap tj  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnext<Space>
+nnoremap tm  :tabm<Space>
+nnoremap td  :tabclose<CR>
+nnoremap tn :tabnew<CR>
+
 " }}}
 
 " coc {{{
@@ -118,7 +146,9 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-eslint',
   \ 'coc-explorer',
-  \ 'coc-jest'
+  \ 'coc-jest',
+  \ 'coc-snippets',
+  \ 'coc-go'
   \ ]
 
 " See: https://github.com/neoclide/coc.nvim#example-vim-configuration 
@@ -150,7 +180,7 @@ set updatetime=300        " The length of time Vim waits after you stop typing b
 set number
 set nu relativenumber
 set cursorline            " highlight current line
-set scrolloff=3           " display some extra lines at the bottom
+set scrolloff=5           " display some extra lines at the bottom
 set ttyfast               " make scrolling faster
 set lazyredraw            " even faster scrolling 
 set ruler                 " show line for max length
@@ -161,9 +191,9 @@ set showmatch             " Show matching closing brackets
 set showbreak=↪\
 set list
 set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·
-" set listchars+=eol:¬
+"set listchars+=eol:¬
 " format text
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+ set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set autoindent
 
 set hlsearch      " highlight search matches
