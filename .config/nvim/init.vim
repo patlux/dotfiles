@@ -28,8 +28,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'junegunn/fzf.vim'
   " Makes nvim as smart as vscode
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  " Toggle linenumbers on window focus
-  Plug 'jeffkreeftmeijer/vim-numbertoggle'
   " Search project files
   Plug 'mileszs/ack.vim'
   " Statusbar
@@ -83,11 +81,7 @@ if has('termguicolors')
   set termguicolors
 endif
 syntax on
-" let ayucolor="mirage"
-" colorscheme ayu
-" let g:sonokai_style = 'andromeda'
 let g:sonokai_style = 'atlantis'
-" let g:sonokai_style = 'maia'
 colorscheme sonokai
 " }}}
 
@@ -178,7 +172,7 @@ set updatetime=300        " The length of time Vim waits after you stop typing b
 
 " Display
 set number
-set nu relativenumber
+set norelativenumber
 set cursorline            " highlight current line
 set scrolloff=5           " display some extra lines at the bottom
 set ttyfast               " make scrolling faster
