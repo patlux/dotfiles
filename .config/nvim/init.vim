@@ -206,6 +206,9 @@ nnoremap <CR> :noh<CR><CR>
 set backupdir=~/.vim/backups/,/tmp/
 set directory=~/.vim/swp/,/tmp/
 set undodir=~/.vim/undo/,/tmp/
+
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/opt/homebrew/bin/python'
 " }}}
 
 " ack.vim {{{
