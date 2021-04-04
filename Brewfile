@@ -27,6 +27,7 @@ cask "appcleaner"
 cask "keyboard-maestro"
 cask "netnewswire"
 cask "startupizer"
+cask "ultimaker-cura"
 
 tap "mattisg/mattisg"
 brew "adblock"
