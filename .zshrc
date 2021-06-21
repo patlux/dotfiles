@@ -16,6 +16,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/usr/local/bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH # brew on apple silicon
+export PATH=/opt/homebrew/sbin:$PATH # brew on apple silicon
 export GOPATH=$HOME/.golang
 export PATH=$GOPATH/bin:$PATH
 export GEM_HOME=$(ruby -e "puts Gem.user_dir")
@@ -31,6 +32,7 @@ alias mkdir='mkdir -p -v'
 alias nano='nano -w -c'
 alias ls='exa'
 alias ll='exa -l --all --all --group-directories-first --git'
+alias ssh="kitty +kitten ssh"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 export EDITOR='vim'
