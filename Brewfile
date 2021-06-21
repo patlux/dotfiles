@@ -11,6 +11,7 @@ brew "ripgrep"
 brew "exa"
 brew "node"
 brew "golangci-lint"
+brew "git-delta"
 
 cask "react-native-debugger"
 cask "figma"
