@@ -59,6 +59,18 @@ Controlled by [hidutil](https://developer.apple.com/library/archive/technotes/tn
 | `capslock` mapped to `esc`           | Easier access to `esc`                                            |
 | `esc` mapped to `^`                  | Easier to enter something like `^g` :)                            |
 
+### Others
+
+#### Adblock
+
+To block ads I'm using [MattiSG/adblock](https://github.com/MattiSG/adblock) as listed in `Brewfile`:
+
+```bash
+brew install mattisg/mattisg/adblock
+# enable:
+sudo adblock on
+```
+
 ## 🦸‍♂️⤵️
 
 Created with 🔥 by [@de_patwoz](https://twitter.com/de_patwoz)
