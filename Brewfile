@@ -29,6 +29,7 @@ cask "keyboard-maestro"
 cask "netnewswire"
 cask "startupizer"
 cask "ultimaker-cura"
+cask "brave-browser"
 
 tap "mattisg/mattisg"
 brew "adblock"
