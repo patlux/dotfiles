@@ -34,4 +34,5 @@ cask "brave-browser"
 cask "gpg-suite"
 cask "kitty"
 cask "alfred"
+cask "appcleaner"
 
