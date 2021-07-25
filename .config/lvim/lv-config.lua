@@ -34,6 +34,7 @@ O.keys.leader_key = "space"
 -- })
 -- you can also use the native vim way directly
 -- vim.api.nvim_set_keymap("i", "<C-Space>", "compe#complete()", { noremap = true, silent = true, expr = true })
+vim.api.nvim_set_keymap('', 'Y', '"*y', { noremap = true, silent = true })
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile O.plugin.dashboard.active = true

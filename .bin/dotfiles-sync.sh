@@ -44,6 +44,7 @@ rsync -avR \
   $ROOT_DIR/.config/nvim/vim-plug/plugins.vim \
   $TMP_DIR
 
+rsync -avR $ROOT_DIR/.config/lvim/lv-config.lua $TMP_DIR
 rsync -avR $ROOT_DIR/.config/alacritty $TMP_DIR
 rsync -avR $ROOT_DIR/.config/kitty $TMP_DIR
 rsync -avR $ROOT_DIR/.config/yabai $TMP_DIR
