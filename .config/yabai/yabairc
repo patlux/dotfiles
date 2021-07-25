@@ -41,5 +41,6 @@ yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info
 yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
 yabai -m rule --add label="The Unarchiver" app="^The Unarchiver$" manage=off
 yabai -m rule --add label="ScreenTray" app="^ScreenTray$" manage=off
+yabai -m rule --add app="Simulator" manage=off
 
 echo "yabai configuration loaded.."
