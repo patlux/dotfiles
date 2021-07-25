@@ -35,4 +35,5 @@ cask "gpg-suite"
 cask "kitty"
 cask "alfred"
 cask "appcleaner"
+cask "syncthing"
 
