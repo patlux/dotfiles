@@ -33,7 +33,9 @@
 [github]
 	username = patlux
 [includeIf "gitdir:~/dev/dwins/"]
-    path = ~/dev/dwins/.gitconfig
+  path = ~/dev/dwins/.gitconfig
+[includeIf "gitdir:~/dev/pdg/"]
+  path = ~/dev/pdg/.gitconfig
 [pull]
 	rebase = true
 [interactive]
