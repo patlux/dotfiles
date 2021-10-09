@@ -8,7 +8,7 @@ lvim.keys.visual_mode["Y"] = '"*y'
 lvim.builtin.nvimtree.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
 
-lvim.builtin.treesitter.ensure_installed = "maintained"
+lvim.builtin.treesitter.ensure_installed = { "bash", "css", "dockerfile", "go", "graphql", "html", "java", "javascript", "jsdoc", "json", "json5", "jsonc", "kotlin", "lua", "nix", "python", "regex", "rust", "scss", "svelte", "typescript", "vim", "vue", "yaml", "zig" }
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
@@ -18,7 +18,7 @@ lvim.plugins = {
 
 local prettier = {
   {
-    exe = "prettier_d_slim",
+    exe = "prettier",
     args = {}
   }
 }
@@ -40,25 +40,9 @@ lvim.lang.css.formatters = prettier
 lvim.lang.json.formatters = prettier
 lvim.lang.yaml.formatters = prettier
 
-lvim.lang.typescript.lsp.setup.filetypes = {"typescript", "typescriptreact"}
-lvim.lang.typescriptreact.lsp.setup.filetypes = {"typescript", "typescriptreact"}
-
-lvim.lang.javascript.lsp.setup.filetypes = {"javascript", "javascriptreact", "javascript.jsx"}
-lvim.lang.javascriptreact.lsp.setup.filetypes = {"javascript", "javascriptreact", "javascript.jsx"}
-
-lvim.lang.javascript.lsp.provider = "flow"
-lvim.lang.javascriptreact.lsp.provider = "flow"
-
-lvim.lang.javascript.lsp.setup.cmd = { "npx", "--no-install", "flow", "lsp" }
-lvim.lang.javascriptreact.lsp.setup.cmd = { "npx", "--no-install", "flow", "lsp" }
-
-local lspconfig = require'lspconfig'
-lvim.lang.javascriptreact.lsp.setup.root_dir = lspconfig.util.root_pattern(".flowconfig")
-
-require'lspconfig'.flow.setup {
-  cmd = lvim.lang.javascript.lsp.setup.cmd,
-  root_dir = lvim.lang.javascript.lsp.setup.root_dir,
-  filetypes = lvim.lang.javascript.lsp.setup.filetypes,
-  formatter = lvim.lang.javascript.formatters,
-  linters = lvim.lang.javascript.linters
+lvim.lang.sql.formatters = {
+  {
+    exe = "pg_format", -- pgFormatter
+    args = {}
+  }
 }
