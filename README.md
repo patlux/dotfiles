@@ -12,6 +12,12 @@ echo "alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=\$HOME'" >> ~/.zshr
 dgit reset --hard
 ```
 
+## Sync
+
+```bash
+./.bin/dotfiles-sync.sh
+```
+
 ## ✨ Bootstrapping
 
 ```bash
