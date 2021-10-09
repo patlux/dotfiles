@@ -19,11 +19,13 @@ export PATH=/opt/homebrew/bin:$PATH # brew on apple silicon
 export PATH=/opt/homebrew/sbin:$PATH # brew on apple silicon
 export GOPATH=$HOME/.golang
 export PATH=$GOPATH/bin:$PATH
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH" # ruby installed via homebrew
 export GEM_HOME=$(ruby -e "puts Gem.user_dir")
 export PATH=$(ruby -e "puts Gem.user_dir")/bin:$PATH # rubygems
 export PATH=$HOME/.cargo/bin:$PATH # rust
 export PATH=$HOME/.bin/n/bin:$PATH # node 
 export PATH=$HOME/.bin:$PATH # custom binaries in home folder
+export PATH=~/.local/bin/:$PATH
 
 # DEFAULTS 
 
