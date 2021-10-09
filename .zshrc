@@ -95,3 +95,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+if [ -f ~/.zshrc_secret ]; then
+    source ~/.zshrc_secret
+fi
