@@ -25,6 +25,7 @@ export PATH=$(ruby -e "puts Gem.user_dir")/bin:$PATH # rubygems
 export PATH=$HOME/.cargo/bin:$PATH # rust
 export PATH=$HOME/.bin/n/bin:$PATH # node 
 export PATH=$HOME/.bin:$PATH # custom binaries in home folder
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH # postgresapp
 export PATH=~/.local/bin/:$PATH
 
 # DEFAULTS 
