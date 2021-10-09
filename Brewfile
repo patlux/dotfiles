@@ -18,6 +18,7 @@ brew "koekeishiya/formulae/skhd"
 brew "mattisg/mattisg/adblock"
 brew "imagemagick"
 brew "pgformatter"
+brew "pinentry-mac"
 
 cask "react-native-debugger"
 cask "figma"
