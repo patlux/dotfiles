@@ -19,6 +19,7 @@ brew "mattisg/mattisg/adblock"
 brew "imagemagick"
 brew "pgformatter"
 brew "pinentry-mac"
+brew "golang-migrate"
 
 cask "react-native-debugger"
 cask "figma"
