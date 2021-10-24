@@ -47,7 +47,7 @@ alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
 # JAVA
 
-export JAVA_HOME=`/usr/libexec/java_home`
+# export JAVA_HOME=`/usr/libexec/java_home`
 useJava8 () {
   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
   java -version
@@ -74,8 +74,8 @@ export HISTCONTROL=ignoreboth
 
 # CUSTOM
 
-fpath=( $HOME/.config/custom/zshfn "${fpath[@]}" )
-autoload -Uz $fpath[1]/*(.:t)
+# fpath=( $HOME/.config/custom/zshfn "${fpath[@]}" )
+# autoload -Uz $fpath[1]/*(.:t)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
