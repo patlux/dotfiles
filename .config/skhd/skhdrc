@@ -2,7 +2,7 @@
 shift + lctrl + alt - r : \
     /usr/bin/env osascript <<< \
         'display notification "Restarting yabai" with title "yabai"'; \
-    brew services restart yabai
+    launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # Reload skhd 
 shift + lctrl + alt - s : \
