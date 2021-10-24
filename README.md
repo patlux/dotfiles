@@ -8,11 +8,13 @@
 cd ~
 git clone git@github.com:patlux/dotfiles.git ./.dotfiles
 echo "alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=\$HOME'" >> ~/.zshrc
-# all exists files will be overwritten!
+# WARNING: all exists files will be overwritten!
 dgit reset --hard
 ```
 
 ## Sync
+
+Will synchronize all files in your home folder to `.dotfiles/`
 
 ```bash
 ./.bin/dotfiles-sync.sh
@@ -76,6 +78,29 @@ brew install mattisg/mattisg/adblock
 # enable:
 sudo adblock on
 ```
+
+### Maintenance
+
+#### `brew`
+
+```bash
+# check for updates
+brew update
+
+# install updates
+brew upgrade
+```
+
+#### `node`
+
+```bash
+# check for updates
+ncu -g
+
+# install updates
+~/.bin/install-node-packages.sh
+```
+
 
 ## 🦸‍♂️⤵️
 
