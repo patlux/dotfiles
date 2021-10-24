@@ -46,3 +46,13 @@ lvim.lang.sql.formatters = {
     args = {}
   }
 }
+
+
+-- https://www.lunarvim.org/languages/#multi-languages-per-formatter
+-- https://github.com/LunarVim/LunarVim/issues/1705
+lvim.lsp.on_attach_callback = function(client, _)
+  if client.name == "tsserver" or client.name == "jsonls" then
+    client.resolved_capabilities.document_formatting = false
+    client.resolved_capabilities.document_range_formatting = false
+  end
+end
