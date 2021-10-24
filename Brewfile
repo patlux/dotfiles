@@ -20,6 +20,7 @@ brew "imagemagick"
 brew "pgformatter"
 brew "pinentry-mac"
 brew "golang-migrate"
+brew "sqlparse" # sqlformat
 
 cask "react-native-debugger"
 cask "figma"
