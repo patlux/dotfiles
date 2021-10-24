@@ -1,24 +1,24 @@
-lvim.format_on_save = true
-lvim.lint_on_save = true
 lvim.colorscheme = "sonokai"
 
 lvim.leader = "space"
 lvim.keys.visual_mode["Y"] = '"*y'
 
-lvim.builtin.nvimtree.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
+lvim.format_on_save = true
+lvim.lint_on_save = true
+
+-- --------------
+-- TREESITTER ---
 
 lvim.builtin.treesitter.ensure_installed = { "bash", "css", "dockerfile", "go", "graphql", "html", "java", "javascript", "jsdoc", "json", "json5", "jsonc", "kotlin", "lua", "nix", "python", "regex", "rust", "scss", "svelte", "typescript", "vim", "vue", "yaml", "zig" }
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
-lvim.plugins = {
-  {"sainnhe/sonokai"}
-}
+-- -------
+-- LSP ---
 
 local prettier = {
   {
-    exe = "prettier",
+    exe = "prettierd",
     args = {}
   }
 }
@@ -47,7 +47,6 @@ lvim.lang.sql.formatters = {
   }
 }
 
-
 -- https://www.lunarvim.org/languages/#multi-languages-per-formatter
 -- https://github.com/LunarVim/LunarVim/issues/1705
 lvim.lsp.on_attach_callback = function(client, _)
@@ -56,3 +55,17 @@ lvim.lsp.on_attach_callback = function(client, _)
     client.resolved_capabilities.document_range_formatting = false
   end
 end
+
+-- --------
+-- Nvimtree
+
+lvim.builtin.nvimtree.side = "left"
+lvim.builtin.nvimtree.show_icons.git = 1
+lvim.builtin.nvimtree.hide_dotfiles = 0
+
+-- -------
+-- PLUGINS
+
+lvim.plugins = {
+  {"sainnhe/sonokai"}
+}
