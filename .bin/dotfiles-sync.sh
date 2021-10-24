@@ -44,6 +44,8 @@ rsync -avR $ROOT_DIR/.config/kitty $TMP_DIR
 rsync -avR $ROOT_DIR/.config/yabai $TMP_DIR
 rsync -avR $ROOT_DIR/.config/skhd $TMP_DIR
 
+rsync -avR $ROOT_DIR/.nixpkgs/darwin-configuration.nix $TMP_DIR
+
 WORK_DIR="${TMP_DIR}${ROOT_DIR}"
 
 rsync -a "$WORK_DIR/" ~/.dotfiles/
