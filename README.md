@@ -4,7 +4,7 @@
 
 ## Usage
 
-### Getting started
+### 🥇 Getting started
 
 How to use this for the first time:
 
@@ -17,7 +17,7 @@ echo "alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=\$HOME'" >> ~/.zshr
 dgit reset --hard
 ```
 
-### Update
+###  Update
 
 ```bash
 cd ~/.dotfiles
@@ -64,9 +64,9 @@ Controlled by [hidutil](https://developer.apple.com/library/archive/technotes/tn
 | `capslock` mapped to `esc`           | Easier access to `esc`                                            |
 | `esc` mapped to `^`                  | Easier to enter something like `^g` :)                            |
 
-### Others
+## Others
 
-#### Adblock
+### Adblock
 
 To block ads I'm using [MattiSG/adblock](https://github.com/MattiSG/adblock) as listed in `Brewfile`:
 
@@ -76,7 +76,9 @@ brew install mattisg/mattisg/adblock
 sudo adblock on
 ```
 
-### System Maintenance
+## System Maintenance
+
+### Updates
 
 #### `brew`
 
@@ -96,6 +98,16 @@ ncu -g
 
 # install updates
 ~/.bin/install-node-packages.sh
+```
+
+#### [LunarVim](https://www.lunarvim.org/)
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+
+# force update:
+rm -rf ~/.local/share/lunarvim
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 ```
 
 ## ✨ Bootstrapping
