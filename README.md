@@ -37,7 +37,8 @@ After changing files in your home folder, you want to sync the changes back into
 
 ### Window Management
 
-Controlled by [skhd](https://github.com/koekeishiya/skhd). Managed by [yabai](https://github.com/koekeishiya/yabai).
+* Controlled by [skhd](https://github.com/koekeishiya/skhd): `~/.config/skhd/skhdrc`
+* Managed by [yabai](https://github.com/koekeishiya/yabai): `~/.config/yabai/yabairc`
 
 | Shortcut                   | Description          |
 | -------------------------- | -------------------- |
@@ -48,15 +49,34 @@ Controlled by [skhd](https://github.com/koekeishiya/skhd). Managed by [yabai](ht
 | `lctrl` + `shift` + `hjkl` | Decrease window size |
 | `alt` + `shift` + `0`      | Balance windows      |
 
-### Vim
+### [LunarVim](https://www.lunarvim.org/)
+
+I'm using LunarVim as my main editor for programming, editing and writing.
+
+`~/.config/lvim/config.lua`
 
 | Shortcut         | Description  |
 | ---------------- | ------------ |
 | `lctrl` + `hjkl` | Switch focus |
 
+### [Kitty](https://sw.kovidgoyal.net/kitty/)
+
+Kitty is my primary used terminal. It has built-in support for tabs and it's known for it's speed.
+
+`~/.config/kitty/kitty.conf`
+
+| Shortcut         | Description  |
+| ---------------- | ------------ |
+| `ctrl` + `,` | Switch to previous tab |
+| `ctrl` + `.` | Switch to next tab |
+| `cmd` + `t` | Create new tab |
+| `cmd` + `n` | Create new window with current directory |
+
 ### System Mappings
 
 Controlled by [hidutil](https://developer.apple.com/library/archive/technotes/tn2450/_index.html).
+
+`~/Library/LaunchAgents/de.patwoz.KeyRemapping.plist`
 
 | Shortcut                             | Description                                                       |
 | ------------------------------------ | ----------------------------------------------------------------- |
