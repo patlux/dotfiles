@@ -1,13 +1,16 @@
 #!/bin/sh
 
 npm install -g \
+  npm \
+  npm-check-updates \
+  yarn \
   @fsouza/prettierd \
   eslint_d \
   expo-cli \
   neovim \
-  npm-check-updates \
-  npm \
-  serve
+  serve \
+  esbuild
+
 
 
 
