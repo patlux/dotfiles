@@ -40,12 +40,12 @@ lvim.lang.css.formatters = prettier
 lvim.lang.json.formatters = prettier
 lvim.lang.yaml.formatters = prettier
 
-lvim.lang.sql.formatters = {
-  {
-    exe = "pg_format", -- pgFormatter
-    args = {}
-  }
-}
+-- lvim.lang.sql.formatters = {
+--   {
+--     exe = "pg_format", -- pgFormatter
+--     args = {}
+--   }
+-- }
 
 -- https://www.lunarvim.org/languages/#multi-languages-per-formatter
 -- https://github.com/LunarVim/LunarVim/issues/1705
