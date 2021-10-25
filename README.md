@@ -2,38 +2,35 @@
 
 > My personal macos setup config.
 
-## 🗃 Usage
+## Usage
+
+### Getting started
+
+How to use this for the first time:
 
 ```bash
 cd ~
 git clone git@github.com:patlux/dotfiles.git ./.dotfiles
 echo "alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=\$HOME'" >> ~/.zshrc
+
 # WARNING: all exists files will be overwritten!
 dgit reset --hard
 ```
 
-## Sync
+### Update
 
-Will synchronize all files in your home folder to `.dotfiles/`
+```bash
+cd ~/.dotfiles
+git pull origin main
+dgit reset --hard
+```
+
+###  Sync
+
+After changing files in your home folder, you want to sync the changes back into `.dotfiles`:
 
 ```bash
 ./.bin/dotfiles-sync.sh
-```
-
-## ✨ Bootstrapping
-
-```bash
-echo "alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=\$HOME'" >> ~/.zshrc
-
-cd ~
-mkdir .dotfiles
-cd .dotfiles
-git init .
-echo "*" > .gitignore
-git add -f .gitignore
-git commit -m "🔥"
-cd ~
-dgit reset --hard
 ```
 
 ## Keyboard bindings
@@ -57,7 +54,7 @@ Controlled by [skhd](https://github.com/koekeishiya/skhd). Managed by [yabai](ht
 | ---------------- | ------------ |
 | `lctrl` + `hjkl` | Switch focus |
 
-### Mappings
+### System Mappings
 
 Controlled by [hidutil](https://developer.apple.com/library/archive/technotes/tn2450/_index.html).
 
@@ -79,7 +76,7 @@ brew install mattisg/mattisg/adblock
 sudo adblock on
 ```
 
-### Maintenance
+### System Maintenance
 
 #### `brew`
 
@@ -101,6 +98,27 @@ ncu -g
 ~/.bin/install-node-packages.sh
 ```
 
+## ✨ Bootstrapping
+
+These describes the steps I did to create the `.dotfiles` folder:
+
+```bash
+echo "alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=\$HOME'" >> ~/.zshrc
+
+cd ~
+mkdir .dotfiles
+cd .dotfiles
+git init .
+echo "*" > .gitignore
+git add -f .gitignore
+git commit -m "🔥"
+cd ~
+dgit reset --hard
+
+# now copy all files which should be stored in git into .dotfiles/
+# then force add them to git
+git add -f <files>
+```
 
 ## 🦸‍♂️⤵️
 
