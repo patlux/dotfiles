@@ -100,6 +100,12 @@ sudo adblock on
 
 ### Updates
 
+#### `nixos`
+
+```bash
+home-manager switch
+```
+
 #### `brew`
 
 ```bash
