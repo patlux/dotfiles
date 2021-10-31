@@ -9,7 +9,7 @@ lvim.lint_on_save = true
 -- --------------
 -- TREESITTER ---
 
-lvim.builtin.treesitter.ensure_installed = { "bash", "css", "dockerfile", "go", "graphql", "html", "java", "javascript", "jsdoc", "json", "json5", "jsonc", "kotlin", "lua", "nix", "python", "regex", "rust", "scss", "svelte", "typescript", "vim", "vue", "yaml", "zig" }
+lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
@@ -67,5 +67,11 @@ lvim.builtin.nvimtree.hide_dotfiles = 0
 -- PLUGINS
 
 lvim.plugins = {
-  {"sainnhe/sonokai"}
+  {"sainnhe/sonokai"},
+ 	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end,
+	},
 }
