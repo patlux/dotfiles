@@ -9,18 +9,14 @@
   home.stateVersion = "21.11";
 
   home.packages = [
-    pkgs.git
     pkgs.htop
-    pkgs.jq
-    pkgs.bat
-    pkgs.gnupg
     pkgs.exa
-    pkgs.pinentry_mac
+    pkgs.pinentry_curses
     pkgs.alacritty
     # https://giters.com/LnL7/nix-darwin/issues/362
     # pkgs.kitty
     pkgs.entr
-    pkgs.nodejs-14_x
+    # pkgs.nodejs-14_x
     pkgs.fzf
     pkgs.ripgrep
     pkgs.fd
@@ -34,7 +30,6 @@
     pkgs.imagemagick
     pkgs.awscli2
     pkgs.ffmpeg
-    pkgs.neovim
   ];
 
   home.sessionVariables = {
@@ -49,7 +44,7 @@
     "${config.home.homeDirectory}/.local/bin"
     "${config.home.homeDirectory}/.cargo/bin"
     "${config.home.homeDirectory}/.golang/bin"
-    "${config.home.homeDirectory}/.bin/n/bin"
+    "${config.home.homeDirectory}/.n/bin"
     "${config.home.homeDirectory}/.bin"
   ];
 
@@ -74,21 +69,21 @@ gem: --user-install --env-shebang --no-document
       pmodules = [ "environment" "terminal" "editor" "history" "directory" "spectrum" "utility" "completion" "prompt" "git" ];
     };
 
+    envExtra = "
+export N_PREFIX=\"${config.home.homeDirectory}/.n\"
+    ";
+
     initExtra = "
 export GEM_HOME=$(ruby -e \"puts Gem.user_dir\")
 export PATH=$PATH:$GEM_HOME/bin
     ";
   };
 
-  programs.fzf = {
-    enable = true;
-    defaultCommand = "fd --type file --hidden --exclude .git";
-  };
+  programs.fzf.enable = true;
+  programs.fzf.defaultCommand = "fd --type file --hidden --exclude .git";
 
-  programs.exa = {
-    enable = true;
-    enableAliases = true;
-  };
+  programs.exa.enable = true;
+  programs.exa.enableAliases = true;
 
   programs.bat.enable = true;
   programs.go.enable = true;
@@ -98,12 +93,10 @@ export PATH=$PATH:$GEM_HOME/bin
     enable = true;
     userName = "Patrick Wozniak";
     userEmail = "email@patwoz.de";
-    aliases = { co = "checkout"; ci = "commit"; br = "branch"; pushf = "push --force-with-lease"; };
+    signing.key = "0D4DE3BE5B9D660B";
+    signing.signByDefault = true;
     delta = { enable = true; };
-    signing = {
-      key = "0D4DE3BE5B9D660B";
-      signByDefault = true;
-    };
+    aliases = { co = "checkout"; ci = "commit"; br = "branch"; pushf = "push --force-with-lease"; };
     includes = [
       {
         condition = "gitdir:~/dev/pdg";
@@ -120,4 +113,44 @@ export PATH=$PATH:$GEM_HOME/bin
       }
     ];
   };
+
+  programs.neovim = {
+    enable = true;
+    vimAlias = true;
+    withNodeJs = true;
+    withPython3 = true;
+    extraPackages = with pkgs; [
+      gcc
+      rnix-lsp
+      tree-sitter
+    ];
+    #plugins = with pkgs.vimPlugins; [
+    #  vim-which-key
+    #  nvim-treesitter
+    #  nvim-web-devicons
+    #  nvim-tree-lua
+    #];
+  };
+
+  programs.gpg = {
+    enable = true;
+    settings = {
+      auto-key-retrieve = true;
+      no-emit-version = true;
+    };
+  };
+
+  home.file.".gnupg/gpg-agent.conf".text = ''
+default-cache-ttl 600
+max-cache-ttl 7200
+
+pinentry-program ${config.home.homeDirectory}/.nix-profile/bin/pinentry-curses
+  '';
+
+  # services.gpg-agent = {
+  #   enable = true;
+  #   defaultCacheTtl = 600;
+  #   maxCacheTtl = 7200;
+  #   pinentryFlavor = "curses";
+  # };
 }
