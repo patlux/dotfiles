@@ -9,8 +9,29 @@ lvim.lint_on_save = true
 -- --------------
 -- TREESITTER ---
 
-lvim.builtin.treesitter.ensure_installed = "maintained"
-lvim.builtin.treesitter.ignore_install = { "haskell" }
+lvim.builtin.treesitter.ensure_installed = {
+	"bash",
+	"css",
+	"dockerfile",
+	"go",
+	"graphql",
+	"html",
+	"javascript",
+	"jsdoc",
+	"json",
+	"json5",
+	"lua",
+	"nix",
+	"python",
+	"regex",
+	"rust",
+	"scss",
+	"toml",
+	"tsx",
+	"typescript",
+	"vim",
+	"yaml"
+}
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- -------
