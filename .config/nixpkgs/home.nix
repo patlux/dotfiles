@@ -66,7 +66,7 @@ gem: --user-install --env-shebang --no-document
     prezto = {
       enable = true;
       editor = { keymap = "vi"; };
-      pmodules = [ "environment" "terminal" "editor" "history" "directory" "spectrum" "utility" "completion" "prompt" "git" ];
+      pmodules = [ "environment" "terminal" "editor" "history" "directory" "spectrum" "utility" "completion" "history-substring-search" "prompt" "git" ];
     };
 
     envExtra = "
