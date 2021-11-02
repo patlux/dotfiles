@@ -68,7 +68,9 @@ Kitty is my primary used terminal. It has built-in support for tabs and it's kno
 | Shortcut         | Description  |
 | ---------------- | ------------ |
 | `ctrl` + `,` | Switch to previous tab |
+| `ctrl` + `shift` + `,` | Move tab backwards |
 | `ctrl` + `.` | Switch to next tab |
+| `ctrl` + `shift` + `,` | Move tab forwards |
 | `cmd` + `t` | Create new tab |
 | `cmd` + `n` | Create new window with current directory |
 
