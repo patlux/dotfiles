@@ -1,3 +1,8 @@
+# https://github.com/Automattic/node-canvas/issues/1065
+brew "pixman"
+brew "cairo"
+brew "pango"
+
 brew "koekeishiya/formulae/yabai"
 brew "koekeishiya/formulae/skhd"
 brew "mattisg/mattisg/adblock"
