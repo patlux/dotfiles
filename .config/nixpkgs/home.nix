@@ -33,7 +33,7 @@
   ];
 
   home.sessionVariables = {
-    LANG = "en_US";
+    LANG = "en_US.UTF-8";
     LC_ALL = "en_US.UTF-8";
     EDITOR = "lvim";
   };
@@ -79,6 +79,16 @@ export PATH=$PATH:$GEM_HOME/bin
 
 GPG_TTY=\"$(tty)\"
 export GPG_TTY
+
+# export JAVA_HOME=`/usr/libexec/java_home`
+useJava8 () {
+  export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+  java -version
+}
+useJava11 () {
+  export JAVA_HOME=`/usr/libexec/java_home -v 11.0`
+  java -version
+}
 
 if [ -f ~/.zshrc_secret ]; then
     source ~/.zshrc_secret
@@ -160,4 +170,11 @@ pinentry-program ${config.home.homeDirectory}/.nix-profile/bin/pinentry-curses
   #   maxCacheTtl = 7200;
   #   pinentryFlavor = "curses";
   # };
+  
+  programs.vscode = {
+    enable = true;
+    userSettings = {
+      "update.channel" = "none";
+    };
+  };
 }
