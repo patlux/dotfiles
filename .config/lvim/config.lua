@@ -37,45 +37,31 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- -------
 -- LSP ---
 
-local prettier = {
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
   {
     exe = "prettierd",
-    args = {}
-  }
+    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "css", "json", "yaml" },
+  },
 }
 
-local eslint_d = {
-  {
-    exe = "eslint_d",
-    args = {}
-  }
-}
-
-lvim.lang.javascript.formatters = prettier
-lvim.lang.javascriptreact.linters = eslint_d
-lvim.lang.typescript.formatters = prettier
-lvim.lang.typescript.linters = eslint_d
-lvim.lang.typescriptreact.formatters = prettier
-lvim.lang.typescriptreact.linters = eslint_d
-lvim.lang.css.formatters = prettier
-lvim.lang.json.formatters = prettier
-lvim.lang.yaml.formatters = prettier
-
--- lvim.lang.sql.formatters = {
+-- local linters = require "lvim.lsp.null-ls.linters"
+-- linters.setup {
 --   {
---     exe = "pg_format", -- pgFormatter
---     args = {}
---   }
+--     exe = "eslint",
+--     filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "css", "json", "yaml" },
+--   },
 -- }
 
 -- https://www.lunarvim.org/languages/#multi-languages-per-formatter
 -- https://github.com/LunarVim/LunarVim/issues/1705
-lvim.lsp.on_attach_callback = function(client, _)
-  if client.name == "tsserver" or client.name == "jsonls" then
-    client.resolved_capabilities.document_formatting = false
-    client.resolved_capabilities.document_range_formatting = false
-  end
-end
+-- lvim.lsp.on_attach_callback = function(client, _)
+--   if client.name == "tsserver" or client.name == "jsonls" then
+--     client.resolved_capabilities.document_formatting = false
+--     client.resolved_capabilities.document_range_formatting = false
+--   end
+-- end
 
 -- --------
 -- Nvimtree
@@ -95,4 +81,17 @@ lvim.plugins = {
 			require("colorizer").setup()
 		end,
 	},
+  {"APZelos/blamer.nvim"},
+  {
+    "ray-x/lsp_signature.nvim",
+    config = function() require"lsp_signature".on_attach() end,
+    event = "BufRead"
+  }
 }
+
+-- -------
+-- FILETYPE
+
+vim.cmd("au BufRead,BufNewFile Appfile set filetype=ruby")
+vim.cmd("au BufRead,BufNewFile Fastfile set filetype=ruby")
+vim.cmd("au BufRead,BufNewFile Matchfile set filetype=ruby")
