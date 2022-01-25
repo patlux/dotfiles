@@ -30,6 +30,9 @@
     pkgs.imagemagick
     pkgs.awscli2
     pkgs.ffmpeg
+    pkgs.helix
+    pkgs.gh
+    pkgs.rsync
   ];
 
   home.sessionVariables = {
@@ -74,6 +77,8 @@ export N_PREFIX=\"${config.home.homeDirectory}/.n\"
     ";
 
     initExtra = "
+# https://github.com/bitwarden/cli/blob/8b650666c593efa19ee54ef7360321de63efe0e2/src/bw.ts#L106
+export BITWARDENCLI_APPDATA_DIR=$HOME/.config/bitwarden-cli
 export GEM_HOME=$(ruby -e \"puts Gem.user_dir\")
 export PATH=$PATH:$GEM_HOME/bin
 

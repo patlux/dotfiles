@@ -1,0 +1,13 @@
+{
+  "installedVersion": "1.20.0",
+  "environmentUrls": {
+    "base": "https://camel-yo.ts.net:7277",
+    "api": null,
+    "identity": null,
+    "webVault": null,
+    "icons": null,
+    "notifications": null,
+    "events": null,
+    "keyConnector": null
+  }
+}
