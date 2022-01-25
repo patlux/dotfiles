@@ -29,7 +29,7 @@
 [commit]
 	gpgsign = true
 [credential]
-	helper = osxkeychain
+	helper = bw
 [github]
 	username = patlux
 [includeIf "gitdir:~/dev/dwins/"]
