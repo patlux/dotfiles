@@ -138,6 +138,17 @@ fi
 
   programs.neovim = {
     enable = true;
+    package = pkgs.neovim-unwrapped.overrideAttrs (_: rec {
+      version = "0.6.1";
+        src = pkgs.fetchFromGitHub {
+          owner = "neovim";
+          repo = "neovim";
+          rev = "v${version}";
+          # Get sha256:
+          # nix-prefetch-url --unpack  https://github.com/neovim/neovim/archive/refs/tags/v0.6.1.zip 
+          sha256 = "0l738d23hwzbjl2kw7aiycrglmywqpdcnlwlvvmr78nniv9rcw6i";
+        };
+    });
     vimAlias = true;
     withNodeJs = true;
     withPython3 = true;
