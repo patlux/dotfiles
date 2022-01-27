@@ -6,6 +6,8 @@ lvim.keys.visual_mode["Y"] = '"*y'
 lvim.format_on_save = true
 lvim.lint_on_save = true
 
+lvim.builtin.notify.active = true
+
 -- --------------
 -- TREESITTER ---
 
@@ -40,7 +42,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
-    exe = "prettierd",
+    exe = "prettier",
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
     filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "css", "json", "yaml" },
   },
@@ -76,11 +78,11 @@ lvim.builtin.nvimtree.hide_dotfiles = 0
 lvim.plugins = {
   {"sainnhe/sonokai"},
  	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup()
-		end,
-	},
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup()
+    end,
+  },
   {"APZelos/blamer.nvim"},
   {
     "ray-x/lsp_signature.nvim",
