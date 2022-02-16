@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
+let
+  name = "patwoz";
+in
 {
+  imports = [ <home-manager/nix-darwin> ];
+
   environment.systemPackages = with pkgs; [];
 
   fonts.fonts = with pkgs; [
@@ -12,4 +17,14 @@
 
   programs.zsh.enable = true;  # default shell on catalina
   system.stateVersion = 4;
+
+  users.users.${name} = {
+    name = name;
+    home = "/Users/${name}";
+  };
+
+  home-manager.users.${name} = { pkgs, ... }: {
+    home.packages = [];
+    programs.zsh.enable = true;
+  };
 }
