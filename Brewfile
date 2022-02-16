@@ -2,6 +2,7 @@
 brew "pixman"
 brew "cairo"
 brew "pango"
+brew "exa"
 
 brew "koekeishiya/formulae/yabai"
 brew "koekeishiya/formulae/skhd"
@@ -26,5 +27,5 @@ cask "gpg-suite"
 cask "kitty"
 cask "alfred"
 cask "syncthing"
-cask "choosy"
+cask "finicky" # cask "choosy"
 

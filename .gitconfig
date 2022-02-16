@@ -4,7 +4,7 @@
 	signingkey = 0D4DE3BE5B9D660B
 [core]
 	editor = lvim 
-	pager = delta --dark --theme="ansi-dark"
+	pager = delta --dark
 [color]
 	ui = true
 [color "diff-highlight"]

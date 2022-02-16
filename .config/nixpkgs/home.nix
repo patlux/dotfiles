@@ -12,31 +12,29 @@ in
   home.stateVersion = "21.11";
 
   home.packages = [
-    pkgs.htop
-    pkgs.exa
-    pkgs.pinentry_curses
-    pkgs.alacritty
-    # https://giters.com/LnL7/nix-darwin/issues/362
-    # pkgs.kitty
-    pkgs.entr
-    # pkgs.nodejs-14_x
-    pkgs.fzf
-    pkgs.ripgrep
-    pkgs.fd
-    pkgs.delta
-    pkgs.ruby
-    pkgs.ncdu
-    # pkgs.scrcpy
-    pkgs.watchman
-    pkgs.translate-shell
-    pkgs.golangci-lint
-    pkgs.imagemagick
-    pkgs.awscli2
-    pkgs.ffmpeg
-    pkgs.helix
-    pkgs.gh
-    pkgs.rsync
-    # pkgs.dprint # https://dprint.dev
+   # pkgs.htop
+   pkgs.pinentry_curses
+   # pkgs.alacritty
+   # https://giters.com/LnL7/nix-darwin/issues/362
+   # pkgs.kitty
+   pkgs.entr # https://eradman.com/entrproject/
+   # pkgs.nodejs-14_x
+   pkgs.ripgrep
+   pkgs.fd
+   pkgs.delta
+   pkgs.ruby
+   pkgs.ncdu
+   # pkgs.scrcpy
+   pkgs.watchman
+   pkgs.translate-shell
+   pkgs.golangci-lint
+   pkgs.imagemagick
+   pkgs.awscli2
+   pkgs.ffmpeg
+   # pkgs.helix # https://github.com/helix-editor/helix
+   pkgs.gh # GitHub Client
+   pkgs.rsync
+   # pkgs.dprint # https://dprint.dev
   ];
 
   home.sessionVariables = {
@@ -75,74 +73,85 @@ gem: --user-install --env-shebang --no-document
       editor = { keymap = "vi"; };
       pmodules = [ "environment" "terminal" "editor" "history" "directory" "spectrum" "utility" "completion" "history-substring-search" "prompt" "git" ];
     };
+ 
+     envExtra = "
+ export N_PREFIX=\"${config.home.homeDirectory}/.n\"
+     ";
+ 
+     initExtra = "
+ # https://github.com/bitwarden/cli/blob/8b650666c593efa19ee54ef7360321de63efe0e2/src/bw.ts#L106
+ export BITWARDENCLI_APPDATA_DIR=$HOME/.config/bitwarden-cli
+ export GEM_HOME=$(ruby -e \"puts Gem.user_dir\")
+ export PATH=$PATH:$GEM_HOME/bin
+ 
+ alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
+ ls = \"exa\";
+ ll = \"exa -l\";
+ la = \"exa -a\";
+ lt = \"exa --tree\";
+ lla = \"exa -la\";
 
-    envExtra = "
-export N_PREFIX=\"${config.home.homeDirectory}/.n\"
-    ";
+ export VOLTA_HOME=\"$HOME/.volta\"
+ export PATH=\"$VOLTA_HOME/bin:$PATH\"
+ 
+ GPG_TTY=\"$(tty)\"
+ export GPG_TTY
+ 
+ # export JAVA_HOME=`/usr/libexec/java_home`
+ useJava8 () {
+   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+   java -version
+ }
+ useJava11 () {
+   export JAVA_HOME=`/usr/libexec/java_home -v 11.0`
+   java -version
+ }
+ 
+ export ANDROID_SDK_ROOT=/opt/homebrew/Caskroom/android-sdk/4333796
+ # export PATH=/opt/homebrew/Caskroom/android-sdk/4333796/tools:$PATH
+ # export PATH=/opt/homebrew/Caskroom/android-platform-tools/32.0.0/platform-tools:$PATH
+ 
+ if [ -f ~/.zshrc_secret ]; then
+     source ~/.zshrc_secret
+ fi
+     ";
+   };
 
-    initExtra = "
-# https://github.com/bitwarden/cli/blob/8b650666c593efa19ee54ef7360321de63efe0e2/src/bw.ts#L106
-export BITWARDENCLI_APPDATA_DIR=$HOME/.config/bitwarden-cli
-export GEM_HOME=$(ruby -e \"puts Gem.user_dir\")
-export PATH=$PATH:$GEM_HOME/bin
+ programs.fzf.enable = true;
+ programs.fzf.defaultCommand = "fd --type file --hidden --exclude .git";
 
-GPG_TTY=\"$(tty)\"
-export GPG_TTY
+ # takes to long to install due compiling
+ # programs.exa.enable = true;
+ # programs.exa.enableAliases = true;
 
-# export JAVA_HOME=`/usr/libexec/java_home`
-useJava8 () {
-  export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-  java -version
-}
-useJava11 () {
-  export JAVA_HOME=`/usr/libexec/java_home -v 11.0`
-  java -version
-}
-
-export ANDROID_SDK_ROOT=/opt/homebrew/Caskroom/android-sdk/4333796
-# export PATH=/opt/homebrew/Caskroom/android-sdk/4333796/tools:$PATH
-# export PATH=/opt/homebrew/Caskroom/android-platform-tools/32.0.0/platform-tools:$PATH
-
-if [ -f ~/.zshrc_secret ]; then
-    source ~/.zshrc_secret
-fi
-    ";
-  };
-
-  programs.fzf.enable = true;
-  programs.fzf.defaultCommand = "fd --type file --hidden --exclude .git";
-
-  programs.exa.enable = true;
-  programs.exa.enableAliases = true;
-
-  programs.bat.enable = true;
-  programs.go.enable = true;
-  programs.jq.enable = true;
-
-  programs.git = {
-    enable = true;
-    userName = "Patrick Wozniak";
-    userEmail = "email@patwoz.de";
-    signing.key = "0D4DE3BE5B9D660B";
-    signing.signByDefault = true;
-    delta = { enable = true; };
-    aliases = { co = "checkout"; ci = "commit"; br = "branch"; pushf = "push --force-with-lease"; };
-    includes = [
-      {
-        condition = "gitdir:~/dev/pdg";
-      	contents = {
-          user = {
-            email = "patrick.wozniak.extern@porsche.digital";
-            name = "Patrick Wozniak";
-            signingKey = "B33CA176B9EF9ECFE39CFCEC1A32081F816CE44F";
-          };
-          commit = {
-            gpgSign = true;
-          };
-	};
-      }
-    ];
-  };
+ programs.bat.enable = true;
+ programs.go.enable = true;
+ programs.jq.enable = true;
+#
+ programs.git = {
+   enable = true;
+   userName = "Patrick Wozniak";
+   userEmail = "email@patwoz.de";
+   signing.key = "0D4DE3BE5B9D660B";
+   signing.signByDefault = true;
+   delta = { enable = true; };
+   aliases = { co = "checkout"; ci = "commit"; br = "branch"; pushf = "push --force-with-lease"; };
+   includes = [
+     {
+       condition = "gitdir:~/dev/pdg";
+     	contents = {
+         user = {
+           email = "patrick.wozniak.extern@porsche.digital";
+           name = "Patrick Wozniak";
+           signingKey = "B33CA176B9EF9ECFE39CFCEC1A32081F816CE44F";
+         };
+         commit = {
+           gpgSign = true;
+         };
+};
+     }
+   ];
+ };
 
   # programs.neovim = {
   #   enable = true;
@@ -181,24 +190,24 @@ fi
     };
   };
 
-  home.file.".gnupg/gpg-agent.conf".text = ''
-default-cache-ttl 600
-max-cache-ttl 7200
+#   home.file.".gnupg/gpg-agent.conf".text = ''
+# default-cache-ttl 600
+# max-cache-ttl 7200
 
-pinentry-program ${config.home.homeDirectory}/.nix-profile/bin/pinentry-curses
-  '';
+# pinentry-program ${config.home.homeDirectory}/.nix-profile/bin/pinentry-curses
+#   '';
 
-  # services.gpg-agent = {
-  #   enable = true;
-  #   defaultCacheTtl = 600;
-  #   maxCacheTtl = 7200;
-  #   pinentryFlavor = "curses";
-  # };
+#   services.gpg-agent = {
+#     enable = true;
+#     defaultCacheTtl = 600;
+#     maxCacheTtl = 7200;
+#     pinentryFlavor = "curses";
+#   };
   
-  programs.vscode = {
-    enable = true;
-    userSettings = {
-      "update.channel" = "none";
-    };
-  };
+#   programs.vscode = {
+#     enable = true;
+#     userSettings = {
+#       "update.channel" = "none";
+#     };
+#   };
 }
