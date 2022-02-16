@@ -3,6 +3,7 @@ brew "pixman"
 brew "cairo"
 brew "pango"
 brew "exa"
+brew "bitwarden-cli"
 
 brew "koekeishiya/formulae/yabai"
 brew "koekeishiya/formulae/skhd"
@@ -28,4 +29,4 @@ cask "kitty"
 cask "alfred"
 cask "syncthing"
 cask "finicky" # cask "choosy"
-
+cask "raycast"
