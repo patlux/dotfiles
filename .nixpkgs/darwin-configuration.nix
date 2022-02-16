@@ -23,8 +23,5 @@ in
     home = "/Users/${name}";
   };
 
-  home-manager.users.${name} = { pkgs, ... }: {
-    home.packages = [];
-    programs.zsh.enable = true;
-  };
+  home-manager.useUserPackages = true;
 }

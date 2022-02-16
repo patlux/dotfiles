@@ -1,10 +1,13 @@
 { config, pkgs, ... }:
 
+let
+  name = "patwoz";
+in
 {
   programs.home-manager.enable = true;
 
-  home.username = "patrick.wozniak";
-  home.homeDirectory = "/Users/patrick.wozniak";
+  home.username = name;
+  home.homeDirectory = "/Users/${name}";
 
   home.stateVersion = "21.11";
 
@@ -33,6 +36,7 @@
     pkgs.helix
     pkgs.gh
     pkgs.rsync
+    # pkgs.dprint # https://dprint.dev
   ];
 
   home.sessionVariables = {
@@ -95,6 +99,10 @@ useJava11 () {
   java -version
 }
 
+export ANDROID_SDK_ROOT=/opt/homebrew/Caskroom/android-sdk/4333796
+# export PATH=/opt/homebrew/Caskroom/android-sdk/4333796/tools:$PATH
+# export PATH=/opt/homebrew/Caskroom/android-platform-tools/32.0.0/platform-tools:$PATH
+
 if [ -f ~/.zshrc_secret ]; then
     source ~/.zshrc_secret
 fi
@@ -136,34 +144,34 @@ fi
     ];
   };
 
-  programs.neovim = {
-    enable = true;
-    package = pkgs.neovim-unwrapped.overrideAttrs (_: rec {
-      version = "0.6.1";
-        src = pkgs.fetchFromGitHub {
-          owner = "neovim";
-          repo = "neovim";
-          rev = "v${version}";
-          # Get sha256:
-          # nix-prefetch-url --unpack  https://github.com/neovim/neovim/archive/refs/tags/v0.6.1.zip 
-          sha256 = "0l738d23hwzbjl2kw7aiycrglmywqpdcnlwlvvmr78nniv9rcw6i";
-        };
-    });
-    vimAlias = true;
-    withNodeJs = true;
-    withPython3 = true;
-    extraPackages = with pkgs; [
-      gcc
-      rnix-lsp
-      tree-sitter
-    ];
-    #plugins = with pkgs.vimPlugins; [
-    #  vim-which-key
-    #  nvim-treesitter
-    #  nvim-web-devicons
-    #  nvim-tree-lua
-    #];
-  };
+  # programs.neovim = {
+  #   enable = true;
+  #   #package = pkgs.neovim-unwrapped.overrideAttrs (_: rec {
+  #   #  version = "0.6.1";
+  #   #    src = pkgs.fetchFromGitHub {
+  #   #      owner = "neovim";
+  #   #      repo = "neovim";
+  #   #      rev = "v${version}";
+  #   #      # Get sha256:
+  #   #      # nix-prefetch-url --unpack  https://github.com/neovim/neovim/archive/refs/tags/v0.6.1.zip 
+  #   #      sha256 = "0l738d23hwzbjl2kw7aiycrglmywqpdcnlwlvvmr78nniv9rcw6i";
+  #   #    };
+  #   #});
+  #   vimAlias = true;
+  #   withNodeJs = true;
+  #   withPython3 = true;
+  #   extraPackages = with pkgs; [
+  #     gcc
+  #     rnix-lsp
+  #     tree-sitter
+  #   ];
+  #   #plugins = with pkgs.vimPlugins; [
+  #   #  vim-which-key
+  #   #  nvim-treesitter
+  #   #  nvim-web-devicons
+  #   #  nvim-tree-lua
+  #   #];
+  # };
 
   programs.gpg = {
     enable = true;
