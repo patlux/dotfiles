@@ -42,5 +42,7 @@ yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password
 yabai -m rule --add label="The Unarchiver" app="^The Unarchiver$" manage=off
 yabai -m rule --add label="ScreenTray" app="^ScreenTray$" manage=off
 yabai -m rule --add app="Simulator" manage=off
+yabai -m rule --add title="^Android Emulator.*" manage=off
+yabai -m rule --add app="^CleanShot X$" sticky=on layer=above manage=off
 
 echo "yabai configuration loaded.."

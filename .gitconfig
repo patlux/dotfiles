@@ -1,7 +1,7 @@
 [user]
 	name = Patrick Wozniak
 	email = email@patwoz.de
-	signingkey = 0D4DE3BE5B9D660B
+	signingkey = D95105068BC8DA2C
 [core]
 	editor = lvim 
 	pager = delta --dark
@@ -28,14 +28,22 @@
   dff = difftool --no-symlinks --dir-diff
 [commit]
 	gpgsign = true
-[credential]
-	helper = bw
 [github]
 	username = patlux
 [includeIf "gitdir:~/dev/dwins/"]
   path = ~/dev/dwins/.gitconfig
 [includeIf "gitdir:~/dev/pdg/"]
   path = ~/dev/pdg/.gitconfig
+[includeIf "gitdir:~/dev/mhp/"]
+  path = ~/dev/mhp/.gitconfig
+[includeIf "gitdir:~/dev/aperto/"]
+  path = ~/dev/aperto/.gitconfig
+[includeIf "gitdir:~/dev/sodefa/"]
+  path = ~/dev/sodefa/.gitconfig
+[includeIf "gitdir:~/dev/nordlb/"]
+  path = ~/dev/nordlb/.gitconfig
+[includeIf "gitdir:~/dev/sap/"]
+  path = ~/dev/sap/.gitconfig
 [pull]
 	rebase = true
 [interactive]
