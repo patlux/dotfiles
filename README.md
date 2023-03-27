@@ -86,6 +86,8 @@ Controlled by [hidutil](https://developer.apple.com/library/archive/technotes/tn
 | `capslock` mapped to `esc`           | Easier access to `esc`                                            |
 | `esc` mapped to `^`                  | Easier to enter something like `^g` :)                            |
 
+Use the [online tool](https://hidutil-generator.netlify.app) to generate the json.
+
 ## Others
 
 ### Adblock
