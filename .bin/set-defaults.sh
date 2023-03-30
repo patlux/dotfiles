@@ -73,21 +73,21 @@ sudo pmset -a sms 0
 # ------------------------------------------------------------------------------------------------ -
 # DOCK
 
-$__dir/dock-writeable.sh
+# $__dir/dock-writeable.sh
 # finder
 # firefox
 # calendar
 # notion
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+# defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 # iterm2
 # vscode
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+# defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 # apple mail
 # slack
 # franz
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+# defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 # other apps
-$__dir/dock-readonly.sh
+# $__dir/dock-readonly.sh
 
 # ------------------------------------------------------------------------------------------------ -
 # FINDER
