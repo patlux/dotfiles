@@ -5,7 +5,6 @@ brew "pango"
 brew "exa"
 brew "bitwarden-cli"
 brew "asimov"
-brew "ios-deploy"
 
 brew "koekeishiya/formulae/yabai"
 brew "koekeishiya/formulae/skhd"
