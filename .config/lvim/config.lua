@@ -32,6 +32,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "json",
   "json5",
   "kotlin",
+  "mermaid",
   "lua",
   "nix",
   "python",
