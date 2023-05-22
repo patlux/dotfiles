@@ -37,6 +37,7 @@ in
     pkgs.rustc
     pkgs.cargo
     pkgs.hyperfine
+    pkgs.duplicity
   ];
 
   home.sessionVariables = {
@@ -51,7 +52,6 @@ in
     "${config.home.homeDirectory}/.local/bin"
     "${config.home.homeDirectory}/.cargo/bin"
     # "${config.home.homeDirectory}/go/bin"
-    "${config.home.homeDirectory}/.n/bin"
     "${config.home.homeDirectory}/.bin"
     "${config.home.homeDirectory}/.bin/bin"
   ];
@@ -77,10 +77,6 @@ in
       pmodules = [ "environment" "terminal" "editor" "history" "directory" "spectrum" "utility" "completion" "history-substring-search" "prompt" "git" ];
     };
 
-    envExtra = "
- export N_PREFIX=\"${config.home.homeDirectory}/.n\"
-     ";
-
     initExtra = "
  plugins=(
   asdf
@@ -101,6 +97,7 @@ in
  export PATH=$PATH:$GOPATH/bin
  export PATH=$PATH:$GOROOT/bin
  export PATH=$PATH:$GOBIN
+ export PATH=$PATH:$HOME/.maestro/bin
  
  alias dgit=\"git --git-dir ~/.dotfiles/.git --work-tree=$HOME\"
  alias ls=\"exa\"
@@ -123,28 +120,18 @@ in
  }
  
  export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+ export ANDROID_HOME=$HOME/Library/Android/sdk
  export PATH=$ANDROID_SDK_ROOT/tools:$PATH
  export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
 
  export PATH=$HOME/Library/Python/3.8/bin:$PATH
  export PATH=$HOME/.bun/bin:$PATH
-
- # https://github.com/oven-sh/bun#install-zig-macos
- # export PATH=\"$(brew --prefix llvm@13)/bin:$HOME/.bun-tools/zig:$PATH\"
- # export LDFLAGS=\"$LDFLAGS -L$(brew --prefix llvm@13)/lib\"
- # export CPPFLAGS=\"$CPPFLAGS -I$(brew --prefix llvm@13)/include\"
- export PATH=\"$HOME/.bun-tools/zig:$PATH\"
-
-  [ -s \"/Users/patwoz/.bun/_bun\" ] && source \"/Users/patwoz/.bun/_bun\"
- 
+  
  if [ -f ~/.zshrc_secret ]; then
      source ~/.zshrc_secret
  fi
 
- if [ -f ~/.gvm/scripts/gvm ]; then
-    source ~/.gvm/scripts/gvm
- fi
-
+ test -d \"$HOME/.tea\" && source <(\"$HOME/.tea/tea.xyz/v*/bin/tea\" --silent)
      ";
   };
 
