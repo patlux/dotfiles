@@ -29,6 +29,8 @@ trap cleanup EXIT
 ROOT_DIR=$HOME
 
 rsync -avR \
+  $ROOT_DIR/.default-gems \
+  $ROOT_DIR/.default-npm-packages \
   $ROOT_DIR/.zshrc \
   $ROOT_DIR/.gitconfig \
   $ROOT_DIR/.gemrc \

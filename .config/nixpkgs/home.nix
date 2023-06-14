@@ -25,7 +25,7 @@ in
     pkgs.ncdu
     # pkgs.scrcpy
     pkgs.watchman
-    pkgs.translate-shell
+    # pkgs.translate-shell
     # pkgs.golangci-lint
     pkgs.imagemagick
     pkgs.awscli2
@@ -34,8 +34,8 @@ in
     pkgs.gh # GitHub Client
     pkgs.rsync
     # pkgs.dprint # https://dprint.dev
-    pkgs.rustc
-    pkgs.cargo
+    # pkgs.rustc
+    # pkgs.cargo
     pkgs.hyperfine
     pkgs.duplicity
   ];
@@ -50,7 +50,7 @@ in
     "/opt/homebrew/bin"
     "/opt/homebrew/sbin"
     "${config.home.homeDirectory}/.local/bin"
-    "${config.home.homeDirectory}/.cargo/bin"
+    # "${config.home.homeDirectory}/.cargo/bin"
     # "${config.home.homeDirectory}/go/bin"
     "${config.home.homeDirectory}/.bin"
     "${config.home.homeDirectory}/.bin/bin"
@@ -78,25 +78,25 @@ in
     };
 
     initExtra = "
- plugins=(
-  asdf
- )
+
+    plugins=()
 
  # asdf (https://asdf-vm.com/guide/getting-started.html#_3-install-asdf)
- . $HOME/.asdf/asdf.sh
+ # . $HOME/.asdf/asdf.sh
 
+ eval \"$(~/.bin/rtx activate zsh)\"
 
  # https://github.com/bitwarden/cli/blob/8b650666c593efa19ee54ef7360321de63efe0e2/src/bw.ts#L106
  export BITWARDENCLI_APPDATA_DIR=$HOME/.config/bitwarden-cli
- export GEM_HOME=$(ruby -e \"puts Gem.user_dir\")
+ export GEM_HOME=$(rtx exec ruby --command 'ruby -e \"puts Gem.user_dir\"')
  export PATH=$PATH:$GEM_HOME/bin
 
- export GOPATH=$(go env GOPATH)
- export GOROOT=$(go env GOROOT)
- export GOBIN=$(go env GOBIN)
- export PATH=$PATH:$GOPATH/bin
- export PATH=$PATH:$GOROOT/bin
- export PATH=$PATH:$GOBIN
+ # export GOPATH=$(go env GOPATH)
+ # export GOROOT=$(go env GOROOT)
+ # export GOBIN=$(go env GOBIN)
+ # export PATH=$PATH:$GOPATH/bin
+ # export PATH=$PATH:$GOROOT/bin
+ # export PATH=$PATH:$GOBIN
  export PATH=$PATH:$HOME/.maestro/bin
  
  alias dgit=\"git --git-dir ~/.dotfiles/.git --work-tree=$HOME\"
@@ -105,6 +105,7 @@ in
  alias la=\"exa -a\"
  alias lt=\"exa --tree\"
  alias lla=\"exa -la\"
+ alias npx=\"bunx\"
  
  GPG_TTY=\"$(tty)\"
  export GPG_TTY
@@ -125,13 +126,13 @@ in
  export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
 
  export PATH=$HOME/Library/Python/3.8/bin:$PATH
- export PATH=$HOME/.bun/bin:$PATH
-  
+ # export PATH=$HOME/.bun/bin:$PATH
+ 
  if [ -f ~/.zshrc_secret ]; then
      source ~/.zshrc_secret
  fi
 
- test -d \"$HOME/.tea\" && source <(\"$HOME/.tea/tea.xyz/v*/bin/tea\" --silent)
+ # test -d \"$HOME/.tea\" && source <(\"$HOME/.tea/tea.xyz/v*/bin/tea\" --silent)
      ";
   };
 

@@ -3,6 +3,8 @@ lvim.colorscheme = "sonokai"
 lvim.format_on_save = true
 lvim.lint_on_save = true
 
+-- vim.lsp.set_log_level("off")
+
 -- lvim.builtin.notify.active = true
 
 lvim.lsp.installer.setup.automatic_installation = true

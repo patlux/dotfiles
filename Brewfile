@@ -4,7 +4,6 @@ brew "cairo"
 brew "pango"
 brew "exa"
 brew "bitwarden-cli"
-brew "asimov"
 
 brew "koekeishiya/formulae/yabai"
 brew "koekeishiya/formulae/skhd"
