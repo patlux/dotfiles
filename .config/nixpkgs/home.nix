@@ -65,6 +65,7 @@ in
     shellAliases = {
       update = "home-manager switch";
       mkdir = "mkdir -p -v";
+      tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
     };
     history = {
       size = 10000;
@@ -105,7 +106,6 @@ in
  alias la=\"exa -a\"
  alias lt=\"exa --tree\"
  alias lla=\"exa -la\"
- alias npx=\"bunx\"
  
  GPG_TTY=\"$(tty)\"
  export GPG_TTY
