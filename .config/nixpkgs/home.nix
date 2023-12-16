@@ -16,11 +16,12 @@ in
     # pkgs.alacritty
     # https://giters.com/LnL7/nix-darwin/issues/362
     # pkgs.kitty
-    pkgs.entr # https://eradman.com/entrproject/
+    # pkgs.entr # https://eradman.com/entrproject/
     # pkgs.nodejs-14_x
     pkgs.ripgrep
     pkgs.fd
     pkgs.delta
+    # pkgs.difftastic
     # pkgs.ruby
     pkgs.ncdu
     # pkgs.scrcpy
@@ -38,6 +39,7 @@ in
     # pkgs.cargo
     pkgs.hyperfine
     pkgs.duplicity
+    pkgs.nixpacks
   ];
 
   home.sessionVariables = {
@@ -50,8 +52,6 @@ in
     "/opt/homebrew/bin"
     "/opt/homebrew/sbin"
     "${config.home.homeDirectory}/.local/bin"
-    # "${config.home.homeDirectory}/.cargo/bin"
-    # "${config.home.homeDirectory}/go/bin"
     "${config.home.homeDirectory}/.bin"
     "${config.home.homeDirectory}/.bin/bin"
   ];
@@ -75,15 +75,24 @@ in
     prezto = {
       enable = true;
       editor = { keymap = "vi"; };
-      pmodules = [ "environment" "terminal" "editor" "history" "directory" "spectrum" "utility" "completion" "history-substring-search" "prompt" "git" ];
+      pmodules = [
+        "environment"
+        "terminal"
+        "editor"
+        "history"
+        "directory"
+        "spectrum"
+        "utility"
+        "completion"
+        "history-substring-search"
+        "prompt"
+        "git"
+      ];
     };
 
     initExtra = "
 
     plugins=()
-
- # asdf (https://asdf-vm.com/guide/getting-started.html#_3-install-asdf)
- # . $HOME/.asdf/asdf.sh
 
  eval \"$(~/.bin/rtx activate zsh)\"
 
@@ -99,6 +108,8 @@ in
  # export PATH=$PATH:$GOROOT/bin
  # export PATH=$PATH:$GOBIN
  export PATH=$PATH:$HOME/.maestro/bin
+
+ export OLLAMA_MODELS=/Volumes/home/AI/Models/ollama
  
  alias dgit=\"git --git-dir ~/.dotfiles/.git --work-tree=$HOME\"
  alias ls=\"exa\"
@@ -110,7 +121,7 @@ in
  GPG_TTY=\"$(tty)\"
  export GPG_TTY
  
- # export JAVA_HOME=`/usr/libexec/java_home`
+ export JAVA_HOME=`/usr/libexec/java_home`
  useJava8 () {
    export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
    java -version
@@ -122,6 +133,7 @@ in
  
  export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
  export ANDROID_HOME=$HOME/Library/Android/sdk
+ export ANDROID_AVD_HOME=/Volumes/home/VMS/Android-Emulator
  export PATH=$ANDROID_SDK_ROOT/tools:$PATH
  export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
 
@@ -139,14 +151,9 @@ in
   programs.fzf.enable = true;
   programs.fzf.defaultCommand = "fd --type file --hidden --exclude .git";
 
-  # takes to long to install due compiling
-  # programs.exa.enable = true;
-  # programs.exa.enableAliases = true;
-
   programs.bat.enable = true;
-  # programs.go.enable = true;
   programs.jq.enable = true;
-  #
+
   programs.git = {
     enable = true;
     userName = "Patrick Wozniak";
@@ -171,35 +178,6 @@ in
       }
     ];
   };
-
-  # programs.neovim = {
-  #   enable = true;
-  #   #package = pkgs.neovim-unwrapped.overrideAttrs (_: rec {
-  #   #  version = "0.6.1";
-  #   #    src = pkgs.fetchFromGitHub {
-  #   #      owner = "neovim";
-  #   #      repo = "neovim";
-  #   #      rev = "v${version}";
-  #   #      # Get sha256:
-  #   #      # nix-prefetch-url --unpack  https://github.com/neovim/neovim/archive/refs/tags/v0.6.1.zip 
-  #   #      sha256 = "0l738d23hwzbjl2kw7aiycrglmywqpdcnlwlvvmr78nniv9rcw6i";
-  #   #    };
-  #   #});
-  #   vimAlias = true;
-  #   withNodeJs = true;
-  #   withPython3 = true;
-  #   extraPackages = with pkgs; [
-  #     gcc
-  #     rnix-lsp
-  #     tree-sitter
-  #   ];
-  #   #plugins = with pkgs.vimPlugins; [
-  #   #  vim-which-key
-  #   #  nvim-treesitter
-  #   #  nvim-web-devicons
-  #   #  nvim-tree-lua
-  #   #];
-  # };
 
   programs.gpg = {
     enable = true;
