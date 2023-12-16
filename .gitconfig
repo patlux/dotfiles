@@ -36,8 +36,8 @@
   path = ~/dev/pdg/.gitconfig
 [includeIf "gitdir:~/dev/mhp/"]
   path = ~/dev/mhp/.gitconfig
-[includeIf "gitdir:~/dev/aperto/"]
-  path = ~/dev/aperto/.gitconfig
+[includeIf "gitdir:~/dev/ibm/"]
+  path = ~/dev/ibm/.gitconfig
 [includeIf "gitdir:~/dev/sodefa/"]
   path = ~/dev/sodefa/.gitconfig
 [includeIf "gitdir:~/dev/nordlb/"]
