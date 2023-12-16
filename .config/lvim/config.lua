@@ -76,11 +76,12 @@ formatters.setup {
   --   root_dir = require("null-ls.utils").root_pattern(".prettierrc")
   -- },
   b.formatting.prettier,
-  {
-    exe = "biome",
-    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "css", "json", "yaml" },
-    root_dir = require("null-ls.utils").root_pattern("biome.json")
-  }
+  { command = "rustfmt", filetypes = { "rust" } },
+  -- {
+  --   exe = "biome",
+  --   filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "css", "json", "yaml" },
+  --   root_dir = require("null-ls.utils").root_pattern("biome.json")
+  -- }
   -- with_root_file(b.formatting.prettier, { "node_modules/.bin/prettier" }),
   -- with_root_file(b.formatting.rome.with { filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact",
   --   "css", "json", "yaml" } }, { "node_modules/.bin/rome" }),
@@ -125,12 +126,20 @@ lvim.plugins = {
     opts = {},
   },
   {
-    "David-Kunz/gen.nvim",
+    "Saecki/crates.nvim",
+    tag = 'stable',
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      -- require('gen').container = 'ollama_gpu'
-      require('gen').model = 'codellama'
-    end
-  }
+      require('crates').setup()
+    end,
+  },
+  -- {
+  --   "David-Kunz/gen.nvim",
+  --   config = function()
+  --     -- require('gen').container = 'ollama_gpu'
+  --     require('gen').model = 'codellama'
+  --   end
+  -- }
 }
 
 local api = require("typescript-tools.api")
