@@ -13,7 +13,8 @@ in
   home.packages = [
     # pkgs.htop
     pkgs.pinentry_curses
-    # pkgs.alacritty
+    pkgs.alacritty
+    pkgs.tmux
     # https://giters.com/LnL7/nix-darwin/issues/362
     # pkgs.kitty
     # pkgs.entr # https://eradman.com/entrproject/
@@ -40,6 +41,7 @@ in
     pkgs.hyperfine
     pkgs.duplicity
     pkgs.nixpacks
+    pkgs.sccache
   ];
 
   home.sessionVariables = {
@@ -94,12 +96,16 @@ in
 
     plugins=()
 
- eval \"$(~/.bin/rtx activate zsh)\"
+ eval \"$(~/.local/bin/mise activate zsh)\"
 
  # https://github.com/bitwarden/cli/blob/8b650666c593efa19ee54ef7360321de63efe0e2/src/bw.ts#L106
  export BITWARDENCLI_APPDATA_DIR=$HOME/.config/bitwarden-cli
- export GEM_HOME=$(rtx exec ruby --command 'ruby -e \"puts Gem.user_dir\"')
+ export GEM_HOME=$(mise exec ruby --command 'ruby -e \"puts Gem.user_dir\"')
  export PATH=$PATH:$GEM_HOME/bin
+ . \"$HOME/.cargo/env\"
+
+ export WASMTIME_HOME=\"$HOME/.wasmtime\"
+ export PATH=\"$WASMTIME_HOME/bin:$PATH\"
 
  # export GOPATH=$(go env GOPATH)
  # export GOROOT=$(go env GOROOT)
@@ -136,6 +142,7 @@ in
  export ANDROID_AVD_HOME=/Volumes/home/VMS/Android-Emulator
  export PATH=$ANDROID_SDK_ROOT/tools:$PATH
  export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
+ export PATH=$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$PATH
 
  export PATH=$HOME/Library/Python/3.8/bin:$PATH
  # export PATH=$HOME/.bun/bin:$PATH
@@ -143,8 +150,6 @@ in
  if [ -f ~/.zshrc_secret ]; then
      source ~/.zshrc_secret
  fi
-
- # test -d \"$HOME/.tea\" && source <(\"$HOME/.tea/tea.xyz/v*/bin/tea\" --silent)
      ";
   };
 
