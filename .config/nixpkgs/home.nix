@@ -106,12 +106,12 @@ in
  export WASMTIME_HOME=\"$HOME/.wasmtime\"
  export PATH=\"$WASMTIME_HOME/bin:$PATH\"
 
- # export GOPATH=$(go env GOPATH)
- # export GOROOT=$(go env GOROOT)
- # export GOBIN=$(go env GOBIN)
- # export PATH=$PATH:$GOPATH/bin
- # export PATH=$PATH:$GOROOT/bin
- # export PATH=$PATH:$GOBIN
+ export GOPATH=$(go env GOPATH)
+ export GOROOT=$(go env GOROOT)
+ export GOBIN=$(go env GOBIN)
+ export PATH=$PATH:$GOPATH/bin
+ export PATH=$PATH:$GOROOT/bin
+ export PATH=$PATH:$GOBIN
  export PATH=$PATH:$HOME/.maestro/bin
 
  export OLLAMA_MODELS=/Volumes/home/AI/Models/ollama
