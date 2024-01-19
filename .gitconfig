@@ -44,6 +44,8 @@
   path = ~/dev/nordlb/.gitconfig
 [includeIf "gitdir:~/dev/sap/"]
   path = ~/dev/sap/.gitconfig
+[includeIf "gitdir:~/dev/abl/ABL-Configuration-App-robin/"]
+  path = ~/dev/abl/.gitconfig-robin
 [pull]
 	rebase = true
 [interactive]
