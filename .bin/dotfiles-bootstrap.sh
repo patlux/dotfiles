@@ -1,3 +1,3 @@
 #!/bin/sh
 
-dgit reset --hard
+git --git-dir ~/.dotfiles/.git --work-tree=$HOME reset --hard
