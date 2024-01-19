@@ -106,9 +106,9 @@ in
  export WASMTIME_HOME=\"$HOME/.wasmtime\"
  export PATH=\"$WASMTIME_HOME/bin:$PATH\"
 
- export GOPATH=$(go env GOPATH)
- export GOROOT=$(go env GOROOT)
- export GOBIN=$(go env GOBIN)
+ export GOPATH=$(mise exec go --command 'go env GOPATH')
+ export GOROOT=$(mise exec go --command 'go env GOROOT')
+ export GOBIN=$(mise exec go --command 'go env GOBIN')
  export PATH=$PATH:$GOPATH/bin
  export PATH=$PATH:$GOROOT/bin
  export PATH=$PATH:$GOBIN
