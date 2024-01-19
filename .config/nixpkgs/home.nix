@@ -42,6 +42,7 @@ in
     pkgs.duplicity
     pkgs.nixpacks
     pkgs.sccache
+    pkgs.iperf3
   ];
 
   home.sessionVariables = {
@@ -113,6 +114,7 @@ in
  export PATH=$PATH:$GOROOT/bin
  export PATH=$PATH:$GOBIN
  export PATH=$PATH:$HOME/.maestro/bin
+ export PATH=$PATH:$HOME/.flashlight/bin
 
  export OLLAMA_MODELS=/Volumes/home/AI/Models/ollama
  
