@@ -1,8 +1,15 @@
 # Restart yabai 
+# shift + lctrl + alt - r : \
+#     /usr/bin/env osascript <<< \
+#         'display notification "Restarting yabai" with title "yabai"'; \
+#     launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+
 shift + lctrl + alt - r : \
     /usr/bin/env osascript <<< \
         'display notification "Restarting yabai" with title "yabai"'; \
-    launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+    killall yabai; \
+    yabai --stop-service; \
+    yabai --start-service
 
 # Reload skhd 
 shift + lctrl + alt - s : \
