@@ -8,16 +8,15 @@ in
   home.username = name;
   home.homeDirectory = "/Users/${name}";
 
-  home.stateVersion = "21.11";
+  home.stateVersion = "24.05";
 
   home.packages = [
     # pkgs.htop
-    pkgs.pinentry_curses
+    pkgs.pinentry-curses
     pkgs.alacritty
     pkgs.tmux
     # https://giters.com/LnL7/nix-darwin/issues/362
-    # pkgs.kitty
-    # pkgs.entr # https://eradman.com/entrproject/
+    pkgs.entr # https://eradman.com/entrproject/
     # pkgs.nodejs-14_x
     pkgs.ripgrep
     pkgs.fd
@@ -39,10 +38,13 @@ in
     # pkgs.rustc
     # pkgs.cargo
     pkgs.hyperfine
-    pkgs.duplicity
+    # pkgs.duplicity
     pkgs.nixpacks
     pkgs.sccache
     pkgs.iperf3
+    pkgs.kitty
+    # pkgs.yabai
+    # pkgs.skhd
   ];
 
   home.sessionVariables = {
