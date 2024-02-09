@@ -1,4 +1,5 @@
 [tools]
 go = "1.21.6"
-bun = "1.0.23"
+bun = "1.0.25"
 ruby = "2.7.6"
+java = "adoptopenjdk-17.0.9+9"
