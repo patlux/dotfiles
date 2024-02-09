@@ -14,6 +14,7 @@ tap "homebrew/cask-fonts"
 cask "font-meslo-lg-nerd-font"
 
 cask "raycast"
+cask "arc"
 
 # cask "react-native-debugger"
 # cask "figma"
