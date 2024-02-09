@@ -8,6 +8,8 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# https://macos-defaults.com/dock/tilesize.html
+
 # ------------------------------------------------------------------------------------------------ -
 # Apple software: Safari, Updater, iTunes, etc.
 
@@ -29,6 +31,8 @@ defaults write com.apple.terminal StringEncodings -array 4
 
 # ------------------------------------------------------------------------------------------------ -
 # USER INTERFACE
+
+defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\""
 
 # Disable animations when opening and closing windows
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
@@ -73,6 +77,12 @@ sudo pmset -a sms 0
 # ------------------------------------------------------------------------------------------------ -
 # DOCK
 
+defaults write com.apple.dock "orientation" -string "right"
+defaults write com.apple.dock "tilesize" -int "36"
+defaults write com.apple.dock "show-recents" -bool "false"
+
+killall Dock
+
 # $__dir/dock-writeable.sh
 # finder
 # firefox
@@ -98,6 +108,12 @@ chflags nohidden ~/Library
 # Show hidden files and file extensions by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show path bar
+defaults write com.apple.finder "ShowPathbar" -bool "true"
+
+# Folders on top
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
 
 # Disable the warning when changing file extensions
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
