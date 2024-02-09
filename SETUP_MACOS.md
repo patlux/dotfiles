@@ -82,3 +82,18 @@ LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.
 
 ./.bin/set-defaults.sh # will reboot
 ```
+
+Replace Spotlight with Raycast
+
+1. Disable spotlight shortcut
+![CleanShot 2024-02-10 at 00 49 53@2x](https://github.com/patlux/dotfiles/assets/4481570/1ae0b66d-18c0-482d-94f8-71f8a2542603)
+2. Open Raycast and setup shortcut
+
+Switch Keyboard Layout for Dygma Keyboard
+
+![CleanShot 2023-03-27 at 10 46 01](https://github.com/patlux/dotfiles/assets/4481570/291b8e51-e965-494d-92c3-dd7183c807e5)
+
+![CleanShot 2023-03-27 at 10 46 48](https://github.com/patlux/dotfiles/assets/4481570/2be86882-a5ae-4f63-b653-a17de2876fc9)
+
+
+
