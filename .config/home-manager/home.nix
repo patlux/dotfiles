@@ -14,7 +14,7 @@ in
     # pkgs.htop
     pkgs.pinentry-curses
     pkgs.alacritty
-    pkgs.exa
+    pkgs.eza
     pkgs.tmux
     # https://giters.com/LnL7/nix-darwin/issues/362
     pkgs.entr # https://eradman.com/entrproject/
@@ -122,11 +122,11 @@ in
  export OLLAMA_MODELS=/Volumes/home/AI/Models/ollama
  
  alias dgit=\"git --git-dir ~/.dotfiles/.git --work-tree=$HOME\"
- alias ls=\"exa\"
- alias ll=\"exa -l\"
- alias la=\"exa -a\"
- alias lt=\"exa --tree\"
- alias lla=\"exa -la\"
+ alias ls=\"eza\"
+ alias ll=\"eza -l\"
+ alias la=\"eza -a\"
+ alias lt=\"eza --tree\"
+ alias lla=\"eza -la\"
  
  GPG_TTY=\"$(tty)\"
  export GPG_TTY
