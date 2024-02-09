@@ -130,6 +130,10 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
 
+# ------------------
+# Spotlight
+
+sudo mdutil -i off.
 
 # ------------------------------------------------------------------------------------------------ -
 
