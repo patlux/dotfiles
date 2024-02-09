@@ -14,6 +14,7 @@ in
     # pkgs.htop
     pkgs.pinentry-curses
     pkgs.alacritty
+    pkgs.exa
     pkgs.tmux
     # https://giters.com/LnL7/nix-darwin/issues/362
     pkgs.entr # https://eradman.com/entrproject/

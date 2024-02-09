@@ -2,7 +2,7 @@
 brew "pixman"
 brew "cairo"
 brew "pango"
-brew "exa"
+# brew "exa"
 brew "bitwarden-cli"
 
 brew "koekeishiya/formulae/yabai"
