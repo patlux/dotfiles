@@ -13,6 +13,8 @@ brew "golang-migrate"
 tap "homebrew/cask-fonts"
 cask "font-meslo-lg-nerd-font"
 
+cask "raycast"
+
 # cask "react-native-debugger"
 # cask "figma"
 cask "gimp"
