@@ -9,6 +9,8 @@ brew "koekeishiya/formulae/yabai"
 brew "koekeishiya/formulae/skhd"
 brew "mattisg/mattisg/adblock"
 brew "golang-migrate"
+tap "homebrew/cask-fonts"
+cask "font-meslo-lg-nerd-font"
 
 # cask "react-native-debugger"
 # cask "figma"
