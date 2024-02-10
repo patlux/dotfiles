@@ -23,6 +23,9 @@ lvim.keys.visual_mode["Y"] = '"*y'
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
+-- https://github.com/LunarVim/LunarVim/issues/4468
+lvim.builtin.treesitter.context_commentstring = nil
+
 -- --------------
 -- TREESITTER ---
 
