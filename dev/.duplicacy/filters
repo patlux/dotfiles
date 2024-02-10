@@ -2,3 +2,7 @@
 -*/target/
 -*/Pods/
 -*/android/app/build/
+-*.apk
+-*.aab
+-*.ipa
+-*.app/

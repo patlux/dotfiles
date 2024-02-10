@@ -13,3 +13,7 @@
 -.fseventsd/
 -Library/Caches
 -Library/Logs
+-*.apk
+-*.aab
+-*.ipa
+-*.app/
