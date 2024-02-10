@@ -43,7 +43,7 @@ program = "/Users/patwoz/.nix-profile/bin/zsh"
 
 [window]
 decorations = "buttonless"
-x = 10
 
 [window.padding]
+x = 10
 y = 10
