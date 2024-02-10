@@ -109,6 +109,17 @@ Setup tailscale
 
 Setup bitwarden
 
+1. Open Bitwarden
+2. Choose Self-Hosted Environment
+3. Enter the URL `https://syno.camel-yo.ts.net:7277`
+4. Open Safai > Settings > Extensions > Download the Bitwarden Extension
+
+Setup ARC
+
+1. Open ARC
+2. Settings
+3. Login
+
 Setup gpg
 
 Setup Little Snitch
