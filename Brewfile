@@ -29,6 +29,10 @@ cask "joplin"
 cask "battery"
 cask "android-studio"
 
+# Backups
+cask "arq"
+cask "duplicacy-cli"
+
 # for abl
 tap "lokalise/cli-2"
 brew "lokalise2"
