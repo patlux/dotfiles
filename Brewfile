@@ -3,7 +3,7 @@ brew "pixman"
 brew "cairo"
 brew "pango"
 # brew "exa"
-brew "bitwarden-cli"
+# brew "bitwarden-cli"
 brew "neovim"
 brew "scrcpy"
 
