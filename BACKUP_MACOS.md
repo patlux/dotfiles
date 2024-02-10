@@ -1,6 +1,10 @@
 # Backup macOS
 
+Splitted into several backups, because some parts take longer than others.
+
 ## `~/dev`
+
+Filters to include/exclude files/folders are in `~/dev/.duplicacy/filters`
 
 **Backup**
 
@@ -22,6 +26,8 @@ Important files
 ```
 ~/.zshrc_secret
 ```
+
+Filters to include/exclude files/folders are in `~/.duplicacy/filters`
 
 **Backup**
 

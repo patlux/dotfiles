@@ -1,7 +1,8 @@
 {
-  "installedVersion": "1.20.0",
-  "environmentUrls": {
-    "base": "https://camel-yo.ts.net:7277",
+  "stateVersion": 12,
+  "global_environment_region": "Self-hosted",
+  "global_environment_urls": {
+    "base": "https://syno.camel-yo.ts.net:7277",
     "api": null,
     "identity": null,
     "webVault": null,
@@ -9,5 +10,10 @@
     "notifications": null,
     "events": null,
     "keyConnector": null
+  },
+  "global": {
+    "theme": "system",
+    "window": {},
+    "installedVersion": "2024.2.0"
   }
 }

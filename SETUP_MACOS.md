@@ -97,15 +97,15 @@ Switch Keyboard Layout for Dygma Keyboard
 
 Setup dev folder
 
-```sh
-brew install syncthing
-brew link syncthing
-brew services start syncthing
-
-# open http://localhost:8384/
-```
+See `./BACKUP_MACOS.md`
 
 Setup tailscale
+
+```sh
+# Open Tailscale with Raycast
+# or run
+# tailscale rungui
+```
 
 Setup bitwarden
 
