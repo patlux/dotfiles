@@ -30,7 +30,8 @@ cask "battery"
 cask "android-studio"
 
 # for abl
-brew "lokalise/cli-2/lokalise2"
+tap "lokalise/cli-2"
+brew "lokalise2"
 
 # cask "react-native-debugger"
 # cask "figma"
