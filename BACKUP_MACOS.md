@@ -40,3 +40,16 @@ duplicacy backup -t first -stats -threads 10
 **Restore**
 
 TODO
+
+## Debug
+
+**Validate include/exclude filters**
+
+```sh
+cd ~/dev
+duplicacy -d -log backup -enum-only > log.txt
+
+# PATTERN_INCLUDE means the folder/file will be included
+# PATTERN_EXCLUDE the opposite
+
+```
