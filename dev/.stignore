@@ -1,0 +1,8 @@
+node_modules/
+Pods/
+*.ipa
+*.apk
+*.aab
+*.app/
+android/app/build
+target/
