@@ -95,9 +95,20 @@ Switch Keyboard Layout for Dygma Keyboard
 
 ![CleanShot 2023-03-27 at 10 46 48](https://github.com/patlux/dotfiles/assets/4481570/2be86882-a5ae-4f63-b653-a17de2876fc9)
 
+Setup dev folder
+
+```sh
+brew install syncthing
+brew link syncthing
+brew services start syncthing
+
+# open http://localhost:8384/
+```
+
 Setup tailscale
 
 Setup bitwarden
 
 Setup gpg
 
+Setup Little Snitch
