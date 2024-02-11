@@ -13,7 +13,7 @@ in
   home.packages = [
     # pkgs.htop
     pkgs.pinentry-curses
-    pkgs.alacritty
+    # pkgs.alacritty (needs xdg-user-dirs which is not available for aarch64-apple)
     pkgs.eza
     pkgs.tmux
     # https://giters.com/LnL7/nix-darwin/issues/362
