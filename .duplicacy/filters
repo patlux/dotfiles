@@ -1,1 +1,9 @@
 +.ssh/*
++.npmrc
++.yarnrc.yml
++.gnupg/
++.gnupg/private-keys-v1.d/
++.gnupg/private-keys-v1.d/*
++.gnupg/gpg-agent.conf
++.gnupg/pubring.kbx
+-*
