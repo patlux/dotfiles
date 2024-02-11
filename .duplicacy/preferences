@@ -1,10 +1,10 @@
 [
     {
         "name": "default",
-        "id": "dev",
+        "id": "home",
         "repository": "",
         "storage": "smb://patwoz@syno.camel-yo.ts.net/Root/Backups/home",
-        "encrypted": false,
+        "encrypted": true,
         "no_backup": false,
         "no_restore": false,
         "no_save_password": false,

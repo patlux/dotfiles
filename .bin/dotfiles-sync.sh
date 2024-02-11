@@ -40,8 +40,10 @@ rsync -avR \
 rsync -avR $ROOT_DIR/Library/LaunchAgents/de.patwoz.KeyRemapping.plist $TMP_DIR
 rsync -avR $ROOT_DIR/dev/dwins/.gitconfig $TMP_DIR
 
-rsync -avR $ROOT_DIR/.duplicity $TMP_DIR
-rsync -avR $ROOT_DIR/dev/.duplicity $TMP_DIR
+rsync -avR $ROOT_DIR/.duplicacy/filters $TMP_DIR
+rsync -avR $ROOT_DIR/.duplicacy/preferences $TMP_DIR
+rsync -avR $ROOT_DIR/dev/.duplicacy/filters $TMP_DIR
+rsync -avR $ROOT_DIR/dev/.duplicacy/preferences $TMP_DIR
 
 rsync -avR $ROOT_DIR/.config/mise/config.toml $TMP_DIR
 rsync -avR $ROOT_DIR/.config/lvim/config.lua $TMP_DIR
