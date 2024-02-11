@@ -1,6 +1,7 @@
 +.ssh/*
 +.npmrc
 +.yarnrc.yml
++.zshrc_secret
 +.gnupg/
 +.gnupg/private-keys-v1.d/
 +.gnupg/private-keys-v1.d/*
