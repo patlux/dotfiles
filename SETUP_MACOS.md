@@ -97,15 +97,18 @@ Switch Keyboard Layout for Dygma Keyboard
 
 Setup dev folder
 
-See `./BACKUP_MACOS.md`
+> See `./BACKUP_MACOS.md`
+
+```sh
+cd ~/dev
+# TODO: "-r 1" required?
+duplicacy restore -r 1 "*"
+```
 
 Setup tailscale
 
-```sh
-# Open Tailscale with Raycast
-# or run
-# tailscale rungui
-```
+1. Open Tailscale (via Raycast)
+2. Login
 
 Setup bitwarden
 

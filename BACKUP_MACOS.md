@@ -16,8 +16,11 @@ duplicacy backup -t first -stats -threads 10
 
 **Restore**
 
-TODO
-
+```sh
+cd ~/dev
+# TODO: "-r 1" required?
+duplicacy restore -r 1 "*"
+```
 
 ## Miscellaneous
 
@@ -39,7 +42,11 @@ duplicacy backup -t first -stats -threads 10
 
 **Restore**
 
-TODO
+```sh
+cd ~/
+# TODO: "-r 1" required?
+duplicacy restore -r 1 "*"
+```
 
 ## Debug
 
