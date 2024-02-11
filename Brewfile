@@ -29,6 +29,7 @@ cask "keepassxc"
 cask "joplin"
 cask "battery"
 cask "android-studio"
+cask "virtualbuddy"
 
 # Backups
 cask "arq"
