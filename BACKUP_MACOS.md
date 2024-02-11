@@ -18,8 +18,19 @@ duplicacy backup -t first -stats -threads 10
 
 ```sh
 cd ~/dev
-# TODO: "-r 1" required?
-duplicacy restore -r 1 "*"
+# get latest revision
+duplicacy list
+# check whats missing
+duplicacy diff
+
+# get everything
+duplicacy restore -r <revision> ""
+
+# get only Personal folder
+duplicacy restore -r <revision> "Personal/*"
+
+# or other
+duplicacy restore -r <revision> "piparo.tech/*"
 ```
 
 ## Miscellaneous
@@ -36,7 +47,8 @@ Filters to include/exclude files/folders are in `~/.duplicacy/filters`
 
 ```sh
 cd ~/
-duplicacy init home smb://patwoz@syno.camel-yo.ts.net/Root/Backups/home
+duplicacy init -e home smb://patwoz@syno.camel-yo.ts.net/Root/Backups/home
+# enter encryption password
 duplicacy backup -t first -stats -threads 10
 ```
 
@@ -44,8 +56,16 @@ duplicacy backup -t first -stats -threads 10
 
 ```sh
 cd ~/
-# TODO: "-r 1" required?
-duplicacy restore -r 1 "*"
+# get latest revision
+duplicacy list
+# check whats missing
+duplicacy diff
+
+# get everything
+duplicacy restore -r <revision> ""
+
+# get only .ssh/
+duplicacy restore -r <revision> ".ssh/*"
 ```
 
 ## Debug
@@ -54,6 +74,9 @@ duplicacy restore -r 1 "*"
 
 ```sh
 cd ~/dev
+# or
+cd ~/
+
 duplicacy -d -log backup -enum-only > log.txt
 
 # PATTERN_INCLUDE means the folder/file will be included
