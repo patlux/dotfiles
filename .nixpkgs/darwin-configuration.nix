@@ -8,14 +8,10 @@ in
 
   environment.systemPackages = with pkgs; [];
 
-  fonts.fonts = with pkgs; [
-    meslo-lgs-nf
-  ];
-
   services.nix-daemon.enable = true;
   nix.package = pkgs.nix;
 
-  programs.zsh.enable = true;  # default shell on catalina
+  programs.zsh.enable = true;
   system.stateVersion = 4;
 
   users.users.${name} = {
@@ -24,4 +20,9 @@ in
   };
 
   home-manager.useUserPackages = true;
+
+  # TODO: move all settings from set-defaults.ts to here
+  system.defaults.dock.orientation = "right";
+  system.defaults.NSGlobalDomain.InitialKeyRepeat = 12;
+  system.defaults.NSGlobalDomain.KeyRepeat = 1;
 }
