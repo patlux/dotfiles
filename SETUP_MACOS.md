@@ -100,6 +100,7 @@ home-manager switch # creates the ~/.zshrc
 
 ```sh
 curl https://mise.run | sh
+# close and open new terminal
 mise install
 
 # Rust
