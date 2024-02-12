@@ -7,4 +7,8 @@
 +.gnupg/private-keys-v1.d/*
 +.gnupg/gpg-agent.conf
 +.gnupg/pubring.kbx
++Library/
++Library/Application Support/
++Library/Application Support/Viscosity/*
++Library/Preferences/com.viscosityvpn.Viscosity.plist
 -*
