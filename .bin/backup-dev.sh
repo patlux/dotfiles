@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd /Users/patwoz/dev
+echo "`date`" Backing up $PWD ...
+/opt/homebrew/bin/duplicacy -log backup -stats
+echo "`date`" Stopped backing up $PWD ...
