@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e # stop on error
+
 cd /Users/patwoz
 echo "`date`" Backing up $PWD ...
 /opt/homebrew/bin/duplicacy -log backup -stats
