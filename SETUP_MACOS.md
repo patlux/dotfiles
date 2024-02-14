@@ -18,8 +18,11 @@ TODO: clearify when to login into icloud. needed for icloud keychain
 
 ## After Setup (Desktop)
 
-TODO: Activate Firewall
-TODO: Activate FileVault
+### Activate FileVault
+
+Open System Settings and make sure FileVault is active.
+
+### (Optional) VirtualBuddy
 
 If you do this on "VirtualBuddy", don't forget to start "VirtualBuddyGuest":
 
@@ -93,6 +96,7 @@ cd .dotfiles
 # On VirtualBuddy: rm -f Library/LaunchAgents/de.patwoz.KeyRemapping.plist
 # Otherwise ESC will not work
 
+darwin-rebuild switch
 home-manager switch # creates the ~/.zshrc
 ```
 
@@ -117,8 +121,6 @@ sudo adblock on
 
 # Install lunarvim
 LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
-
-./.bin/set-defaults.sh # will reboot
 ```
 
 ### Setup Raycast
