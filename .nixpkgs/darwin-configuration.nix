@@ -51,7 +51,7 @@ in
   system.defaults.trackpad = {
     Clicking = true;
     TrackpadRightClick = true;
-    TrackpadThreeFingerDrag = true;
+    TrackpadThreeFingerDrag = false;
     Dragging = true;
   };
 
@@ -94,11 +94,11 @@ in
       DSDontWriteNetworkStores = true;
       DSDontWriteUSBStores = true;
     };
-    "com.apple.Safari" = {
-      Homepage = "about:blank";
-      UniversalSearchEnabled = false;
-      SuppressSearchSuggestions = true;
-    };
+    # "com.apple.Safari" = {
+    #   Homepage = "about:blank";
+    #   UniversalSearchEnabled = false;
+    #   SuppressSearchSuggestions = true;
+    # };
     "com.apple.NetworkBrowser" = {
       BrowseAllInterfaces = 1; 
     };
