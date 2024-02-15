@@ -15,8 +15,7 @@ in
     pkgs.pinentry-curses
     # pkgs.alacritty (needs xdg-user-dirs which is not available for aarch64-apple)
     pkgs.eza
-    pkgs.tmux
-    # https://giters.com/LnL7/nix-darwin/issues/362
+    pkgs.tmux # https://giters.com/LnL7/nix-darwin/issues/362
     pkgs.entr # https://eradman.com/entrproject/
     # pkgs.nodejs-14_x
     pkgs.ripgrep
@@ -52,6 +51,7 @@ in
     LANG = "en_US.UTF-8";
     LC_ALL = "en_US.UTF-8";
     EDITOR = "lvim";
+    VISUAL = "lvim";
   };
 
   home.sessionPath = [
