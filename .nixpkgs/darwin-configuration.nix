@@ -25,6 +25,39 @@ in
 
   home-manager.useUserPackages = true;
 
+  # doesn't work
+  # system.keyboard = {
+  #   # https://hidutil-generator.netlify.app/
+  #   # enableKeyMapping = true;
+
+  #   # CAPSLOCK - ESC (For vim)
+  #   # remapCapsLockToEscape = true;
+
+  # # {"HIDKeyboardModifierMappingSrc":0x700000029,"HIDKeyboardModifierMappingDst":0x700000035},
+  # # {"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029},
+  # # {"HIDKeyboardModifierMappingSrc":0x0007000000e7,"HIDKeyboardModifierMappingDst":0x0007000000e6}
+
+  #   # use a hex to integer tool to convert values
+  #   # userKeyMapping = [
+  #   #   # {
+  #   #   #   # ESC - 
+  #   #   #   HIDKeyboardModifierMappingSrc = 30064771113; # 0x700000029;
+  #   #   #   HIDKeyboardModifierMappingDst = 30064771125; # 0x700000035;
+  #   #   # } 
+  #   #   {
+  #   #     # CAPS LOCK to ESC
+  #   #     HIDKeyboardModifierMappingSrc = 30064771129; # 0x700000039;
+  #   #     HIDKeyboardModifierMappingDst = 30064771113; # 0x700000029;
+  #   #   }
+  #   #   {
+  #   #     # Right CMD -> Right Option (Because Dygma doesn't have a right option key)
+  #   #     # This makes it possible to enter "@"
+  #   #     HIDKeyboardModifierMappingSrc = 30064771303; # 0x7000000E7
+  #   #     HIDKeyboardModifierMappingDst = 30064771302; # 0x7000000E6
+  #   #   }
+  #   # ];
+  # };
+
   # TODO: move all settings from set-defaults.ts to here
   system.defaults.dock = {
     autohide = false;
@@ -53,29 +86,6 @@ in
     TrackpadRightClick = true;
     TrackpadThreeFingerDrag = false;
     Dragging = true;
-  };
-
-  system.keyboard = {
-    # https://hidutil-generator.netlify.app/
-    enableKeyMapping = true;
-
-    # CAPSLOCK - ESC (For vim)
-    remapCapsLockToEscape = true;
-
-    # use a hex to integer tool to convert values
-    userKeyMapping = [
-      {
-        # Right CMD -> Right Option (Because Dygma doesn't have a right option key)
-        # This makes it possible to enter "@"
-        HIDKeyboardModifierMappingSrc = 30064771303;
-        HIDKeyboardModifierMappingDst = 30064771302;
-      },
-      {
-        # ESC - 
-        HIDKeyboardModifierMappingSrc = 30064771113; # 0x700000029;
-        HIDKeyboardModifierMappingDst = 30064771129; # 0x700000039;
-      }
-    ];
   };
 
   system.defaults.NSGlobalDomain = {
