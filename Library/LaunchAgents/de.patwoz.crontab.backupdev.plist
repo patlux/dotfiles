@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>de.patwoz.crontab.backupdev</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/patwoz/.bin/backup-dev.sh</string>
+  </array>
+
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict>
+      <key>Hour</key>
+      <integer>10</integer>
+      <key>Minute</key>
+      <integer>10</integer>
+    </dict>
+  </array>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>StandardErrorPath</key>
+  <string>/tmp/de.patwoz.crontab.backupdev.err</string>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/de.patwoz.crontab.backupdev.out</string>
+</dict>
+</plist>
