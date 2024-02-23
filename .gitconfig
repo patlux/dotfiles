@@ -47,7 +47,7 @@
 [includeIf "gitdir:~/dev/abl/ABL-Configuration-App-robin/"]
   path = ~/dev/abl/.gitconfig-robin
 [pull]
-	rebase = true
+	rebase = false
 [interactive]
     diffFilter = delta --color-only
 [diff]
@@ -70,3 +70,7 @@
   autoSetupRemote = true
 [init]
 	defaultBranch = main
+[branch "master"]
+	rebase = false
+[branch "main"]
+	rebase = false
