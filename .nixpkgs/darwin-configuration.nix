@@ -39,11 +39,6 @@ in
 
   #   # use a hex to integer tool to convert values
   #   # userKeyMapping = [
-  #   #   # {
-  #   #   #   # ESC - 
-  #   #   #   HIDKeyboardModifierMappingSrc = 30064771113; # 0x700000029;
-  #   #   #   HIDKeyboardModifierMappingDst = 30064771125; # 0x700000035;
-  #   #   # } 
   #   #   {
   #   #     # CAPS LOCK to ESC
   #   #     HIDKeyboardModifierMappingSrc = 30064771129; # 0x700000039;
