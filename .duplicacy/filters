@@ -10,6 +10,11 @@
 +Library/
 +Library/Application Support/
 +Library/Application Support/Viscosity/*
++Library/Application Support/
++Library/Application Support/Google/
++Library/Application Support/Google/Chrome/
++Library/Application Support/Google/Chrome/Profile */*
++Library/Application Support/Google/Chrome/Default/*
 +Library/Preferences/
 +Library/Preferences/com.viscosityvpn.Viscosity.plist
 -*
