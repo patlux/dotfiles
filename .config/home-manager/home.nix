@@ -150,6 +150,9 @@ in
 
  export PATH=$HOME/Library/Python/3.8/bin:$PATH
  # export PATH=$HOME/.bun/bin:$PATH
+
+ # Add key: "ssh-add --apple-use-keychain ~/.ssh/<key>"
+ ssh-add --apple-load-keychain 2> /dev/null
  
  if [ -f ~/.zshrc_secret ]; then
      source ~/.zshrc_secret

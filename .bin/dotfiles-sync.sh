@@ -52,6 +52,7 @@ rsync -avR $ROOT_DIR/.config/kitty $TMP_DIR
 rsync -avR $ROOT_DIR/.config/yabai $TMP_DIR
 rsync -avR $ROOT_DIR/.config/skhd $TMP_DIR
 rsync -avR $ROOT_DIR/.config/nixpkgs $TMP_DIR
+rsync -avR $ROOT_DIR/.config/home-manager $TMP_DIR
 
 rsync -avR $ROOT_DIR/.nixpkgs/darwin-configuration.nix $TMP_DIR
 
