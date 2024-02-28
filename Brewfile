@@ -17,6 +17,8 @@ brew "git-lfs"
 tap "homebrew/cask-fonts"
 cask "font-meslo-lg-nerd-font"
 
+cask "betterdisplay"
+
 cask "bitwarden"
 cask "raycast"
 cask "arc"
