@@ -23,13 +23,39 @@ lvim.keys.visual_mode["Y"] = '"*y'
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
+local function isFileBig(_, bufnr)
+  -- Is caching necessary?
+  if vim.b.big_file ~= nil then
+    return vim.b.big_file
+  end
+
+  local file = vim.api.nvim_buf_get_name(bufnr)
+  if not file or #file == 0 then
+    vim.b.big_file = false
+    return false
+  end
+
+  local max_filesize = 1024 * 1024
+  local ok, stats = pcall(vim.loop.fs_stat, file)
+  if ok and stats and stats.size > max_filesize then
+    vim.b.big_file = true
+    return true
+  end
+
+  vim.b.big_file = false
+  return false
+end
+
 -- https://github.com/LunarVim/LunarVim/issues/4468
 lvim.builtin.treesitter.context_commentstring = nil
 
 -- --------------
 -- TREESITTER ---
 
-lvim.builtin.treesitter.highlight.enable = true
+lvim.builtin.treesitter.highlight.enable = isFileBig ~= true
+lvim.builtin.treesitter.matchup.disable = isFileBig
+lvim.builtin.treesitter.indent.disable = isFileBig
+lvim.builtin.illuminate.options.large_file_cutoff = 5000
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "css",
