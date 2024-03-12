@@ -7,9 +7,13 @@ brew "pango"
 brew "neovim"
 brew "scrcpy"
 
+tap "koekeishiya/formulae"
 brew "koekeishiya/formulae/yabai"
 brew "koekeishiya/formulae/skhd"
+
+tap "mattisg/mattisg"
 brew "mattisg/mattisg/adblock"
+
 brew "golang-migrate"
 brew "git-delta"
 brew "git-lfs"
@@ -34,7 +38,6 @@ cask "android-studio"
 cask "virtualbuddy"
 
 # Backups
-cask "arq"
 cask "duplicacy-cli"
 
 # for abl
@@ -59,7 +62,7 @@ cask "gpg-suite"
 # cask "kitty"
 # cask "alfred"
 cask "syncthing"
-cask "finicky" # cask "choosy"
+# cask "finicky" # cask "choosy"
 cask "raycast"
 cask "minisim" # launch ios/android simulator/emulators from the menu
 
