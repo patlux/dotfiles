@@ -40,6 +40,7 @@ Install xcode command line tools
 
 ```sh
 xcode-select --install
+sudo xcodebuild -license
 ```
 
 ### Setup brew & nix
@@ -115,6 +116,7 @@ cd ~/.dotfiles
 brew bundle
 
 yabai --start-service
+skhd --start-service
 
 # https://github.com/MattiSG/adblock
 sudo adblock on
@@ -123,7 +125,18 @@ sudo adblock on
 LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 ```
 
-### Setup Raycast
+### Setup Keyboard
+
+#### Hide Menu Bar Entry
+
+1. `System Settings`
+2. `Keyboard`
+3. `Input Sources` `Edit...`
+4. Uncheck `Show Input menu in menu bar`
+
+#### Raycast
+
+`System Settings` > `Keyboard` > `Keyboard Shortcuts...`
 
 Replace Spotlight with Raycast
 
@@ -131,11 +144,27 @@ Replace Spotlight with Raycast
 ![CleanShot 2024-02-10 at 00 49 53@2x](https://github.com/patlux/dotfiles/assets/4481570/1ae0b66d-18c0-482d-94f8-71f8a2542603)
 2. Open Raycast and setup shortcut
 
-Switch Keyboard Layout for Dygma Keyboard
+#### Dygma Keyboard
 
-![CleanShot 2023-03-27 at 10 46 01](https://github.com/patlux/dotfiles/assets/4481570/291b8e51-e965-494d-92c3-dd7183c807e5)
+**Fix keyboard type**
 
-![CleanShot 2023-03-27 at 10 46 48](https://github.com/patlux/dotfiles/assets/4481570/2be86882-a5ae-4f63-b653-a17de2876fc9)
+macOS won't detect the correct german quertz keyboard with the `<>` keys at the first. 
+
+To fix this run:
+
+```sh
+rm -f /Library/Preferences/keyboardtype.plist
+```
+
+Now reboot. After reboot:
+
+`System Settings` > `Keyboard` > `Change Keyboard Type...` > Finish the process
+
+**Swap `Option` and `Command` key**
+
+`System Settings` > `Keyboard` > `Keyboard Shortcuts...`
+
+![CleanShot 2024-03-12 at 17 04 06](https://github.com/patlux/dotfiles/assets/4481570/c3f22bd9-ef08-48fe-9985-e5f66388e8ac)
 
 # Setup tailscale
 
@@ -160,8 +189,10 @@ gpg, .ssh, .npmrc, .yarnrc
 > See `./BACKUP_MACOS.md`
 
 ```sh
-cd ~/dev
+cd ~/
 duplicacy list
+# Enter password from "Synology NAS (Web/SSH)" when asking for SAMBA password
+# Enter password from "duplicacy" when asking for storage password
 duplicacy restore -r <revision> "*"
 # with overwrite existing files:
 duplicacy restore -overwrite -r <revision> "*"
