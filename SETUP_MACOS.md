@@ -229,4 +229,15 @@ duplicacy restore -r <revision> "piparo.tech/*"
 
 ### Other
 
-TODO: Setup Little Snitch
+#### Install "Apple WWDR certificate"
+
+Download [Certificate](https://www.apple.com/certificateauthority/AppleWWDRCAG3.cer)
+
+```sh
+cd ~/Downloads
+sudo security import AppleWWDRCAG3.cer -k /Library/Keychains/System.keychain
+```
+
+This fixes `Distribution certificate with fingerprint EAF3A00C1FC18283CACFEDC21AD6BB37EB993438 hasn't been imported successfully`
+
+#### TODO: Setup Little Snitch
