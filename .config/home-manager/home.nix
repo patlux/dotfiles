@@ -43,6 +43,8 @@ in
     pkgs.sccache
     pkgs.iperf3
     pkgs.kitty
+    pkgs.wget
+    pkgs.neovim
     # pkgs.yabai
     # pkgs.skhd
   ];
