@@ -9,8 +9,11 @@ brew "scrcpy"
 brew "cmake" # run "sudo ln -s $(which cmake) /usr/local/bin/cmake"
 brew "pkg-config" # run "sudo ln -s $(which pkg-config) /usr/local/bin/pkg-config"
 
-tap "koekeishiya/formulae"
-brew "koekeishiya/formulae/yabai"
+# tap "koekeishiya/formulae"
+# brew ".brew/yabai.rb"
+# in yabai v7.1.0 the rules are not working
+# we will use v7.0.4
+# Run "brew install .brew/yabai"
 brew "koekeishiya/formulae/skhd"
 
 tap "mattisg/mattisg"
