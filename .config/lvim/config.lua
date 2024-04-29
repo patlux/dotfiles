@@ -11,8 +11,6 @@ lvim.builtin.dap.active = false
 lvim.builtin.project.active = false
 lvim.builtin.luasnip.active = false
 
-lvim.lsp.installer.setup.automatic_installation = false
-
 -- --------------
 -- KEYMAPPINGS ---
 
