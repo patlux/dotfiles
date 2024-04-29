@@ -39,6 +39,7 @@ cask "joplin"
 cask "battery"
 cask "android-studio"
 cask "virtualbuddy"
+cask "timing"
 
 # Backups
 cask "duplicacy-cli"
