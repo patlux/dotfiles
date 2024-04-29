@@ -154,21 +154,6 @@ lvim.plugins = {
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     opts = {},
   },
-  {
-    "Saecki/crates.nvim",
-    tag = 'stable',
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require('crates').setup()
-    end,
-  },
-  -- {
-  --   "David-Kunz/gen.nvim",
-  --   config = function()
-  --     -- require('gen').container = 'ollama_gpu'
-  --     require('gen').model = 'codellama'
-  --   end
-  -- }
 }
 
 local api = require("typescript-tools.api")
