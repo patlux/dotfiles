@@ -45,8 +45,12 @@ in
     pkgs.kitty
     pkgs.wget
     pkgs.neovim
+    pkgs.lazygit
+    pkgs.tree
+    pkgs.mysql
     # pkgs.yabai
     # pkgs.skhd
+    # pkgs.yabai
   ];
 
   home.sessionVariables = {
