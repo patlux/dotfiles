@@ -2,6 +2,7 @@
 brew "pixman"
 brew "cairo"
 brew "pango"
+brew "dive"
 # brew "exa"
 # brew "bitwarden-cli"
 # brew "neovim"
