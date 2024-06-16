@@ -40,6 +40,9 @@ Install xcode command line tools
 
 ```sh
 xcode-select --install
+sudo xcode-select --switch /Library/Developer/CommandLineTools
+
+# If Xcode is installed
 sudo xcodebuild -license
 ```
 
