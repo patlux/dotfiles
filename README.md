@@ -120,16 +120,6 @@ brew update
 brew upgrade
 ```
 
-#### `node`
-
-```bash
-# check for updates
-ncu -g
-
-# install updates
-~/.bin/install-node-packages.sh
-```
-
 #### [LunarVim](https://www.lunarvim.org/)
 
 ```bash
