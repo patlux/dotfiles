@@ -103,7 +103,8 @@ formatters.setup {
   --   root_dir = require("null-ls.utils").root_pattern(".prettierrc")
   -- },
   b.formatting.prettier,
-  { command = "rustfmt", filetypes = { "rust" } },
+  { command = "rustfmt",     filetypes = { "rust" } },
+  { command = "swiftformat", filetypes = { "swift" } },
   -- {
   --   exe = "biome",
   --   filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "css", "json", "yaml" },
