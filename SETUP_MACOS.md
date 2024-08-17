@@ -40,6 +40,9 @@ Install xcode command line tools
 
 ```sh
 xcode-select --install
+sudo xcode-select --switch /Library/Developer/CommandLineTools
+
+# If Xcode is installed
 sudo xcodebuild -license
 ```
 
@@ -97,6 +100,7 @@ cd .dotfiles
 # On VirtualBuddy: rm -f Library/LaunchAgents/de.patwoz.KeyRemapping.plist
 # Otherwise ESC will not work
 
+# If not already done, open a new terminal window to make it work
 darwin-rebuild switch
 home-manager switch # creates the ~/.zshrc
 ```
