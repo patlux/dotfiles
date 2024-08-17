@@ -59,11 +59,11 @@ I'm using LunarVim as my main editor for programming, editing and writing.
 | ---------------- | ------------ |
 | `lctrl` + `hjkl` | Switch focus |
 
-### [Kitty](https://sw.kovidgoyal.net/kitty/)
+### [wezterm](https://wezfurlong.org/wezterm)
 
-Kitty is my primary used terminal. It has built-in support for tabs and it's known for it's speed.
+`wezterm` is my primary used terminal. It has built-in support for tabs and it's known for it's speed.
 
-`~/.config/kitty/kitty.conf`
+`~/.config/wezterm/wezterm.conf`
 
 | Shortcut         | Description  |
 | ---------------- | ------------ |
