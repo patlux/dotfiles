@@ -1,7 +1,9 @@
 [tools]
 go = "1.21.6"
-bun = "1.1.4"
+bun = "1.1.23"
 ruby = "2.7.6"
 java = "adoptopenjdk-17.0.9+9"
 node = "20.11.0"
 yarn = "1.22.0"
+python = "3.12.2"
+zig = "0.13.0"
