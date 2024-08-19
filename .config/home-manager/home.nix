@@ -34,6 +34,7 @@ in
     # pkgs.helix # https://github.com/helix-editor/helix
     pkgs.gh # GitHub Client
     pkgs.rsync
+    pkgs.cmake
     # pkgs.dprint # https://dprint.dev
     # pkgs.rustc
     # pkgs.cargo

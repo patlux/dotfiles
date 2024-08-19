@@ -7,7 +7,7 @@ brew "dive"
 # brew "bitwarden-cli"
 # brew "neovim"
 brew "scrcpy"
-brew "cmake" # run "sudo ln -s $(which cmake) /usr/local/bin/cmake"
+# brew "cmake" # run "sudo ln -s $(which cmake) /usr/local/bin/cmake"
 brew "pkg-config" # run "sudo ln -s $(which pkg-config) /usr/local/bin/pkg-config"
 brew "apktool"
 
