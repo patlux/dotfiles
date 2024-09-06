@@ -19,6 +19,15 @@ config.window_padding = {
 
 config.window_decorations = "RESIZE"
 
+function active_tab_idx(mux_win)
+   for _, item in ipairs(mux_win:tabs_with_info()) do
+      -- wezterm.log_info('idx: ', idx, 'tab:', item)
+      if item.is_active then
+         return item.index
+      end
+   end
+end
+
 local act = wezterm.action
 config.keys = {
   { key = '.', mods = 'CTRL',       action = act.ActivateTabRelative(1) },
@@ -26,6 +35,20 @@ config.keys = {
   { key = '.', mods = 'SHIFT|CTRL', action = act.MoveTabRelative(1) },
   { key = ',', mods = 'SHIFT|CTRL', action = act.MoveTabRelative(-1) },
   { key = '+', mods = 'CMD',        action = act.IncreaseFontSize },
+  { key = 'n', mods = 'OPT',        action = act { SendString = "~" } },
+  {
+    key = 't',
+    mods = 'CMD',
+    -- https://github.com/wez/wezterm/issues/909
+    action = wezterm.action_callback(function(win, pane)
+      local mux_win = win:mux_window()
+      local idx = active_tab_idx(mux_win)
+      -- wezterm.log_info('active_tab_idx: ', idx)
+      local tab = mux_win:spawn_tab({})
+      -- wezterm.log_info('movetab: ', idx)
+      win:perform_action(wezterm.action.MoveTab(idx+1), pane)
+    end),
+  },
 }
 
 return config
