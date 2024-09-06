@@ -38,6 +38,7 @@ yabai -m rule --add label="The Unarchiver" app="^The Unarchiver$" manage=off
 yabai -m rule --add label="ScreenTray" app="^ScreenTray$" manage=off
 yabai -m rule --add app="^Simulator$" manage=off sticky=on
 yabai -m rule --add title="^iPhone.*" manage=off sticky=on
+yabai -m rule --add title="^Android Emulator.*" manage=off sticky=on
 yabai -m rule --add app="^CleanShot X$" sticky=on manage=off
 yabai -m rule --add app="Petit Player" sticky=on manage=off
 yabai -m rule --add app="Bezel" sticky=on manage=off
