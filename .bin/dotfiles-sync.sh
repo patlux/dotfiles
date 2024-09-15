@@ -47,6 +47,7 @@ rsync -avR $ROOT_DIR/dev/.duplicacy/preferences $TMP_DIR
 
 rsync -avR $ROOT_DIR/.config/mise/config.toml $TMP_DIR
 rsync -avR $ROOT_DIR/.config/lvim/config.lua $TMP_DIR
+rsync -avR $ROOT_DIR/.config/nvim $TMP_DIR
 rsync -avR $ROOT_DIR/.config/alacritty $TMP_DIR
 rsync -avR $ROOT_DIR/.config/kitty $TMP_DIR
 rsync -avR $ROOT_DIR/.config/yabai $TMP_DIR
