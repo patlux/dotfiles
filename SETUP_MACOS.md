@@ -32,6 +32,49 @@ If you do this on "VirtualBuddy", don't forget to start "VirtualBuddyGuest":
 
 For Copy/Paste between Host and Virtual Machine.
 
+Also run the following to optimize the vm:
+
+See https://github.com/sickcodes/osx-optimizer for more.
+
+```sh
+# Skip the GUI login screen
+defaults write com.apple.loginwindow autoLoginUser -bool true
+
+# Disable motion and transparency 
+defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
+defaults write com.apple.Accessibility ReduceMotionEnabled -int 1
+defaults write com.apple.universalaccess reduceMotion -int 1
+defaults write com.apple.universalaccess reduceTransparency -int 1
+
+# Multi session
+sudo /usr/bin/defaults write .GlobalPreferences MultipleSessionsEnabled -bool TRUE
+defaults write "Apple Global Domain" MultipleSessionsEnabled -bool true
+
+# Disable updates
+sudo su
+defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -bool false
+defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool false
+defaults write com.apple.commerce AutoUpdate -bool false
+defaults write com.apple.commerce AutoUpdateRestartRequired -bool false
+defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 0
+defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 0
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 0
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 0
+
+# Enable osascript over SSH automatically without sshd-keygen warning and full disk access
+defaults write com.apple.universalaccessAuthWarning /System/Applications/Utilities/Terminal.app -bool true
+defaults write com.apple.universalaccessAuthWarning /usr/libexec -bool true
+defaults write com.apple.universalaccessAuthWarning /usr/libexec/sshd-keygen-wrapper -bool true
+defaults write com.apple.universalaccessAuthWarning com.apple.Messages -bool true
+defaults write com.apple.universalaccessAuthWarning com.apple.Terminal -bool true
+
+# Disable lock screen
+defaults write com.apple.loginwindow DisableScreenLock -bool true
+
+# Disable saving the application state on shutdown
+defaults write com.apple.loginwindow TALLogoutSavesState -bool false
+```
+
 ### Install Xcode command line tools
 
 Open Terminal via Spotlight (CMD + Space)
