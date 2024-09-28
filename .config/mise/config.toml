@@ -1,6 +1,6 @@
 [tools]
 go = "1.21.6"
-bun = "1.1.26"
+bun = "1.1.29"
 ruby = "2.7.6"
 java = "adoptopenjdk-17.0.9+9"
 node = "20.11.0"
