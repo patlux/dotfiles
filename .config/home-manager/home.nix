@@ -49,6 +49,7 @@ in
     pkgs.lazygit
     pkgs.tree
     pkgs.mysql
+    pkgs.picocom
     # pkgs.yabai
     # pkgs.skhd
     # pkgs.yabai
@@ -153,7 +154,7 @@ in
  export ANDROID_AVD_HOME=/Volumes/home/VMS/Android-Emulator
  export PATH=$ANDROID_SDK_ROOT/tools:$PATH
  export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
- export PATH=$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$PATH
+ export PATH=$ANDROID_SDK_ROOT/cmdline-tools/latest/tools/bin:$PATH
 
  export PATH=$HOME/Library/Python/3.8/bin:$PATH
  # export PATH=$HOME/.bun/bin:$PATH
