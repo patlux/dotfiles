@@ -16,6 +16,7 @@ brew "apktool"
 # in yabai v7.1.0 the rules are not working
 # we will use v7.0.4
 # Run "brew install .brew/yabai"
+tap "koekeishiya/formulae"
 brew "koekeishiya/formulae/skhd"
 
 tap "xcodesorg/made"
