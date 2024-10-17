@@ -266,6 +266,9 @@ duplicacy restore -r <revision> "piparo.tech/*"
 1. Launch Android Studio (via Raycast)
 2. Make the setup
 3. This will install a initial sdk under `~/Library/Android/sdk`
+4. "Settings..." -> "Languages & Frameworks" -> "Android SDK"
+5. Checkmark "Android SDK Command-line Tools (latest)"
+6. Apply
 
 ### Setup Mounts
 
