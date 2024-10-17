@@ -18,6 +18,9 @@ brew "apktool"
 # Run "brew install .brew/yabai"
 brew "koekeishiya/formulae/skhd"
 
+tap "xcodesorg/made"
+brew "xcodesorg/made/xcodes"
+
 tap "mattisg/mattisg"
 brew "mattisg/mattisg/adblock"
 
@@ -80,15 +83,15 @@ mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "Apple Configurator", id: 1037126344
 mas "Bitwarden", id: 1352778147
-mas "Microsoft Excel", id: 462058435
+# mas "Microsoft Excel", id: 462058435
+# mas "Microsoft Word", id: 462054704
 mas "Microsoft Remote Desktop", id: 1295203466
-mas "Microsoft Word", id: 462054704
 mas "Quick Camera", id: 598853070
 mas "Steam Link", id: 1246969117
 mas "Tailscale", id: 1475387142
 mas "TestFlight", id: 899247664
 mas "WireGuard", id: 1451685025
-mas "Xcode", id: 497799835
+# mas "Xcode", id: 497799835
 
 # visual studio code extensions
 vscode "bierner.markdown-mermaid"
