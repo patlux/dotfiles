@@ -172,5 +172,22 @@ in
 
     # Following line should allow us to avoid a logout/login cycle
     /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+
+    # Disables the keyboard short "Select the previous input source"
+    # which makes it possible to use Control-Space (for e.g. in neovim)
+    defaults write com.apple.symbolichotkeys.plist AppleSymbolicHotKeys -dict-add 60 "
+      <dict>
+        <key>enabled</key><false/>
+        <key>value</key><dict>
+          <key>type</key><string>standard</string>
+          <key>parameters</key>
+          <array>
+            <integer>32</integer>
+            <integer>49</integer>
+            <integer>262144</integer>
+          </array>
+        </dict>
+      </dict>
+    "
   '';
 }
