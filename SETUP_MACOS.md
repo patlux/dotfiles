@@ -1,7 +1,5 @@
 # Setup a new macOS
 
-TODO: clearify when to login into icloud. needed for icloud keychain
-
 ## Setup
 
 - Language: English
@@ -121,9 +119,11 @@ Install home-manager (https://github.com/LnL7/nix-darwin)
 # Make sure you logged out and logged in again
 
 # Install home-manager (adds configurations options for home)
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
 nix-channel --add https://github.com/rycee/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
 nix-shell '<home-manager>' -A install
+# If error occurs, check the error if there is something wrong in $HOME/.config/home-manager/configuration.nix
 
 # Install darwin module (adds configurations options for macos)
 nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer
