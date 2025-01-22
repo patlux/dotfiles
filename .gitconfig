@@ -3,7 +3,7 @@
 	email = email@patwoz.de
 	signingkey = D95105068BC8DA2C
 [core]
-	editor = lvim 
+	editor = nvim 
 	pager = delta --dark
 [color]
 	ui = true
@@ -46,6 +46,8 @@
   path = ~/dev/sap/.gitconfig
 [includeIf "gitdir:~/dev/abl/ABL-Configuration-App-robin/"]
   path = ~/dev/abl/.gitconfig-robin
+[includeIf "gitdir:~/dev/enerparc/"]
+  path = ~/dev/enerparc/.gitconfig
 [pull]
 	rebase = false
 [interactive]

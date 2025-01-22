@@ -58,8 +58,8 @@ in
   home.sessionVariables = {
     LANG = "en_US.UTF-8";
     LC_ALL = "en_US.UTF-8";
-    EDITOR = "lvim";
-    VISUAL = "lvim";
+    EDITOR = "nvim";
+    VISUAL = "nvim";
   };
 
   home.sessionPath = [
@@ -79,6 +79,7 @@ in
     shellAliases = {
       update = "home-manager switch";
       mkdir = "mkdir -p -v";
+      aic = "aider --model r1 --no-attribute-author --no-attribute-committer";
     };
     history = {
       size = 10000;

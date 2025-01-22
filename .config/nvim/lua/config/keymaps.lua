@@ -15,17 +15,17 @@ end
 map("n", "<leader>xj", diagnostic_goto(true), { desc = "Next Diagnostic" })
 map("n", "<leader>xk", diagnostic_goto(false), { desc = "Prev Diagnostic" })
 
-local telescope = require("telescope.builtin")
-map("n", "<leader>si", function()
-  telescope.live_grep({
-    additional_args = function()
-      return { "--no-ignore" }
-    end,
-  })
-end, { desc = "Live grep for all files" })
-map("n", "<leader>fi", function()
-  telescope.find_files({
-    no_ignore = true, -- Include ignored files
-    hidden = true, -- Optionally include hidden files
-  })
-end, { desc = "Find all files" })
+-- local telescope = require("telescope.builtin")
+-- map("n", "<leader>si", function()
+--   telescope.live_grep({
+--     additional_args = function()
+--       return { "--no-ignore" }
+--     end,
+--   })
+-- end, { desc = "Live grep for all files" })
+-- map("n", "<leader>fi", function()
+--   telescope.find_files({
+--     no_ignore = true, -- Include ignored files
+--     hidden = true, -- Optionally include hidden files
+--   })
+-- end, { desc = "Find all files" })
