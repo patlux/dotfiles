@@ -126,11 +126,8 @@ nix-shell '<home-manager>' -A install
 # If error occurs, check the error if there is something wrong in $HOME/.config/home-manager/configuration.nix
 
 # Install darwin module (adds configurations options for macos)
-nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer
-./result/bin/darwin-installer
-
-# Would you like to edit the default configuration.nix before starting? [y/N] N
-# Would you like to manage <darwin> with nix-channel? [y/N] y
+nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A darwin-rebuild
+./result/bin/darwin-rebuild switch -I darwin-config=$HOME/.config/nix-darwin/configuration.nix
 ```
 
 ### Setup dotfiles
