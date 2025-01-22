@@ -48,7 +48,7 @@ in
     pkgs.neovim
     pkgs.lazygit
     pkgs.tree
-    pkgs.mysql
+    # pkgs.mysql
     pkgs.picocom
     # pkgs.yabai
     # pkgs.skhd
