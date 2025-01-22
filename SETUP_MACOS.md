@@ -164,9 +164,6 @@ skhd --start-service
 
 # https://github.com/MattiSG/adblock
 sudo adblock on
-
-# Install lunarvim
-LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 ```
 
 ### Setup Keyboard
