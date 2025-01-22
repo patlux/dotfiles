@@ -30,7 +30,6 @@ brew "git-delta"
 brew "git-lfs"
 brew "ios-deploy"
 
-tap "homebrew/cask-fonts"
 cask "font-meslo-lg-nerd-font"
 
 cask "betterdisplay"
@@ -97,7 +96,6 @@ mas "WireGuard", id: 1451685025
 # visual studio code extensions
 vscode "bierner.markdown-mermaid"
 vscode "dbaeumer.vscode-eslint"
-vscode "devicescript.devicescript-vscode"
 vscode "dotjoshjohnson.xml"
 vscode "esbenp.prettier-vscode"
 vscode "evgeniypeshkov.syntax-highlighter"
