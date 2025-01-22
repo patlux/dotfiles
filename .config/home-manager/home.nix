@@ -79,6 +79,7 @@ in
     shellAliases = {
       update = "home-manager switch";
       mkdir = "mkdir -p -v";
+      aic = "aider --model r1 --no-attribute-author --no-attribute-committer";
     };
     history = {
       size = 10000;
