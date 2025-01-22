@@ -44,4 +44,13 @@ yabai -m rule --add app="Petit Player" sticky=on manage=off
 yabai -m rule --add app="Bezel" sticky=on manage=off
 yabai -m rule --add title=".*raylib.*" manage=off sticky=on
 
+# https://github.com/koekeishiya/yabai/issues/68#issuecomment-2395591920
+# yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
+# yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
+
+yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --focus next; sleep 0.01; yabai -m space --focus prev'
+yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --focus next; sleep 0.01; yabai -m space --focus prev'
+yabai -m signal --add app='^Finder$' event=window_created action='yabai -m space --focus next; sleep 0.01; yabai -m space --focus prev'
+yabai -m signal --add app='^Finder$' event=window_destroyed action='yabai -m space --focus next; sleep 0.01; yabai -m space --focus prev'
+
 echo "yabai configuration loaded.."
