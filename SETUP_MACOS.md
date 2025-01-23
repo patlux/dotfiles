@@ -166,6 +166,7 @@ skhd --start-service
 
 # https://github.com/MattiSG/adblock
 sudo adblock on
+npm install -g tree-sitter-cli
 ```
 
 ### Setup Keyboard
