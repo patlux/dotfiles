@@ -48,7 +48,7 @@ in
     pkgs.neovim
     pkgs.lazygit
     pkgs.tree
-    pkgs.mysql
+    # pkgs.mysql
     pkgs.picocom
     # pkgs.yabai
     # pkgs.skhd
@@ -58,8 +58,8 @@ in
   home.sessionVariables = {
     LANG = "en_US.UTF-8";
     LC_ALL = "en_US.UTF-8";
-    EDITOR = "lvim";
-    VISUAL = "lvim";
+    EDITOR = "nvim";
+    VISUAL = "nvim";
   };
 
   home.sessionPath = [

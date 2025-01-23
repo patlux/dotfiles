@@ -3,7 +3,7 @@
 	email = email@patwoz.de
 	signingkey = D95105068BC8DA2C
 [core]
-	editor = lvim 
+	editor = nvim 
 	pager = delta --dark
 [color]
 	ui = true

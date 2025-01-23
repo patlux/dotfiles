@@ -48,6 +48,8 @@ cask "battery"
 cask "android-studio"
 cask "virtualbuddy"
 cask "timing"
+cask "ghostty"
+cask "libreoffice"
 
 # Backups
 cask "duplicacy-cli"
