@@ -152,6 +152,8 @@ curl https://mise.run | sh
 # close and open new terminal
 mise install
 
+gem install
+
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 2) Customize install to not modify path
