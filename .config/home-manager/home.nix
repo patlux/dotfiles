@@ -140,15 +140,15 @@ in
  GPG_TTY=\"$(tty)\"
  export GPG_TTY
  
- export JAVA_HOME=`/usr/libexec/java_home`
- useJava8 () {
-   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-   java -version
- }
- useJava11 () {
-   export JAVA_HOME=`/usr/libexec/java_home -v 11.0`
-   java -version
- }
+ # export JAVA_HOME=`/usr/libexec/java_home`
+ # useJava8 () {
+ #   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+ #   java -version
+ # }
+ # useJava11 () {
+ #   export JAVA_HOME=`/usr/libexec/java_home -v 11.0`
+ #   java -version
+ # }
  
  export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
  export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -159,7 +159,7 @@ in
  # \"Android SDK Command-line Tools (latest)\" needs to be installed (See SETUP_MACOS.md)
  export PATH=$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$PATH
 
- export PATH=$HOME/Library/Python/3.8/bin:$PATH
+ # export PATH=$HOME/Library/Python/3.8/bin:$PATH
  # export PATH=$HOME/.bun/bin:$PATH
 
  ssh-add --apple-load-keychain 2> /dev/null
