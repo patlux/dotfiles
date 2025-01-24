@@ -169,6 +169,16 @@ sudo adblock on
 npm install -g tree-sitter-cli
 ```
 
+Setup `llm`: 
+
+```sh
+uv tool install llm
+llm install llm-cmd
+llm install llm-deepseek
+llm keys set deepseek
+# <Paste key here>
+```
+
 ### Setup Keyboard
 
 #### Hide Menu Bar Entry
