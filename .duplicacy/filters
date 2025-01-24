@@ -18,6 +18,12 @@
 +Library/Application Support/com.tinyapp.TablePlus/
 +Library/Application Support/com.tinyapp.TablePlus/Data
 +Library/Application Support/com.tinyapp.TablePlus/Data/*
++Library/Application Support/Insomnium/
++Library/Application Support/Insomnium/*.db
++Library/Application Support/Insomnium/Preferences
++Library/Application Support/Insomnium/Cookies
++Library/Application Support/Insomnium/plugins
++Library/Application Support/Insomnium/plugins/*
 +Library/Preferences/
 +Library/Preferences/com.viscosityvpn.Viscosity.plist
 -*
