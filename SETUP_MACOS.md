@@ -174,6 +174,7 @@ Setup `llm`:
 ```sh
 uv tool install llm
 llm install llm-cmd
+llm install llm-jq
 llm install llm-deepseek
 llm keys set deepseek
 # <Paste key here>
