@@ -11,7 +11,8 @@ brew "scrcpy"
 brew "pkg-config" # run "sudo ln -s $(which pkg-config) /usr/local/bin/pkg-config"
 brew "apktool"
 
-# tap "koekeishiya/formulae"
+tap "koekeishiya/formulae"
+brew "koekeishiya/formulae/yabai"
 # brew ".brew/yabai.rb"
 # in yabai v7.1.0 the rules are not working
 # we will use v7.0.4
