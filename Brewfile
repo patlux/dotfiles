@@ -80,6 +80,7 @@ cask "syncthing"
 # cask "finicky" # cask "choosy"
 cask "raycast"
 cask "minisim" # launch ios/android simulator/emulators from the menu
+cask "wezterm"
 
 # App Store 
 mas "AdGuard for Safari", id: 1440147259
