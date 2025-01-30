@@ -53,6 +53,7 @@ in
     # pkgs.yabai
     # pkgs.skhd
     # pkgs.yabai
+    pkgs.uv
   ];
 
   home.sessionVariables = {
