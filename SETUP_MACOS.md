@@ -152,7 +152,8 @@ curl https://mise.run | sh
 # close and open new terminal
 mise install
 
-gem install
+# install gems (cocoapods)
+bundle install 
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
