@@ -2,6 +2,8 @@
 
 > My personal macos setup config.
 
+:no_entry: [DEPRECATED] Moved everything to NixOS: https://github.com/patlux/nixos-config
+
 ## Usage
 
 ### 🥇 Getting started
